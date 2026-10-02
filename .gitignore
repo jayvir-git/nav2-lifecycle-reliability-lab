@@ -1,0 +1,6 @@
+downloads/
+wsl/
+results/
+__pycache__/
+*.pyc
+*.log
