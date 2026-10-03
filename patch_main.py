@@ -21,6 +21,7 @@ s=s.replace('invoke<Change>(change_, request, std::chrono::seconds(5),\n      st
 s=s.replace('uint8_t get_state() {', 'uint8_t get_state(std::chrono::milliseconds timeout = std::chrono::seconds(2)) {')
 s=s.replace('std::chrono::seconds(2), std::chrono::seconds(2))->current_state.id;', 'timeout, timeout)->current_state.id;')
 s=s.replace('throw std::runtime_error("Lifecycle service wait interrupted by shutdown");','throw ShutdownCancelled();')
+s=s.replace('rclcpp::SystemDefaultsQoS()', 'rclcpp::ServicesQoS()')
 s=s.replace(': stopping_(stopping) {', '''
   : stopping_(stopping), context_(node->get_node_base_interface()->get_context()),
     executor_(executor_options(context_)) {''')
