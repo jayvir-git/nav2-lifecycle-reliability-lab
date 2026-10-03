@@ -1,0 +1,256 @@
+{
+  "source_sha": "d7bf2ac06fe778c21c6141eb49b4d3e2c0c82d3a",
+  "runtime": {
+    "ros_distro": "rolling",
+    "kernel": "6.17.0-1022-azure",
+    "ci": "true"
+  },
+  "trials": [
+    {
+      "run": "shutdown-alive-1790999295179986259",
+      "expectation_met": true,
+      "result": {
+        "mode": "alive",
+        "graceful_manager_shutdown": true,
+        "manager_executable": "/tmp/nav2-build/upstream-main/install/lib/nav2_lifecycle_manager/lifecycle_manager",
+        "shutdown_delay_after_detection": 2.0,
+        "variant": "upstream-main",
+        "bond_startup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_lifecycle_manager_core.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_fastrtps_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_introspection_cpp.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_util_core.so"
+        ],
+        "shutdown_seconds": 0.214
+      },
+      "log": "[INFO] [1790999295.283356939] [probe_manager]: Creating\n[INFO] [1790999295.283714631] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1790999295.284199296] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790999295.287567725] [map_server]: \n\tmap_server lifecycle node launched. \n\tWaiting on external lifecycle transitions to activate\n\tSee https://design.ros2.org/articles/node_lifecycle.html for more information.\n[INFO] [1790999295.287655820] [map_server]: Creating\n[INFO] [1790999295.552506298] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1790999295.571609825] [probe_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790999295.571659539] [probe_manager]: \u001b[34m\u001b[1mConfiguring map_server\u001b[0m\u001b[0m\n[INFO] [1790999295.572038195] [map_server]: Configuring\n[INFO] [1790999295.572149576] [map_io]: Loading yaml file: /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-alive-1790999295179986259/room.yaml\n[INFO] [1790999295.572475716] [map_io]: resolution: 0.05\n[INFO] [1790999295.572497505] [map_io]: origin[0]: 0\n[INFO] [1790999295.572502652] [map_io]: origin[1]: 0\n[INFO] [1790999295.572511448] [map_io]: origin[2]: 0\n[INFO] [1790999295.572516510] [map_io]: free_thresh: 0.25\n[INFO] [1790999295.572521622] [map_io]: occupied_thresh: 0.65\n[INFO] [1790999295.572527818] [map_io]: mode: trinary\n[INFO] [1790999295.572532986] [map_io]: negate: 0\n[INFO] [1790999295.572730270] [map_io]: Loading image_file: /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-alive-1790999295179986259/room.pgm\n[INFO] [1790999295.572881066] [map_io]: Read map /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-alive-1790999295179986259/room.pgm: 20 X 20 map @ 0.05 m/cell\n[INFO] [1790999295.586209525] [probe_manager]: \u001b[34m\u001b[1mActivating map_server\u001b[0m\u001b[0m\n[INFO] [1790999295.586466162] [map_server]: Activating\n[INFO] [1790999295.586564057] [map_server]: Creating bond (map_server) to lifecycle manager.\n[INFO] [1790999295.840169201] [probe_manager]: Server map_server connected with bond.\n[INFO] [1790999295.840231642] [probe_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790999295.840255992] [probe_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790999299.891334306] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999299.891452377] [probe_manager]: Running Nav2 LifecycleManager rcl preshutdown (probe_manager)\n[INFO] [1790999299.891482320] [probe_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790999299.994480046] [probe_manager]: Destroying probe_manager\n[INFO] [1790999300.105749347] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999300.105840718] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)\n[INFO] [1790999300.105903406] [map_server]: Deactivating\n[INFO] [1790999300.105913781] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790999300.116038986] [map_server]: Cleaning up\n[INFO] [1790999300.116072272] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790999300.117756816] [map_server]: Destroying\n[WARN] [1790999300.117786097] [rclcpp_lifecycle]: LifecycleNode is not shut down: Node still in state(1) in destructor\n"
+    },
+    {
+      "run": "shutdown-dead-1790999300809051784",
+      "expectation_met": true,
+      "result": {
+        "mode": "dead",
+        "graceful_manager_shutdown": false,
+        "manager_executable": "/tmp/nav2-build/upstream-main/install/lib/nav2_lifecycle_manager/lifecycle_manager",
+        "shutdown_delay_after_detection": 2.0,
+        "variant": "upstream-main",
+        "bond_startup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_lifecycle_manager_core.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_fastrtps_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_introspection_cpp.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_util_core.so"
+        ],
+        "bond_loss_detected": true,
+        "manager_alive_after_5_seconds": true,
+        "shutdown_deadline_seconds": 5,
+        "shutdown_seconds": 5.0
+      },
+      "log": "[INFO] [1790999300.900619071] [probe_manager]: Creating\n[INFO] [1790999300.901000760] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1790999300.902157381] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790999300.907981167] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1790999300.909843412] [map_server]: \n\tmap_server lifecycle node launched. \n\tWaiting on external lifecycle transitions to activate\n\tSee https://design.ros2.org/articles/node_lifecycle.html for more information.\n[INFO] [1790999300.909945545] [map_server]: Creating\n[INFO] [1790999300.919840287] [probe_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790999300.919877297] [probe_manager]: \u001b[34m\u001b[1mConfiguring map_server\u001b[0m\u001b[0m\n[INFO] [1790999301.073086113] [map_server]: Configuring\n[INFO] [1790999301.073217415] [map_io]: Loading yaml file: /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-dead-1790999300809051784/room.yaml\n[INFO] [1790999301.073506184] [map_io]: resolution: 0.05\n[INFO] [1790999301.073516448] [map_io]: origin[0]: 0\n[INFO] [1790999301.073520172] [map_io]: origin[1]: 0\n[INFO] [1790999301.073525751] [map_io]: origin[2]: 0\n[INFO] [1790999301.073529341] [map_io]: free_thresh: 0.25\n[INFO] [1790999301.073532722] [map_io]: occupied_thresh: 0.65\n[INFO] [1790999301.073537037] [map_io]: mode: trinary\n[INFO] [1790999301.073541499] [map_io]: negate: 0\n[INFO] [1790999301.073722440] [map_io]: Loading image_file: /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-dead-1790999300809051784/room.pgm\n[INFO] [1790999301.073888351] [map_io]: Read map /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-dead-1790999300809051784/room.pgm: 20 X 20 map @ 0.05 m/cell\n[INFO] [1790999301.090204874] [probe_manager]: \u001b[34m\u001b[1mActivating map_server\u001b[0m\u001b[0m\n[INFO] [1790999301.090374202] [map_server]: Activating\n[INFO] [1790999301.090466506] [map_server]: Creating bond (map_server) to lifecycle manager.\n[INFO] [1790999301.344253103] [probe_manager]: Server map_server connected with bond.\n[INFO] [1790999301.344333107] [probe_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790999301.344359020] [probe_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790999307.344462917] [probe_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from map_server.\u001b[0m\u001b[0m\n[ERROR] [1790999307.344526761] [probe_manager]: CRITICAL FAILURE: SERVER map_server IS DOWN after not receiving a heartbeat for 4000 ms. Shutting down related nodes.\n[INFO] [1790999307.344541867] [probe_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790999307.344547351] [probe_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790999307.344552616] [probe_manager]: \u001b[34m\u001b[1mDeactivating map_server\u001b[0m\u001b[0m\n[INFO] [1790999309.409927909] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999309.410033631] [probe_manager]: Running Nav2 LifecycleManager rcl preshutdown (probe_manager)\n"
+    },
+    {
+      "run": "discovery-1790999316635491080",
+      "expectation_met": true,
+      "result": {
+        "variant": "main-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.0,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/tmp/nav2-build/main-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.164
+      },
+      "log": "[INFO] [1790999316.670025770] [lifecycle_manager]: Creating\n[INFO] [1790999316.670312069] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1790999316.670708680] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790999316.687081760] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999316.687149454] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790999316.723182462] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790999316899787396",
+      "expectation_met": true,
+      "result": {
+        "variant": "main-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.05,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/tmp/nav2-build/main-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.164
+      },
+      "log": "[INFO] [1790999316.933647659] [lifecycle_manager]: Creating\n[INFO] [1790999316.933937309] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1790999316.934296188] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790999317.001586175] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999317.001671572] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790999317.036836572] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790999317221262526",
+      "expectation_met": true,
+      "result": {
+        "variant": "main-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 2.0,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/tmp/nav2-build/main-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.164
+      },
+      "log": "[INFO] [1790999317.259196078] [lifecycle_manager]: Creating\n[INFO] [1790999317.259505801] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1790999317.259881955] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790999319.273827427] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999319.273985627] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790999319.312486510] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790999319489060665",
+      "expectation_met": true,
+      "result": {
+        "variant": "main-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.0,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/tmp/nav2-build/main-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.164
+      },
+      "log": "[INFO] [1790999319.525511847] [lifecycle_manager]: Creating\n[INFO] [1790999319.525812489] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1790999319.526178180] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790999319.540741323] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999319.540814399] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790999319.582083327] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790999319749613388",
+      "expectation_met": true,
+      "result": {
+        "variant": "main-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.05,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/tmp/nav2-build/main-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.164
+      },
+      "log": "[INFO] [1790999319.783538342] [lifecycle_manager]: Creating\n[INFO] [1790999319.783822698] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1790999319.784218403] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790999319.851306256] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999319.851399621] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790999319.886686694] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790999320065098786",
+      "expectation_met": true,
+      "result": {
+        "variant": "main-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 2.0,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/tmp/nav2-build/main-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.164
+      },
+      "log": "[INFO] [1790999320.098709965] [lifecycle_manager]: Creating\n[INFO] [1790999320.099002974] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1790999320.099376841] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790999322.117093653] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999322.117183917] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790999322.151943736] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "shutdown-alive-1790999322663771898",
+      "expectation_met": true,
+      "result": {
+        "mode": "alive",
+        "graceful_manager_shutdown": true,
+        "manager_executable": "/tmp/nav2-build/main-coordinated/install/lib/nav2_lifecycle_manager/lifecycle_manager",
+        "shutdown_delay_after_detection": 2.0,
+        "variant": "main-coordinated",
+        "bond_startup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/tmp/nav2-build/main-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_fastrtps_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_introspection_cpp.so"
+        ],
+        "shutdown_seconds": 0.214
+      },
+      "log": "[INFO] [1790999322.747677696] [probe_manager]: Creating\n[INFO] [1790999322.748101550] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1790999322.749908337] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790999322.754279883] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1790999322.755488308] [map_server]: \n\tmap_server lifecycle node launched. \n\tWaiting on external lifecycle transitions to activate\n\tSee https://design.ros2.org/articles/node_lifecycle.html for more information.\n[INFO] [1790999322.755586933] [map_server]: Creating\n[INFO] [1790999322.765044011] [probe_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790999322.765083415] [probe_manager]: \u001b[34m\u001b[1mConfiguring map_server\u001b[0m\u001b[0m\n[INFO] [1790999322.919863335] [map_server]: Configuring\n[INFO] [1790999322.919974916] [map_io]: Loading yaml file: /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-alive-1790999322663771898/room.yaml\n[INFO] [1790999322.920209204] [map_io]: resolution: 0.05\n[INFO] [1790999322.920216226] [map_io]: origin[0]: 0\n[INFO] [1790999322.920218999] [map_io]: origin[1]: 0\n[INFO] [1790999322.920223851] [map_io]: origin[2]: 0\n[INFO] [1790999322.920226762] [map_io]: free_thresh: 0.25\n[INFO] [1790999322.920229416] [map_io]: occupied_thresh: 0.65\n[INFO] [1790999322.920233357] [map_io]: mode: trinary\n[INFO] [1790999322.920237176] [map_io]: negate: 0\n[INFO] [1790999322.920423801] [map_io]: Loading image_file: /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-alive-1790999322663771898/room.pgm\n[INFO] [1790999322.920578263] [map_io]: Read map /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-alive-1790999322663771898/room.pgm: 20 X 20 map @ 0.05 m/cell\n[INFO] [1790999322.936070380] [probe_manager]: \u001b[34m\u001b[1mActivating map_server\u001b[0m\u001b[0m\n[INFO] [1790999322.936247586] [map_server]: Activating\n[INFO] [1790999322.936366649] [map_server]: Creating bond (map_server) to lifecycle manager.\n[INFO] [1790999323.190489216] [probe_manager]: Server map_server connected with bond.\n[INFO] [1790999323.190547617] [probe_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790999323.190571879] [probe_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790999327.248135074] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999327.248233964] [probe_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790999327.248425683] [probe_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790999327.351092133] [probe_manager]: Destroying probe_manager\n[INFO] [1790999327.461964428] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999327.462048669] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)\n[INFO] [1790999327.462107854] [map_server]: Deactivating\n[INFO] [1790999327.462117442] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790999327.472275775] [map_server]: Cleaning up\n[INFO] [1790999327.472327531] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790999327.473838731] [map_server]: Destroying\n[WARN] [1790999327.473858876] [rclcpp_lifecycle]: LifecycleNode is not shut down: Node still in state(1) in destructor\n"
+    },
+    {
+      "run": "shutdown-dead-1790999328143847298",
+      "expectation_met": false,
+      "result": {
+        "mode": "dead",
+        "graceful_manager_shutdown": false,
+        "manager_executable": "/tmp/nav2-build/main-coordinated/install/lib/nav2_lifecycle_manager/lifecycle_manager",
+        "shutdown_delay_after_detection": 2.0,
+        "variant": "main-coordinated",
+        "error": "Map server did not activate"
+      },
+      "log": "[INFO] [1790999328.226019286] [probe_manager]: Creating\n[INFO] [1790999328.226632504] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1790999328.228790374] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790999328.229254310] [map_server]: \n\tmap_server lifecycle node launched. \n\tWaiting on external lifecycle transitions to activate\n\tSee https://design.ros2.org/articles/node_lifecycle.html for more information.\n[INFO] [1790999328.229361331] [map_server]: Creating\n[INFO] [1790999328.418655212] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1790999328.429969258] [probe_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790999328.430023017] [probe_manager]: \u001b[34m\u001b[1mConfiguring map_server\u001b[0m\u001b[0m\n[INFO] [1790999328.568776835] [map_server]: Configuring\n[INFO] [1790999328.568915429] [map_io]: Loading yaml file: /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-dead-1790999328143847298/room.yaml\n[INFO] [1790999328.569145688] [map_io]: resolution: 0.05\n[INFO] [1790999328.569152513] [map_io]: origin[0]: 0\n[INFO] [1790999328.569155532] [map_io]: origin[1]: 0\n[INFO] [1790999328.569159933] [map_io]: origin[2]: 0\n[INFO] [1790999328.569162936] [map_io]: free_thresh: 0.25\n[INFO] [1790999328.569165741] [map_io]: occupied_thresh: 0.65\n[INFO] [1790999328.569169353] [map_io]: mode: trinary\n[INFO] [1790999328.569173365] [map_io]: negate: 0\n[INFO] [1790999328.569359499] [map_io]: Loading image_file: /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-dead-1790999328143847298/room.pgm\n[INFO] [1790999328.569530316] [map_io]: Read map /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-dead-1790999328143847298/room.pgm: 20 X 20 map @ 0.05 m/cell\n[ERROR] [1790999333.583778054] [probe_manager]: Failed to change state for node: map_server. Exception: Lifecycle response timed out.\n[ERROR] [1790999333.583851740] [probe_manager]: Failed to bring up all requested nodes. Aborting bringup.\n[INFO] [1790999348.175641184] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999348.175746609] [probe_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790999348.177456680] [probe_manager]: Destroying probe_manager\n[INFO] [1790999348.289256052] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999348.289369233] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)\n[INFO] [1790999348.289442699] [map_server]: Cleaning up\n[INFO] [1790999348.289459164] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790999348.290694973] [map_server]: Destroying\n[WARN] [1790999348.290715677] [rclcpp_lifecycle]: LifecycleNode is not shut down: Node still in state(1) in destructor\n"
+    },
+    {
+      "run": "shutdown-transition-1790999348955734232",
+      "expectation_met": true,
+      "result": {
+        "mode": "transition",
+        "graceful_manager_shutdown": true,
+        "manager_executable": "/tmp/nav2-build/main-coordinated/install/lib/nav2_lifecycle_manager/lifecycle_manager",
+        "shutdown_delay_after_detection": 2.0,
+        "variant": "main-coordinated",
+        "bond_startup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/tmp/nav2-build/main-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_fastrtps_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_introspection_cpp.so"
+        ],
+        "transition_wait_confirmed": true,
+        "shutdown_seconds": 0.264
+      },
+      "log": "[INFO] [1790999349.038281390] [probe_manager]: Creating\n[INFO] [1790999349.038719285] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1790999349.039357291] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790999349.047356291] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1790999349.048387268] [map_server]: \n\tmap_server lifecycle node launched. \n\tWaiting on external lifecycle transitions to activate\n\tSee https://design.ros2.org/articles/node_lifecycle.html for more information.\n[INFO] [1790999349.048479615] [map_server]: Creating\n[INFO] [1790999349.058631028] [probe_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790999349.058675203] [probe_manager]: \u001b[34m\u001b[1mConfiguring map_server\u001b[0m\u001b[0m\n[INFO] [1790999349.219362171] [map_server]: Configuring\n[INFO] [1790999349.219523759] [map_io]: Loading yaml file: /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-transition-1790999348955734232/room.yaml\n[INFO] [1790999349.219888373] [map_io]: resolution: 0.05\n[INFO] [1790999349.219899330] [map_io]: origin[0]: 0\n[INFO] [1790999349.219902800] [map_io]: origin[1]: 0\n[INFO] [1790999349.219908743] [map_io]: origin[2]: 0\n[INFO] [1790999349.219912291] [map_io]: free_thresh: 0.25\n[INFO] [1790999349.219915787] [map_io]: occupied_thresh: 0.65\n[INFO] [1790999349.219920228] [map_io]: mode: trinary\n[INFO] [1790999349.219924733] [map_io]: negate: 0\n[INFO] [1790999349.220093451] [map_io]: Loading image_file: /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-transition-1790999348955734232/room.pgm\n[INFO] [1790999349.220266910] [map_io]: Read map /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-transition-1790999348955734232/room.pgm: 20 X 20 map @ 0.05 m/cell\n[INFO] [1790999349.236533984] [probe_manager]: \u001b[34m\u001b[1mActivating map_server\u001b[0m\u001b[0m\n[INFO] [1790999349.236940240] [map_server]: Activating\n[INFO] [1790999349.237025187] [map_server]: Creating bond (map_server) to lifecycle manager.\n[INFO] [1790999349.494029961] [probe_manager]: Server map_server connected with bond.\n[INFO] [1790999349.494091544] [probe_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790999349.494119271] [probe_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790999351.557372936] [probe_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790999351.557427541] [probe_manager]: \u001b[34m\u001b[1mPausing managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790999351.557433427] [probe_manager]: \u001b[34m\u001b[1mDeactivating map_server\u001b[0m\u001b[0m\n[INFO] [1790999353.607767667] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999353.607880748] [probe_manager]: Coordinated lifecycle manager preshutdown\n[ERROR] [1790999353.612085753] [probe_manager]: Failed to change state for node: map_server. Exception: Lifecycle wait cancelled by shutdown.\n[ERROR] [1790999353.612130638] [probe_manager]: Failed to pause nodes: aborting pause\n[INFO] [1790999353.715010149] [probe_manager]: Destroying probe_manager\n[INFO] [1790999353.872259939] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999353.872352676] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)\n[INFO] [1790999353.872407661] [map_server]: Deactivating\n[INFO] [1790999353.872422001] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790999353.973700618] [map_server]: Cleaning up\n[INFO] [1790999353.973755572] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790999353.975383950] [map_server]: Destroying\n[WARN] [1790999353.975415601] [rclcpp_lifecycle]: LifecycleNode is not shut down: Node still in state(1) in destructor\n"
+    },
+    {
+      "run": "shutdown-slow-1790999354652838998",
+      "expectation_met": true,
+      "result": {
+        "mode": "slow",
+        "graceful_manager_shutdown": true,
+        "manager_executable": "/tmp/nav2-build/main-coordinated/install/lib/nav2_lifecycle_manager/lifecycle_manager",
+        "shutdown_delay_after_detection": 2.0,
+        "variant": "main-coordinated",
+        "bond_startup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/tmp/nav2-build/main-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_fastrtps_c.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so",
+          "/tmp/nav2-build/upstream-main/install/lib/libnav2_msgs__rosidl_typesupport_introspection_cpp.so"
+        ],
+        "delayed_pause_seconds": 3.605,
+        "delayed_pause_succeeded": true,
+        "shutdown_seconds": 0.114
+      },
+      "log": "[INFO] [1790999354.733004443] [probe_manager]: Creating\n[INFO] [1790999354.733983597] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1790999354.736442172] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790999354.737498098] [map_server]: \n\tmap_server lifecycle node launched. \n\tWaiting on external lifecycle transitions to activate\n\tSee https://design.ros2.org/articles/node_lifecycle.html for more information.\n[INFO] [1790999354.737606879] [map_server]: Creating\n[INFO] [1790999354.875803085] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1790999354.886794665] [probe_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790999354.886848043] [probe_manager]: \u001b[34m\u001b[1mConfiguring map_server\u001b[0m\u001b[0m\n[INFO] [1790999355.076298389] [map_server]: Configuring\n[INFO] [1790999355.076462954] [map_io]: Loading yaml file: /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-slow-1790999354652838998/room.yaml\n[INFO] [1790999355.076730628] [map_io]: resolution: 0.05\n[INFO] [1790999355.076741289] [map_io]: origin[0]: 0\n[INFO] [1790999355.076744174] [map_io]: origin[1]: 0\n[INFO] [1790999355.076749366] [map_io]: origin[2]: 0\n[INFO] [1790999355.076752463] [map_io]: free_thresh: 0.25\n[INFO] [1790999355.076755417] [map_io]: occupied_thresh: 0.65\n[INFO] [1790999355.076759312] [map_io]: mode: trinary\n[INFO] [1790999355.076763269] [map_io]: negate: 0\n[INFO] [1790999355.076924107] [map_io]: Loading image_file: /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-slow-1790999354652838998/room.pgm\n[INFO] [1790999355.077078024] [map_io]: Read map /__w/nav2-lifecycle-lab/nav2-lifecycle-lab/results/shutdown-slow-1790999354652838998/room.pgm: 20 X 20 map @ 0.05 m/cell\n[INFO] [1790999355.091416328] [probe_manager]: \u001b[34m\u001b[1mActivating map_server\u001b[0m\u001b[0m\n[INFO] [1790999355.092085812] [map_server]: Activating\n[INFO] [1790999355.092181285] [map_server]: Creating bond (map_server) to lifecycle manager.\n[INFO] [1790999355.347032512] [probe_manager]: Server map_server connected with bond.\n[INFO] [1790999355.347097431] [probe_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790999355.347122206] [probe_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790999357.405542587] [probe_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790999357.405608609] [probe_manager]: \u001b[34m\u001b[1mPausing managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790999357.405616408] [probe_manager]: \u001b[34m\u001b[1mDeactivating map_server\u001b[0m\u001b[0m\n[INFO] [1790999360.897642508] [map_server]: Deactivating\n[INFO] [1790999360.897691767] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790999361.009465997] [probe_manager]: \u001b[34m\u001b[1mManaged nodes have been paused\u001b[0m\u001b[0m\n[INFO] [1790999363.010157823] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999363.010254573] [probe_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790999363.011850284] [probe_manager]: Destroying probe_manager\n[INFO] [1790999363.123927460] [rclcpp]: signal_handler(signum=2)\n[INFO] [1790999363.124014590] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)\n[INFO] [1790999363.124071927] [map_server]: Cleaning up\n[INFO] [1790999363.124086205] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790999363.125357751] [map_server]: Destroying\n[WARN] [1790999363.125406325] [rclcpp_lifecycle]: LifecycleNode is not shut down: Node still in state(1) in destructor\n"
+    }
+  ],
+  "success": false
+}

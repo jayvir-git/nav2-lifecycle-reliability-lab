@@ -18,13 +18,14 @@ prefix=build_root/variant/'install'
 out=root/'results'/('discovery-'+str(time.time_ns()))
 out.mkdir(parents=True)
 env=os.environ.copy()
-env['ROS_DOMAIN_ID']='74'
+env['ROS_DOMAIN_ID']=os.environ.get('NAV2_LAB_DOMAIN_ID','74')
 env['ROS_AUTOMATIC_DISCOVERY_RANGE']='LOCALHOST'
 dependency='upstream-main' if variant=='main-coordinated' else 'baseline'
 env['LD_LIBRARY_PATH']=str(prefix/'lib')+':'+str(build_root/dependency/'install/lib')+':'+env.get('LD_LIBRARY_PATH','')
 delay=float(sys.argv[2]) if len(sys.argv)>2 else 0.5
 if not 0 <= delay <= 10: raise SystemExit('Delay must be between 0 and 10 seconds')
 result={'variant':variant,'mode':'discovery','delay_after_initialization_log':delay,'graceful_manager_shutdown':False}
+result['ros_domain_id']=env['ROS_DOMAIN_ID']
 with (out/'process.log').open('w') as log:
     manager=subprocess.Popen([str(prefix/'lib/nav2_lifecycle_manager/lifecycle_manager'),
         '--ros-args','-p','node_names:=[intentionally_absent_probe_server]',

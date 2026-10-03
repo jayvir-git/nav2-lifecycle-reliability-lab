@@ -17,6 +17,7 @@ target=root/'results'/('context-matrix-'+str(time.time_ns())+'.json')
 target.parent.mkdir(exist_ok=True)
 for repeat in range(3):
     for mode,delay in [('before-spin',0)]+[(m,d) for m in ('discovery','empty') for d in (0,5,50)]:
+        env['ROS_DOMAIN_ID']=str(120+len(report['trials']))
         try:
             p=subprocess.run([str(base/'context-probe/context_probe'),mode,str(delay)],
                              env=env,text=True,capture_output=True,timeout=12)

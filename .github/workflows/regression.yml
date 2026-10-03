@@ -34,6 +34,7 @@ jobs:
           apt-get install -y --no-install-recommends build-essential cmake curl python3-rosdep
           bash prepare_ci.sh
       - name: Build pinned upstream and candidate
+        id: build
         shell: bash
         run: |
           mkdir -p results
@@ -45,8 +46,9 @@ jobs:
           source /opt/ros/${ROS_DISTRO}/setup.bash
           export LD_LIBRARY_PATH="$NAV2_LAB_BUILD_ROOT/upstream-main/install/lib:$LD_LIBRARY_PATH"
           export PYTHONPATH="$(find "$NAV2_LAB_BUILD_ROOT/upstream-main/install" -type d -name site-packages | paste -sd:):$PYTHONPATH"
-          python3 validate_main.py
+          python3 validate_main.py --fault-pairs 3
       - name: Context composition regression
+        if: always() && steps.build.outcome == 'success'
         shell: bash
         run: |
           bash build_context_probe.sh discovery 2>&1 | tee results/context-discovery.log

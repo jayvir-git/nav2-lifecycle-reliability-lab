@@ -19,7 +19,7 @@ out.mkdir(parents=True)
 # Generate the small map locally so the repro does not depend on old results.
 (out/'room.pgm').write_bytes(b'P5\n20 20\n255\n'+bytes([254])*400)
 (out/'room.yaml').write_text('image: room.pgm\nresolution: 0.05\norigin: [0,0,0]\nnegate: 0\noccupied_thresh: 0.65\nfree_thresh: 0.25\n')
-os.environ['ROS_DOMAIN_ID']='74'
+os.environ['ROS_DOMAIN_ID']=os.environ.get('NAV2_LAB_DOMAIN_ID','74')
 log=(out/'process.log').open('w')
 children=[]
 manager_executable=os.environ.get('NAV2_PROBE_MANAGER','/opt/ros/jazzy/lib/nav2_lifecycle_manager/lifecycle_manager')
@@ -30,6 +30,7 @@ if 'NAV2_PROBE_PREFIX' in os.environ:
     manager_env['LD_LIBRARY_PATH']=os.environ['NAV2_PROBE_PREFIX']+f'/lib:{build_root}/{dependency}/install/lib:'+os.environ.get('LD_LIBRARY_PATH','')
 shutdown_delay=float(os.environ.get('NAV2_PROBE_SHUTDOWN_DELAY','2'))
 result={'mode':mode,'graceful_manager_shutdown':False,'manager_executable':manager_executable,
+        'ros_domain_id':os.environ['ROS_DOMAIN_ID'],
         'shutdown_delay_after_detection':shutdown_delay,
         'variant':os.environ.get('NAV2_PROBE_VARIANT','installed')}
 rclpy.init(); observer=Node('shutdown_probe')
