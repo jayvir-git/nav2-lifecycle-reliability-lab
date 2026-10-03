@@ -1,0 +1,177 @@
+{
+  "runtime": {
+    "ros_distro": "rolling",
+    "kernel": "6.17.0-1022-azure"
+  },
+  "trials": [
+    {
+      "mode": "before-spin",
+      "delay_ms": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK before-spin\n",
+      "stderr": "[INFO] [1791001068.408395261] [lifecycle_manager]: Creating\n[INFO] [1791001068.408641023] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001068.408933013] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "discovery",
+      "delay_ms": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.0477489\n",
+      "stderr": "[INFO] [1791001068.551302955] [lifecycle_manager]: Creating\n[INFO] [1791001068.551675143] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001068.552039900] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001068.556658054] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001068.604463077] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "discovery",
+      "delay_ms": 5,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.042653\n",
+      "stderr": "[INFO] [1791001068.748260823] [lifecycle_manager]: Creating\n[INFO] [1791001068.748647092] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001068.749020803] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001068.758701373] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001068.801397152] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "discovery",
+      "delay_ms": 50,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.0477065\n",
+      "stderr": "[INFO] [1791001068.944952168] [lifecycle_manager]: Creating\n[INFO] [1791001068.945348352] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001068.945748371] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001069.000422296] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001069.048204494] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "empty",
+      "delay_ms": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.000303847\n",
+      "stderr": "[INFO] [1791001069.192107595] [lifecycle_manager]: Creating\n[INFO] [1791001069.192494484] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001069.192893172] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001069.192904969] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1791001069.201367405] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1791001069.201396879] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1791001069.201408476] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001069.202607813] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001069.202682863] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001069.202948454] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "empty",
+      "delay_ms": 5,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.000410314\n",
+      "stderr": "[INFO] [1791001069.346573969] [lifecycle_manager]: Creating\n[INFO] [1791001069.346957424] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001069.347388559] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001069.347405133] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1791001069.355671350] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1791001069.355700293] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1791001069.355711539] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001069.362130094] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001069.362224994] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001069.362577493] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "empty",
+      "delay_ms": 50,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.000584661\n",
+      "stderr": "[INFO] [1791001069.506852700] [lifecycle_manager]: Creating\n[INFO] [1791001069.507264317] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001069.507660911] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001069.507677686] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1791001069.516299387] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1791001069.516333768] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1791001069.516344814] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001069.567448157] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001069.567621773] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001069.568084835] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "before-spin",
+      "delay_ms": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK before-spin\n",
+      "stderr": "[INFO] [1791001069.712518332] [lifecycle_manager]: Creating\n[INFO] [1791001069.712729714] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001069.712974104] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "discovery",
+      "delay_ms": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.0477308\n",
+      "stderr": "[INFO] [1791001069.856808335] [lifecycle_manager]: Creating\n[INFO] [1791001069.857245580] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001069.857646792] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001069.862182907] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001069.909971087] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "discovery",
+      "delay_ms": 5,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.0427548\n",
+      "stderr": "[INFO] [1791001070.054181562] [lifecycle_manager]: Creating\n[INFO] [1791001070.054607090] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001070.054980380] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001070.064646496] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001070.107451160] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "discovery",
+      "delay_ms": 50,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.0477643\n",
+      "stderr": "[INFO] [1791001070.251561880] [lifecycle_manager]: Creating\n[INFO] [1791001070.251950082] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001070.252352105] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001070.307027454] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001070.354842154] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "empty",
+      "delay_ms": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.000377577\n",
+      "stderr": "[INFO] [1791001070.498728452] [lifecycle_manager]: Creating\n[INFO] [1791001070.499126038] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001070.499539016] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001070.499555481] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1791001070.507805129] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1791001070.507833291] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1791001070.507844047] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001070.509253824] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001070.509360111] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001070.509664069] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "empty",
+      "delay_ms": 5,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.000388132\n",
+      "stderr": "[INFO] [1791001070.653341750] [lifecycle_manager]: Creating\n[INFO] [1791001070.653725605] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001070.654099196] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001070.654115600] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1791001070.662328334] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1791001070.662356856] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1791001070.662367903] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001070.668898417] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001070.668988460] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001070.669320890] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "empty",
+      "delay_ms": 50,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.000628025\n",
+      "stderr": "[INFO] [1791001070.813116847] [lifecycle_manager]: Creating\n[INFO] [1791001070.813507382] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001070.813877177] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001070.813887953] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1791001070.822130029] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1791001070.822172331] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1791001070.822183318] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001070.873698360] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001070.873883974] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001070.874366615] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "before-spin",
+      "delay_ms": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK before-spin\n",
+      "stderr": "[INFO] [1791001071.018529390] [lifecycle_manager]: Creating\n[INFO] [1791001071.018755854] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001071.019036137] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "discovery",
+      "delay_ms": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.0476865\n",
+      "stderr": "[INFO] [1791001071.163039718] [lifecycle_manager]: Creating\n[INFO] [1791001071.163451114] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001071.163830874] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001071.168432897] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001071.216192073] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "discovery",
+      "delay_ms": 5,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.0426462\n",
+      "stderr": "[INFO] [1791001071.359842065] [lifecycle_manager]: Creating\n[INFO] [1791001071.360247663] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001071.360635053] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001071.370251926] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001071.412940277] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "discovery",
+      "delay_ms": 50,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.0477616\n",
+      "stderr": "[INFO] [1791001071.556824805] [lifecycle_manager]: Creating\n[INFO] [1791001071.557211354] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001071.557576162] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001071.612276071] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001071.660080612] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "empty",
+      "delay_ms": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.000358499\n",
+      "stderr": "[INFO] [1791001071.804275786] [lifecycle_manager]: Creating\n[INFO] [1791001071.804658571] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001071.805044319] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001071.805061044] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1791001071.813453863] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1791001071.813480061] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1791001071.813489275] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001071.814771054] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001071.814868868] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001071.815178064] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "empty",
+      "delay_ms": 5,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.00033257\n",
+      "stderr": "[INFO] [1791001071.959113786] [lifecycle_manager]: Creating\n[INFO] [1791001071.959511101] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001071.959874046] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001071.959886013] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1791001071.968197713] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1791001071.968226376] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1791001071.968238393] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001071.974688289] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001071.974775558] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001071.975059056] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "mode": "empty",
+      "delay_ms": 50,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "CONTEXT_SHUTDOWN_OK 0.000588467\n",
+      "stderr": "[INFO] [1791001072.119006624] [lifecycle_manager]: Creating\n[INFO] [1791001072.119419602] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle publishers\u001b[0m\u001b[0m\n[INFO] [1791001072.119790389] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1791001072.119807534] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service servers\u001b[0m\u001b[0m\n[INFO] [1791001072.128038125] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1791001072.128063442] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1791001072.128074378] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001072.179597221] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1791001072.179803044] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1791001072.180238316] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    }
+  ],
+  "success": true
+}

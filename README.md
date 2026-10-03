@@ -1,10 +1,14 @@
-# First Nav2 operating lesson
+# Nav2 lifecycle reliability lab
 
 This lab operates the existing ROS 2 Nav2 stack. It is a learning environment, not a new navigation framework or a claim of vehicle validation.
 
+The current investigation asks whether a failed navigation stack can shut down cleanly so a supervisor can restart it. The deliverable is a reproducible failure, an experimental C++ fix, and regression evidence. Start with the [review milestone](docs/reviewable-milestone.md), [current source patch](docs/main-context.patch), and [independent CI](https://github.com/jayvir-git/nav2-lifecycle-lab/actions/workflows/regression.yml). Historical experiments below explain how the design changed when tests found new failures.
+
+The final milestone run passed on **Jazzy and Rolling**, each with 16 process cases and 21 context-composition cases. The baseline still reproduces the killed-server shutdown hang; the candidate exits cleanly in the recorded fault cases. Earlier startup timeouts remain documented and causally unresolved. This is an experimental review package, not an upstream-accepted fix.
+
 ## Visual walkthrough
 
-Open `docs/index.html` in a browser. It works offline with the adjacent `baseline.js` file: step through the navigation pipeline, toggle the educational lifecycle model, and scrub actual feedback from the clean baseline. The visual is not connected to a running robot. `docs/baseline.json` preserves the source evidence; the lifecycle toggle is illustrative.
+Serve the evidence locally with `python3 -m http.server 5180 --directory docs`, then open [the milestone](http://127.0.0.1:5180/#milestone). A local HTTP server is needed for the newer sections to load their recorded JSON evidence. Step through the navigation pipeline, toggle the educational lifecycle model, and scrub actual feedback from the clean baseline. The visual is not connected to a running robot. `docs/baseline.json` preserves the source evidence; the lifecycle toggle is illustrative.
 
 ## Set up on another machine
 

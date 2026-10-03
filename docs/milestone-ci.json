@@ -1,0 +1,77 @@
+{
+  "run_id": 37095489089,
+  "limits": [
+    "Earlier startup timeouts have not been causally explained.",
+    "No ThreadSanitizer result or exhaustive concurrency proof.",
+    "No full-navigation run for this main-source candidate.",
+    "No upstream proposal or adoption claimed."
+  ],
+  "local": {
+    "process_evidence": "milestone-local-main.json",
+    "context_cases": 21,
+    "process_cases": 16,
+    "context_evidence": "milestone-local-context.json"
+  },
+  "lab_commit": "ba20d4479d7d813a780675fb898baba2111522fd",
+  "prior_runs": [
+    {
+      "id": 37093652060,
+      "outcome": "Jazzy passed; Rolling binary dependencies unavailable"
+    },
+    {
+      "id": 37093880330,
+      "outcome": "Source-built Jazzy passed; Rolling had one candidate startup timeout"
+    },
+    {
+      "id": 37094593019,
+      "outcome": "Isolation-only: two candidate startup failures on each distribution; Rolling context test hit removed CMake macro"
+    },
+    {
+      "id": 37094704180,
+      "outcome": "Service-QoS candidate: both 16-case process matrices passed; Jazzy contexts passed; Rolling context test blocked by CMake macro"
+    }
+  ],
+  "url": "https://github.com/jayvir-git/nav2-lifecycle-lab/actions/runs/37095489089",
+  "upstream_sha": "d7bf2ac06fe778c21c6141eb49b4d3e2c0c82d3a",
+  "jobs": [
+    {
+      "process_cases": 16,
+      "process_evidence": "ci-jazzy-main.json",
+      "context_cases": 21,
+      "runtime": {
+        "ros_distro": "jazzy",
+        "kernel": "6.17.0-1022-azure",
+        "ci": "true"
+      },
+      "packages": [
+        "ros-jazzy-ament-cmake\t2.5.6-2noble.20260225.222913",
+        "ros-jazzy-rclcpp\t28.1.22-1noble.20260902.055335",
+        "ros-jazzy-rmw-fastrtps-cpp\t8.4.4-1noble.20260902.041916"
+      ],
+      "context_evidence": "ci-jazzy-context.json",
+      "url": "https://github.com/jayvir-git/nav2-lifecycle-lab/actions/runs/37095489089/job/111124431089",
+      "name": "jazzy",
+      "status": "PASS: 16 process + 21 context cases"
+    },
+    {
+      "process_cases": 16,
+      "process_evidence": "ci-rolling-main.json",
+      "context_cases": 21,
+      "runtime": {
+        "ros_distro": "rolling",
+        "kernel": "6.17.0-1022-azure",
+        "ci": "true"
+      },
+      "packages": [
+        "ros-rolling-ament-cmake\t2.9.2-1resolute.20260908.134555",
+        "ros-rolling-rclcpp\t33.1.0-1resolute.20260916.201145",
+        "ros-rolling-rmw-fastrtps-cpp\t9.6.0-1resolute.20260916.193506"
+      ],
+      "context_evidence": "ci-rolling-context.json",
+      "url": "https://github.com/jayvir-git/nav2-lifecycle-lab/actions/runs/37095489089/job/111124430965",
+      "name": "rolling",
+      "status": "PASS: 16 process + 21 context cases"
+    }
+  ],
+  "status": "passed"
+}

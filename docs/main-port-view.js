@@ -17,7 +17,7 @@
       <div class="lower"><div class="card"><div class="eyebrow">DISCOVERY INTERRUPTIONS</div><h2>${passed(discoveries)} / ${discoveries.length}</h2><p>Three delay settings, each repeated twice. All attempted trials are included.</p></div>
       <div class="card"><div class="eyebrow">OTHER CANDIDATE CHECKS</div><h2>${passed(waits)} / ${waits.length}</h2><p>Healthy shutdown, killed server, interrupted transition, and delayed healthy transition.</p></div></div>
       <p><strong>What this establishes:</strong> the observed improvement extends beyond the old 1.3.13 source. The unmodified-main healthy control still exits cleanly; its killed-server control still hangs.</p>
-      <p><strong>Boundary:</strong> main-source manager on Jazzy / WSL, not native Rolling. This port has not run the full navigation experiment. No ThreadSanitizer result, exhaustive concurrency proof, or upstream submission is claimed.</p>
+      <p><strong>Boundary at this checkpoint:</strong> main-source manager on Jazzy / WSL, not native Rolling. The next section records the subsequent context fix and independent CI. This port has not run the full navigation experiment. No ThreadSanitizer result, exhaustive concurrency proof, or upstream submission is claimed.</p>
       <p><a href="main-port-review.md">Concurrency review and reproduction</a> · <a href="main-matrix.json">Every trial and log</a> · <a href="main-coordinated.patch">Exact source patch</a></p>`;
     function select(patched) {
       section.querySelector('#main-stock').setAttribute('aria-pressed',String(!patched));

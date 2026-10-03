@@ -1,5 +1,7 @@
 # Pinned-main port and concurrency review
 
+This records the first main-source port. A subsequent context-aware revision, public-API composition tests, and independent CI are documented in the [review milestone](reviewable-milestone.md). The limits below describe this earlier checkpoint.
+
 The coordinated experiment is now ported to upstream commit `d7bf2ac06fe778c21c6141eb49b4d3e2c0c82d3a`. This is the previously captured main snapshot, not a claim that the branch has remained unchanged. The manager and its pinned upstream dependencies are built on ROS 2 Jazzy in WSL; this is not native Rolling validation.
 
 ## What the review changed
