@@ -2,7 +2,7 @@
 # Build only nav2_util and nav2_lifecycle_manager; never replace /opt/ros.
 set -eo pipefail
 variant=${1:-baseline}
-case "$variant" in baseline|bounded-response|shutdown-cancellation) ;; *) exit 2;; esac
+case "$variant" in baseline|bounded-response|shutdown-cancellation|shutdown-coordinated) ;; *) exit 2;; esac
 source /opt/ros/jazzy/setup.bash
 base=/home/learner/nav2-shutdown-build
 mkdir -p "$base"
@@ -21,6 +21,9 @@ fi
 packages="nav2_util nav2_lifecycle_manager"
 if [[ "$variant" == shutdown-cancellation ]]; then
   python3 "$(dirname "$0")/patch_cancellation.py" "$base/$variant/src/navigation2-1.3.13"
+fi
+if [[ "$variant" == shutdown-coordinated ]]; then
+  python3 "$(dirname "$0")/patch_coordinated.py" "$base/$variant/src/navigation2-1.3.13"
 fi
 if [[ "$variant" != baseline ]]; then packages="nav2_lifecycle_manager"; fi
 for package in $packages; do

@@ -11,7 +11,7 @@ import time
 root=Path(__file__).resolve().parent
 resource.setrlimit(resource.RLIMIT_CORE,(0,0))
 variant=sys.argv[1]
-if variant not in ('baseline','shutdown-cancellation','upstream-jazzy','upstream-main'):
+if variant not in ('baseline','shutdown-cancellation','shutdown-coordinated','upstream-jazzy','upstream-main'):
     raise SystemExit('Unknown variant')
 prefix=Path('/home/learner/nav2-shutdown-build')/variant/'install'
 out=root/'results'/('discovery-'+str(time.time_ns()))
@@ -20,7 +20,9 @@ env=os.environ.copy()
 env['ROS_DOMAIN_ID']='74'
 env['ROS_AUTOMATIC_DISCOVERY_RANGE']='LOCALHOST'
 env['LD_LIBRARY_PATH']=str(prefix/'lib')+':/home/learner/nav2-shutdown-build/baseline/install/lib:'+env.get('LD_LIBRARY_PATH','')
-result={'variant':variant,'mode':'discovery','graceful_manager_shutdown':False}
+delay=float(sys.argv[2]) if len(sys.argv)>2 else 0.5
+if not 0 <= delay <= 10: raise SystemExit('Delay must be between 0 and 10 seconds')
+result={'variant':variant,'mode':'discovery','delay_after_initialization_log':delay,'graceful_manager_shutdown':False}
 with (out/'process.log').open('w') as log:
     manager=subprocess.Popen([str(prefix/'lib/nav2_lifecycle_manager/lifecycle_manager'),
         '--ros-args','-p','node_names:=[intentionally_absent_probe_server]',
@@ -31,7 +33,7 @@ with (out/'process.log').open('w') as log:
             if manager.poll() is not None or time.monotonic()>deadline:
                 raise RuntimeError('Manager did not reach client initialization')
             time.sleep(0.05)
-        time.sleep(0.5)
+        time.sleep(delay)
         result['missing_service_setup_confirmed']=True
         result['loaded_nav2_libraries']=sorted(set(s.split()[-1] for s in Path(f'/proc/{manager.pid}/maps').read_text().splitlines() if '/libnav2_' in s))
         start=time.monotonic()

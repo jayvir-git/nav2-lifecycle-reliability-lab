@@ -7,13 +7,14 @@ import time
 
 parser=argparse.ArgumentParser()
 parser.add_argument('--pairs',type=int,default=3)
+parser.add_argument('--candidate',choices=['shutdown-cancellation','shutdown-coordinated'],default='shutdown-cancellation')
 args=parser.parse_args()
 if not 1 <= args.pairs <= 20: parser.error('pairs must be between 1 and 20')
 root=Path(__file__).resolve().parent
 target=root/'results'/('reliability-'+str(time.time_ns())+'.json')
-report={'pairs_requested':args.pairs,'order':'baseline then candidate, serially, no middleware changes','runs':[]}
+report={'pairs_requested':args.pairs,'candidate':args.candidate,'order':'baseline then candidate, serially, no middleware changes','runs':[]}
 for pair in range(args.pairs):
-    for variant in ('baseline','shutdown-cancellation'):
+    for variant in ('baseline',args.candidate):
         before=set((root/'results').glob('failure-experiment-*.json'))
         run=subprocess.run(['bash',str(root/'run_cancellation_experiment.sh'),variant],timeout=650)
         created=set((root/'results').glob('failure-experiment-*.json'))-before

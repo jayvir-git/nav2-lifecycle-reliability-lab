@@ -23,12 +23,17 @@ for run in batch['runs']:
             'maximum_sampled_cpu_busy_percent':max(s.get('cpu_busy_percent',0) for s in samples),
             'minimum_memory_available_kib':min(s['memory_available_kib'] for s in samples)}})
 assert len(rows)==batch['pairs_requested']*2, 'Batch is incomplete'
-counts={v:sum(r['success'] for r in rows if r['variant']==v) for v in ['baseline','shutdown-cancellation']}
+candidate=batch.get('candidate','shutdown-cancellation')
+counts={v:sum(r['success'] for r in rows if r['variant']==v) for v in ['baseline',candidate]}
 warnings=sum(len(r['response_delivery_warnings']) for r in rows)
 summary={'source_file':source.name,'pairs':batch['pairs_requested'],'completed_sequences':counts,
     'definition':'Baseline success excludes clean shutdown; candidate additionally requires clean lifecycle-manager exits and no launcher escalation.',
     'response_delivery_warning_count':warnings,'runs':rows}
-(root/'docs/reliability-summary.json').write_text(json.dumps(summary,indent=2))
+filename='coordinated-reliability.json' if candidate=='shutdown-coordinated' else 'reliability-summary.json'
+(root/'docs'/filename).write_text(json.dumps(summary,indent=2))
+if candidate=='shutdown-coordinated':
+    print(json.dumps({'counts':counts,'warnings':warnings}))
+    raise SystemExit(0)
 n=batch['pairs_requested']
 view={'main_status':'HANG REPRODUCED',
     'main_detail':'Unmodified main-source manager, utilities, and messages built on the Jazzy runtime. Healthy control exited; killed-node control remained alive after five seconds. This is not a native Rolling test.',

@@ -1,0 +1,493 @@
+{
+  "candidate": "shutdown-coordinated",
+  "trials": [
+    {
+      "run": "discovery-1790996012629670914",
+      "expected_exit_code": 1,
+      "actual_exit_code": 1,
+      "expectation_met": true,
+      "result": {
+        "variant": "baseline",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.5,
+        "graceful_manager_shutdown": false,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_lifecycle_manager_core.so",
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": -6,
+        "shutdown_seconds": 0.032
+      },
+      "log": "[INFO] [1790996012.941387376] [lifecycle_manager]: Creating\n[INFO] [1790996012.965213094] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996013.521028510] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996013.521544934] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n[INFO] [1790996013.522117029] [lifecycle_manager]: Waiting for service intentionally_absent_probe_server/get_state...\n\n>>> [rcutils|error_handling.c:108] rcutils_set_error_state()\nThis error state is being overwritten:\n\n  'rcl node's context is invalid, at ./src/rcl/node.c:404'\n\nwith this new error message:\n\n  'publisher's context is invalid, at ./src/rcl/publisher.c:423'\n\nrcutils_reset_error() should be called after error handling to avoid this.\n<<<\nFailed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423\n[INFO] [1790996013.524633598] [lifecycle_manager]: Waiting for service intentionally_absent_probe_server/get_state...\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  context cannot be slept with because it's invalid\n"
+    },
+    {
+      "run": "discovery-1790996013788988051",
+      "expected_exit_code": 1,
+      "actual_exit_code": 1,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-cancellation",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.5,
+        "graceful_manager_shutdown": false,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-cancellation/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": -6,
+        "shutdown_seconds": 0.032
+      },
+      "log": "[INFO] [1790996013.877074228] [lifecycle_manager]: Creating\n[INFO] [1790996013.884975656] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996014.414801599] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996014.415378324] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  Lifecycle service wait interrupted by shutdown\n"
+    },
+    {
+      "run": "discovery-1790996014703405716",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.0,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.164
+      },
+      "log": "[INFO] [1790996014.791892539] [lifecycle_manager]: Creating\n[INFO] [1790996014.799690871] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996014.826691567] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996014.827184463] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996014.855093046] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790996015256883883",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.005,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996015.351068820] [lifecycle_manager]: Creating\n[INFO] [1790996015.358325832] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996015.401828951] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996015.410337050] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996015.414737694] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790996015795186506",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.05,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996015.876856284] [lifecycle_manager]: Creating\n[INFO] [1790996015.884533158] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996015.969817540] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996015.970560204] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996015.991761391] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790996016397376364",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.5,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996016.480510157] [lifecycle_manager]: Creating\n[INFO] [1790996016.487761844] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996017.025469622] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996017.026580927] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996017.048360216] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790996017421000534",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 2.0,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996017.499954909] [lifecycle_manager]: Creating\n[INFO] [1790996017.514098239] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996019.545806840] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996019.546658664] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996019.573732119] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790996019969694257",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.0,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996020.047501159] [lifecycle_manager]: Creating\n[INFO] [1790996020.054875786] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996020.093818437] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996020.094494339] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996020.110588092] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790996020470294679",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.005,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996020.549845933] [lifecycle_manager]: Creating\n[INFO] [1790996020.556495652] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996020.602006423] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996020.602727256] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996020.612346951] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790996021051350500",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.05,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.166
+      },
+      "log": "[INFO] [1790996021.132971565] [lifecycle_manager]: Creating\n[INFO] [1790996021.140413407] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996021.224740095] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996021.225830394] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996021.247055813] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790996021677597926",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.5,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996021.754801015] [lifecycle_manager]: Creating\n[INFO] [1790996021.762691110] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996022.300965169] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996022.301761341] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996022.324340066] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790996022707821985",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 2.0,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996022.785068210] [lifecycle_manager]: Creating\n[INFO] [1790996022.792810135] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996024.836503412] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996024.837581492] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996024.850079829] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790996025230391965",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.0,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996025.303709635] [lifecycle_manager]: Creating\n[INFO] [1790996025.310433223] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996025.352541420] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996025.353232843] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996025.367068839] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790996025835777593",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.005,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996025.907617198] [lifecycle_manager]: Creating\n[INFO] [1790996025.914588056] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996025.960512545] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996025.961116783] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996025.971556255] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790996026381907168",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.05,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996026.471977452] [lifecycle_manager]: Creating\n[INFO] [1790996026.479831691] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996026.571666455] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996026.572662818] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996026.586067364] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790996026954684612",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 0.5,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996027.033145112] [lifecycle_manager]: Creating\n[INFO] [1790996027.041276532] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996027.583130537] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996027.583986709] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996027.601802883] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "discovery-1790996028026632320",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "variant": "shutdown-coordinated",
+        "mode": "discovery",
+        "delay_after_initialization_log": 2.0,
+        "graceful_manager_shutdown": true,
+        "missing_service_setup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "exit_code": 0,
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996028.101962132] [lifecycle_manager]: Creating\n[INFO] [1790996028.108518877] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996030.147638328] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996030.148600074] [lifecycle_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996030.165760063] [lifecycle_manager]: Destroying lifecycle_manager\n"
+    },
+    {
+      "run": "shutdown-alive-1790996031852296015",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "mode": "alive",
+        "graceful_manager_shutdown": true,
+        "manager_executable": "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/nav2_lifecycle_manager/lifecycle_manager",
+        "shutdown_delay_after_detection": 2.0,
+        "variant": "shutdown-coordinated",
+        "bond_startup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996032.150882568] [probe_manager]: Creating\n[INFO] [1790996032.158244324] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996032.253525236] [map_server]: \n\tmap_server lifecycle node launched. \n\tWaiting on external lifecycle transitions to activate\n\tSee https://design.ros2.org/articles/node_lifecycle.html for more information.\n[INFO] [1790996032.254743040] [map_server]: Creating\n[INFO] [1790996032.331835883] [probe_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790996032.332663567] [probe_manager]: \u001b[34m\u001b[1mConfiguring map_server\u001b[0m\u001b[0m\n[INFO] [1790996032.483052532] [map_server]: Configuring\n[INFO] [1790996032.483824112] [map_io]: Loading yaml file: /mnt/c/Users/jayvir/Documents/resume/sphinx/codex/nav2-lab/results/shutdown-alive-1790996031852296015/room.yaml\n[INFO] [1790996032.492170704] [map_io]: resolution: 0.05\n[INFO] [1790996032.492505046] [map_io]: origin[0]: 0\n[INFO] [1790996032.492756150] [map_io]: origin[1]: 0\n[INFO] [1790996032.492997611] [map_io]: origin[2]: 0\n[INFO] [1790996032.493246130] [map_io]: free_thresh: 0.25\n[INFO] [1790996032.493488027] [map_io]: occupied_thresh: 0.65\n[INFO] [1790996032.493729302] [map_io]: mode: trinary\n[INFO] [1790996032.493984762] [map_io]: negate: 0\n[INFO] [1790996032.502463819] [map_io]: Loading image_file: /mnt/c/Users/jayvir/Documents/resume/sphinx/codex/nav2-lab/results/shutdown-alive-1790996031852296015/room.pgm\n[INFO] [1790996032.515095150] [map_io]: Read map /mnt/c/Users/jayvir/Documents/resume/sphinx/codex/nav2-lab/results/shutdown-alive-1790996031852296015/room.pgm: 20 X 20 map @ 0.05 m/cell\n[INFO] [1790996032.532348039] [probe_manager]: \u001b[34m\u001b[1mActivating map_server\u001b[0m\u001b[0m\n[INFO] [1790996032.533363224] [map_server]: Activating\n[INFO] [1790996032.533942269] [map_server]: Creating bond (map_server) to lifecycle manager.\n[INFO] [1790996032.644683598] [probe_manager]: Server map_server connected with bond.\n[INFO] [1790996032.646153602] [probe_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790996032.647448898] [probe_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790996036.654732647] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996036.655703687] [probe_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996036.656934825] [probe_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790996036.672868620] [probe_manager]: Destroying probe_manager\n[INFO] [1790996036.820402943] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996036.821716590] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)\n[INFO] [1790996036.822655285] [map_server]: Deactivating\n[INFO] [1790996036.823533950] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790996036.834688306] [map_server]: Cleaning up\n[INFO] [1790996036.835874019] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790996036.843135855] [map_server]: Destroying\n"
+    },
+    {
+      "run": "shutdown-dead-1790996038416108664",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "mode": "dead",
+        "graceful_manager_shutdown": true,
+        "manager_executable": "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/nav2_lifecycle_manager/lifecycle_manager",
+        "shutdown_delay_after_detection": 2.0,
+        "variant": "shutdown-coordinated",
+        "bond_startup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "bond_loss_detected": true,
+        "shutdown_seconds": 0.215
+      },
+      "log": "[INFO] [1790996038.608881921] [probe_manager]: Creating\n[INFO] [1790996038.617402853] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996038.634396229] [probe_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790996038.635038427] [probe_manager]: \u001b[34m\u001b[1mConfiguring map_server\u001b[0m\u001b[0m\n[INFO] [1790996038.636253487] [map_server]: \n\tmap_server lifecycle node launched. \n\tWaiting on external lifecycle transitions to activate\n\tSee https://design.ros2.org/articles/node_lifecycle.html for more information.\n[INFO] [1790996038.637405206] [map_server]: Creating\n[INFO] [1790996038.802454461] [map_server]: Configuring\n[INFO] [1790996038.803306499] [map_io]: Loading yaml file: /mnt/c/Users/jayvir/Documents/resume/sphinx/codex/nav2-lab/results/shutdown-dead-1790996038416108664/room.yaml\n[INFO] [1790996038.813390664] [map_io]: resolution: 0.05\n[INFO] [1790996038.814333338] [map_io]: origin[0]: 0\n[INFO] [1790996038.814725008] [map_io]: origin[1]: 0\n[INFO] [1790996038.815010844] [map_io]: origin[2]: 0\n[INFO] [1790996038.815250207] [map_io]: free_thresh: 0.25\n[INFO] [1790996038.815478128] [map_io]: occupied_thresh: 0.65\n[INFO] [1790996038.815757914] [map_io]: mode: trinary\n[INFO] [1790996038.816071206] [map_io]: negate: 0\n[INFO] [1790996038.816922818] [map_io]: Loading image_file: /mnt/c/Users/jayvir/Documents/resume/sphinx/codex/nav2-lab/results/shutdown-dead-1790996038416108664/room.pgm\n[INFO] [1790996038.831208907] [map_io]: Read map /mnt/c/Users/jayvir/Documents/resume/sphinx/codex/nav2-lab/results/shutdown-dead-1790996038416108664/room.pgm: 20 X 20 map @ 0.05 m/cell\n[INFO] [1790996038.847323716] [probe_manager]: \u001b[34m\u001b[1mActivating map_server\u001b[0m\u001b[0m\n[INFO] [1790996038.848875185] [map_server]: Activating\n[INFO] [1790996038.849497056] [map_server]: Creating bond (map_server) to lifecycle manager.\n[INFO] [1790996038.957898386] [probe_manager]: Server map_server connected with bond.\n[INFO] [1790996038.958451888] [probe_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790996038.958946561] [probe_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790996044.959515586] [probe_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from map_server.\u001b[0m\u001b[0m\n[ERROR] [1790996044.962180077] [probe_manager]: CRITICAL FAILURE: SERVER map_server IS DOWN after not receiving a heartbeat for 4000 ms. Shutting down related nodes.\n[INFO] [1790996044.963478194] [probe_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790996044.964057905] [probe_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790996044.964671080] [probe_manager]: \u001b[34m\u001b[1mDeactivating map_server\u001b[0m\u001b[0m\n[INFO] [1790996046.985167202] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996046.986101734] [probe_manager]: Coordinated lifecycle manager preshutdown\n[ERROR] [1790996047.030163503] [probe_manager]: Failed to change state for node: map_server. Exception: Lifecycle service wait interrupted by shutdown.\n[INFO] [1790996047.031377212] [probe_manager]: \u001b[34m\u001b[1mManaged nodes have been reset\u001b[0m\u001b[0m\n[INFO] [1790996047.052716903] [probe_manager]: Destroying probe_manager\n"
+    },
+    {
+      "run": "shutdown-transition-1790996048588032932",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "mode": "transition",
+        "graceful_manager_shutdown": true,
+        "manager_executable": "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/nav2_lifecycle_manager/lifecycle_manager",
+        "shutdown_delay_after_detection": 2.0,
+        "variant": "shutdown-coordinated",
+        "bond_startup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "transition_wait_confirmed": true,
+        "shutdown_seconds": 0.265
+      },
+      "log": "[INFO] [1790996048.784329755] [probe_manager]: Creating\n[INFO] [1790996048.793502510] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996048.813306909] [map_server]: \n\tmap_server lifecycle node launched. \n\tWaiting on external lifecycle transitions to activate\n\tSee https://design.ros2.org/articles/node_lifecycle.html for more information.\n[INFO] [1790996048.815018873] [map_server]: Creating\n[INFO] [1790996048.942660782] [probe_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790996048.943283359] [probe_manager]: \u001b[34m\u001b[1mConfiguring map_server\u001b[0m\u001b[0m\n[INFO] [1790996049.120818971] [map_server]: Configuring\n[INFO] [1790996049.122475732] [map_io]: Loading yaml file: /mnt/c/Users/jayvir/Documents/resume/sphinx/codex/nav2-lab/results/shutdown-transition-1790996048588032932/room.yaml\n[INFO] [1790996049.130460897] [map_io]: resolution: 0.05\n[INFO] [1790996049.130801079] [map_io]: origin[0]: 0\n[INFO] [1790996049.131059980] [map_io]: origin[1]: 0\n[INFO] [1790996049.131291712] [map_io]: origin[2]: 0\n[INFO] [1790996049.131525211] [map_io]: free_thresh: 0.25\n[INFO] [1790996049.131754942] [map_io]: occupied_thresh: 0.65\n[INFO] [1790996049.131984415] [map_io]: mode: trinary\n[INFO] [1790996049.132214880] [map_io]: negate: 0\n[INFO] [1790996049.132802123] [map_io]: Loading image_file: /mnt/c/Users/jayvir/Documents/resume/sphinx/codex/nav2-lab/results/shutdown-transition-1790996048588032932/room.pgm\n[INFO] [1790996049.143285182] [map_io]: Read map /mnt/c/Users/jayvir/Documents/resume/sphinx/codex/nav2-lab/results/shutdown-transition-1790996048588032932/room.pgm: 20 X 20 map @ 0.05 m/cell\n[INFO] [1790996049.156116909] [probe_manager]: \u001b[34m\u001b[1mActivating map_server\u001b[0m\u001b[0m\n[INFO] [1790996049.156982500] [map_server]: Activating\n[INFO] [1790996049.157409097] [map_server]: Creating bond (map_server) to lifecycle manager.\n[INFO] [1790996049.266099964] [probe_manager]: Server map_server connected with bond.\n[INFO] [1790996049.267185247] [probe_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790996049.268323122] [probe_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790996051.325408667] [probe_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790996051.326876708] [probe_manager]: \u001b[34m\u001b[1mPausing managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790996051.327882924] [probe_manager]: \u001b[34m\u001b[1mDeactivating map_server\u001b[0m\u001b[0m\n[INFO] [1790996053.331489951] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996053.332273655] [probe_manager]: Coordinated lifecycle manager preshutdown\n[ERROR] [1790996053.341577781] [probe_manager]: Failed to change state for node: map_server. Exception: Lifecycle service wait interrupted by shutdown.\n[ERROR] [1790996053.342795714] [probe_manager]: Failed to pause nodes: aborting pause\n[INFO] [1790996053.448636591] [probe_manager]: Destroying probe_manager\n[INFO] [1790996053.597141254] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996053.599208270] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)\n[INFO] [1790996053.601547370] [map_server]: Deactivating\n[INFO] [1790996053.602260792] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790996053.703510934] [map_server]: Cleaning up\n[INFO] [1790996053.706136662] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790996053.708245141] [map_server]: Destroying\n"
+    },
+    {
+      "run": "shutdown-slow-1790996055512843331",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "expectation_met": true,
+      "result": {
+        "mode": "slow",
+        "graceful_manager_shutdown": true,
+        "manager_executable": "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/nav2_lifecycle_manager/lifecycle_manager",
+        "shutdown_delay_after_detection": 2.0,
+        "variant": "shutdown-coordinated",
+        "bond_startup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/shutdown-coordinated/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "delayed_pause_seconds": 3.802,
+        "delayed_pause_succeeded": true,
+        "shutdown_seconds": 0.165
+      },
+      "log": "[INFO] [1790996055.798116444] [probe_manager]: Creating\n[INFO] [1790996055.805898734] [probe_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790996055.824540511] [probe_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790996055.825527136] [probe_manager]: \u001b[34m\u001b[1mConfiguring map_server\u001b[0m\u001b[0m\n[INFO] [1790996055.827946106] [map_server]: \n\tmap_server lifecycle node launched. \n\tWaiting on external lifecycle transitions to activate\n\tSee https://design.ros2.org/articles/node_lifecycle.html for more information.\n[INFO] [1790996055.829287710] [map_server]: Creating\n[INFO] [1790996055.988364213] [map_server]: Configuring\n[INFO] [1790996055.989159698] [map_io]: Loading yaml file: /mnt/c/Users/jayvir/Documents/resume/sphinx/codex/nav2-lab/results/shutdown-slow-1790996055512843331/room.yaml\n[INFO] [1790996055.994737317] [map_io]: resolution: 0.05\n[INFO] [1790996055.995043679] [map_io]: origin[0]: 0\n[INFO] [1790996055.995284157] [map_io]: origin[1]: 0\n[INFO] [1790996055.995515576] [map_io]: origin[2]: 0\n[INFO] [1790996055.995748544] [map_io]: free_thresh: 0.25\n[INFO] [1790996055.995979393] [map_io]: occupied_thresh: 0.65\n[INFO] [1790996055.996212709] [map_io]: mode: trinary\n[INFO] [1790996055.996443713] [map_io]: negate: 0\n[INFO] [1790996055.996984871] [map_io]: Loading image_file: /mnt/c/Users/jayvir/Documents/resume/sphinx/codex/nav2-lab/results/shutdown-slow-1790996055512843331/room.pgm\n[INFO] [1790996056.006652805] [map_io]: Read map /mnt/c/Users/jayvir/Documents/resume/sphinx/codex/nav2-lab/results/shutdown-slow-1790996055512843331/room.pgm: 20 X 20 map @ 0.05 m/cell\n[INFO] [1790996056.019498533] [probe_manager]: \u001b[34m\u001b[1mActivating map_server\u001b[0m\u001b[0m\n[INFO] [1790996056.020681933] [map_server]: Activating\n[INFO] [1790996056.022563016] [map_server]: Creating bond (map_server) to lifecycle manager.\n[INFO] [1790996056.131882843] [probe_manager]: Server map_server connected with bond.\n[INFO] [1790996056.134188457] [probe_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790996056.135121487] [probe_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790996058.157432962] [probe_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790996058.158233907] [probe_manager]: \u001b[34m\u001b[1mPausing managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790996058.159527031] [probe_manager]: \u001b[34m\u001b[1mDeactivating map_server\u001b[0m\u001b[0m\n[INFO] [1790996061.839265188] [map_server]: Deactivating\n[INFO] [1790996061.840396419] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790996061.956052175] [probe_manager]: \u001b[34m\u001b[1mManaged nodes have been paused\u001b[0m\u001b[0m\n[INFO] [1790996063.959245755] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996063.960295075] [probe_manager]: Coordinated lifecycle manager preshutdown\n[INFO] [1790996063.964354056] [probe_manager]: Destroying probe_manager\n[INFO] [1790996064.124464922] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790996064.128515523] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)\n[INFO] [1790996064.129749720] [map_server]: Cleaning up\n[INFO] [1790996064.130580583] [map_server]: Destroying bond (map_server) to lifecycle manager.\n[INFO] [1790996064.134580331] [map_server]: Destroying\n"
+    }
+  ],
+  "success": true
+}

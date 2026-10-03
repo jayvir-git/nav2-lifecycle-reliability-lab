@@ -32,13 +32,13 @@ if len(runs)==2:
         'navigator_observed_inactive':any(s['node']=='bt_navigator' and s['state']=='inactive' for s in fault.get('state_samples',[])),
         'restart_navigation_succeeded':runs[1]['result'].get('success',False)}
     report['success']=report['success'] and all(report['checks'].values())
-    if os.environ.get('NAV2_PROBE_VARIANT')=='shutdown-cancellation':
+    if os.environ.get('NAV2_PROBE_VARIANT') in ('shutdown-cancellation','shutdown-coordinated'):
         report['checks']['no_forced_shutdown']=all(not r['forced_shutdown_observed'] for r in runs)
         report['checks']['lifecycle_managers_clean_exit']=all(r['lifecycle_managers_clean_exit'] for r in runs)
         report['success']=report['success'] and all(report['checks'].values())
 report['success_meaning']=(
     'Success requires fault observation, restart navigation, and clean lifecycle-manager exit checks.'
-    if os.environ.get('NAV2_PROBE_VARIANT')=='shutdown-cancellation' else
+    if os.environ.get('NAV2_PROBE_VARIANT') in ('shutdown-cancellation','shutdown-coordinated') else
     'Success requires fault observation and restart checks; does not imply graceful shutdown.')
 target=root/'results'/('failure-experiment-'+runs[0]['run']+'.json')
 target.write_text(json.dumps(report,indent=2))

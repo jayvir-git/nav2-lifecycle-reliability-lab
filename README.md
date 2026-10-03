@@ -97,3 +97,7 @@ Check an actual run's `summary.json` for its outcome. Installation or file creat
 ## Shutdown cancellation prototype
 
 The [cancellation validation](docs/cancellation-validation.md) tests a manager-local C++ client that observes a shared stop flag before shutdown joins its worker. The visual explanation is at `docs/index.html#cancellation`, with recorded evidence in `docs/cancellation-results.json`. This remains an isolated Nav2 1.3.13 experiment; installed packages are unchanged. See the subsequent [upstream review](docs/upstream-review.md) for newer source checks, repeated runs, and the discovered startup-cancellation gap. The prototype is not ready for upstream submission.
+
+## Coordinated initialization/shutdown candidate
+
+The [revised candidate](docs/coordinated-validation.md) adds a guarded initialization handoff, handles cancellation inside initialization, and joins the worker before clearing shared state. The notebook explains the ordering at `docs/index.html#coordination`. It is a separate 1.3.13 build; the earlier prototype and its failing discovery evidence remain available. This is not a submitted or accepted upstream fix.

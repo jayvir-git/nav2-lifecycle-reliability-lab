@@ -59,3 +59,7 @@ The earlier response-delivery failure was not reproduced. Its cause remains unre
 ## Main debugger confirmation
 
 A separate root-run probe (root used to permit debugger attachment), `shutdown-dead-1790995333628598576`, captures the same blocked chain in pinned main: pre-shutdown is joining `nav2::NodeThread` at manager line 517, while the worker is in `checkBondConnections -> reset -> change_state` with an infinite (`-1 ms`) transition-response timeout inside `spin_until_future_complete`. See `upstream-main-backtrace.txt`. Its 8.165-second elapsed value includes debugger work and must not be treated as the shutdown deadline or a performance measurement. The ordinary-user main probe independently remained alive at the five-second deadline.
+
+## Subsequent candidate
+
+The [coordinated candidate](coordinated-validation.md) addresses the discovery gap identified at this checkpoint. The findings above describe the original cancellation prototype; newer results are recorded separately.
