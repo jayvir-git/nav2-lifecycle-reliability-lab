@@ -28,11 +28,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install build and probe dependencies
+        id: dependencies
         shell: bash
         run: |
           apt-get update
           apt-get install -y --no-install-recommends build-essential cmake curl python3-rosdep
           bash prepare_ci.sh
+          echo "fingerprint=$(sha256sum results/packages.txt | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+      - name: Reuse unmodified upstream build for identical dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            /tmp/nav2-upstream
+            /tmp/nav2-build/upstream-main/install
+          key: nav2-d7bf2ac0-${{ matrix.ros }}-${{ steps.dependencies.outputs.fingerprint }}
       - name: Build pinned upstream and candidate
         id: build
         shell: bash
