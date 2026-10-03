@@ -2,9 +2,21 @@
 
 This lab operates the existing ROS 2 Nav2 stack. It is a learning environment, not a new navigation framework or a claim of vehicle validation.
 
-The current investigation asks whether a failed navigation stack can shut down cleanly so a supervisor can restart it. The deliverable is a reproducible failure, an experimental C++ fix, and regression evidence. Start with the [review milestone](docs/reviewable-milestone.md), [current source patch](docs/main-context.patch), and [independent CI](https://github.com/jayvir-git/nav2-lifecycle-lab/actions/workflows/regression.yml). Historical experiments below explain how the design changed when tests found new failures.
+The current investigation asks whether a failed navigation stack can shut down cleanly so a supervisor can restart it. The deliverable is a reproducible failure, an experimental C++ fix, and regression evidence. Start with the [review milestone](docs/reviewable-milestone.md), [current source patch](docs/main-context.patch), and [public CI](https://github.com/jayvir-git/nav2-lifecycle-reliability-lab/actions/workflows/regression.yml). Historical experiments below explain how the design changed when tests found new failures.
 
 The final milestone run passed on **Jazzy and Rolling**, each with 16 process cases and 21 context-composition cases. The baseline still reproduces the killed-server shutdown hang; the candidate exits cleanly in the recorded fault cases. Earlier startup timeouts remain documented and causally unresolved. This is an experimental review package, not an upstream-accepted fix.
+
+## Contribution and scope
+
+This public repository uses privacy-corrected commit metadata. The original development repository and its Actions runs remain private. Historical run URLs in the evidence refer to that private archive; their downloaded JSON results are included here. [The commit mapping](docs/history-rewrite.json) records the metadata rewrite; every rewritten commit retained an identical file tree. Fresh runs are available through the public CI link above.
+
+This is Jayvir's AI-assisted learning and engineering investigation. Jayvir set the goals and directed the project; Codex performed substantial implementation, debugging, test execution, and documentation work. The artifacts demonstrate the recorded experiment and are not evidence of unaided authorship or independent mastery of every component.
+
+The navigation stack is the existing [Nav2 project](https://github.com/ros-navigation/navigation2). This repository adds experiment harnesses, candidate patches, regression evidence, and an educational walkthrough. No physical vehicle, production deployment, external adoption, or upstream acceptance is claimed. The practical question is whether a failed navigation stack can terminate cleanly so that a supervisor can restart it; the current main-source tests validate shutdown behavior, not end-to-end recovery on a robot.
+
+## License and attribution
+
+Unless otherwise marked, this lab's code and documentation are provided under the [Apache License 2.0](LICENSE). Upstream material retains its original notices and licenses; see [third-party attribution](THIRD_PARTY_NOTICES.md). Historical patches are experimental modifications, not upstream releases. The project is not affiliated with or endorsed by Nav2 or GM.
 
 ## Visual walkthrough
 
@@ -108,4 +120,4 @@ The [revised candidate](docs/coordinated-validation.md) adds a guarded initializ
 
 ## Pinned-main port
 
-The coordinated candidate now has a separate port to upstream commit d7bf2ac0. Ten candidate probes passed alongside healthy/hanging upstream controls on the Jazzy runtime. See [review and reproduction](docs/main-port-review.md), [all twelve trials](docs/main-matrix.json), and the [interactive comparison](http://127.0.0.1:5180/#main-port). Native Rolling, full navigation for this port, and sanitizer validation remain outstanding.
+The coordinated candidate now has a separate port to upstream commit d7bf2ac0. Ten candidate probes passed alongside healthy/hanging upstream controls on the Jazzy runtime. See [review and reproduction](docs/main-port-review.md), [all twelve trials](docs/main-matrix.json), and the [interactive comparison](http://127.0.0.1:5180/#main-port). At that checkpoint, native Rolling, full navigation for this port, and sanitizer validation were outstanding. The later milestone above adds native Rolling CI; full navigation for this main-source port and sanitizer validation remain outstanding.

@@ -2,6 +2,8 @@
 
 The useful deliverable is a small, reviewable experiment that another engineer can run: a pinned failing control, an isolated candidate, and tests that reject the candidate when its behavior is wrong. It is not a new robotics product or a claim that an upstream maintainer wants this implementation.
 
+Publication note: the original Actions links below refer to a private development archive. Its downloaded JSON evidence is checked into this public repository. Commit metadata was rewritten for author-email privacy without changing file trees; see `history-rewrite.json`. New independently inspectable runs use the [public workflow](https://github.com/jayvir-git/nav2-lifecycle-reliability-lab/actions/workflows/regression.yml).
+
 **Milestone achieved:** [independent run 37095489089](https://github.com/jayvir-git/nav2-lifecycle-lab/actions/runs/37095489089) passed on both Jazzy and Rolling at lab commit `ba20d4479d7d813a780675fb898baba2111522fd`. Each job passed its 16-case process matrix and 21-case context matrix. The downloaded JSON artifacts were checked for successful outcomes and expected case counts, then saved in this repository as `ci-jazzy-main.json`, `ci-jazzy-context.json`, `ci-rolling-main.json`, and `ci-rolling-context.json`. Runtime and selected package versions are in `milestone-ci.json`.
 
 ## A new failure found by broadening the test
@@ -44,7 +46,7 @@ Source is pinned to `d7bf2ac06fe778c21c6141eb49b4d3e2c0c82d3a` with a checked ar
 
 ## Reproduce locally in a prepared ROS environment
 
-Repository collaborators can also open **Actions → Independent Linux regression → Run workflow** to repeat the complete experiment without a local ROS installation. The repository remains private; this does not claim public availability or outside adoption.
+Repository collaborators can also open **Actions → Independent Linux regression → Run workflow** to repeat the complete experiment without a local ROS installation. Public readers can inspect runs or fork the repository to run the workflow themselves. Public availability does not establish outside adoption.
 
 ```bash
 export NAV2_LAB_BUILD_ROOT="$HOME/nav2-review-build"
