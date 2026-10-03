@@ -35,7 +35,8 @@ result={'mode':mode,'graceful_manager_shutdown':False,'manager_executable':manag
 rclpy.init(); observer=Node('shutdown_probe')
 try:
     ros_prefix='/opt/ros/'+os.environ.get('ROS_DISTRO','jazzy')
-    server=subprocess.Popen([ros_prefix+'/lib/nav2_map_server/map_server','--ros-args','-p',
+    server_executable=os.environ.get('NAV2_PROBE_SERVER',ros_prefix+'/lib/nav2_map_server/map_server')
+    server=subprocess.Popen([server_executable,'--ros-args','-p',
         'yaml_filename:='+str(out/'room.yaml')],stdout=log,stderr=log,start_new_session=True)
     children.append(server)
     manager=subprocess.Popen([manager_executable,

@@ -23,14 +23,16 @@ jobs:
       NAV2_LAB_BUILD_ROOT: /tmp/nav2-build
       NAV2_LAB_UPSTREAM_ROOT: /tmp/nav2-upstream
       ROS_AUTOMATIC_DISCOVERY_RANGE: LOCALHOST
+      NAV2_LAB_BUILD_MAP_SERVER: '1'
+      NAV2_PROBE_SERVER: /tmp/nav2-build/upstream-main/install/lib/nav2_map_server/map_server
     steps:
       - uses: actions/checkout@v4
       - name: Install build and probe dependencies
         shell: bash
         run: |
           apt-get update
-          apt-get install -y --no-install-recommends build-essential cmake curl \
-            ros-${ROS_DISTRO}-navigation2 ros-${ROS_DISTRO}-nav2-bringup
+          apt-get install -y --no-install-recommends build-essential cmake curl python3-rosdep
+          bash prepare_ci.sh
       - name: Build pinned upstream and candidate
         shell: bash
         run: |
@@ -41,6 +43,8 @@ jobs:
         shell: bash
         run: |
           source /opt/ros/${ROS_DISTRO}/setup.bash
+          export LD_LIBRARY_PATH="$NAV2_LAB_BUILD_ROOT/upstream-main/install/lib:$LD_LIBRARY_PATH"
+          export PYTHONPATH="$(find "$NAV2_LAB_BUILD_ROOT/upstream-main/install" -type d -name site-packages | paste -sd:):$PYTHONPATH"
           python3 validate_main.py
       - name: Context composition regression
         shell: bash
