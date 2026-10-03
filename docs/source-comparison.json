@@ -1,0 +1,122 @@
+{
+  "startup_error_lines": [
+    "[lifecycle_manager-15] [ERROR] [1790992471.364092062] [lifecycle_manager_navigation]: Failed to change state for node: controller_server. Exception: controller_server/change_state service client: async_send_request failed.",
+    "[lifecycle_manager-15] [ERROR] [1790992471.364293066] [lifecycle_manager_navigation]: Failed to bring up all requested nodes. Aborting bringup."
+  ],
+  "source_sha256": "424bf5ebe912156448a13c1f4153105d302fcb0a5577e9575af6007306da2670",
+  "full_experiment": {
+    "recovery_method": "Deliberate full-stack restart with pose reset; not automatic recovery or in-place controller restart",
+    "runs": [
+      {
+        "phase": "fault",
+        "run": "20261003T015425Z",
+        "result": {
+          "simulation": "Upstream Nav2 loopback; idealized motion, no physical robot",
+          "goals": [],
+          "variant": "bounded-response",
+          "success": false,
+          "events": [
+            {
+              "seconds": 90.158,
+              "event": "experiment_error",
+              "message": "Stack not ready: {'map_server': 'active', 'planner_server': 'inactive', 'controller_server': 'active', 'bt_navigator': 'inactive'}"
+            }
+          ],
+          "odometry": [],
+          "state_samples": [],
+          "observation_window_seconds": 20,
+          "fault": "SIGKILL controller process",
+          "prediction": "Loss of controller bond should trigger coordinated lifecycle teardown. Action outcome and simulated motion must be measured.",
+          "error": "Stack not ready: {'map_server': 'active', 'planner_server': 'inactive', 'controller_server': 'active', 'bt_navigator': 'inactive'}",
+          "mission_exit_code": 1,
+          "residual_group_cleanup_needed": false,
+          "launch_exit_code": 0
+        },
+        "log_excerpts": [],
+        "forced_shutdown_observed": false
+      }
+    ],
+    "success": false,
+    "success_meaning": "Fault observation and restart checks passed; does not imply graceful shutdown."
+  },
+  "source_tag": "1.3.13",
+  "probes": [
+    {
+      "result": {
+        "mode": "dead",
+        "graceful_manager_shutdown": false,
+        "manager_executable": "/home/learner/nav2-shutdown-build/baseline/install/lib/nav2_lifecycle_manager/lifecycle_manager",
+        "variant": "baseline",
+        "bond_startup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_lifecycle_manager_core.so",
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "bond_loss_detected": true,
+        "manager_alive_after_5_seconds": true,
+        "shutdown_deadline_seconds": 5,
+        "shutdown_seconds": 5.001
+      },
+      "run": "shutdown-dead-1790992301130603348"
+    },
+    {
+      "result": {
+        "mode": "alive",
+        "graceful_manager_shutdown": true,
+        "manager_executable": "/home/learner/nav2-shutdown-build/baseline/install/lib/nav2_lifecycle_manager/lifecycle_manager",
+        "variant": "baseline",
+        "bond_startup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_lifecycle_manager_core.so",
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "shutdown_seconds": 0.166
+      },
+      "run": "shutdown-alive-1790992380263769688"
+    },
+    {
+      "result": {
+        "mode": "dead",
+        "graceful_manager_shutdown": true,
+        "manager_executable": "/home/learner/nav2-shutdown-build/bounded-response/install/lib/nav2_lifecycle_manager/lifecycle_manager",
+        "variant": "bounded-response",
+        "bond_startup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/bounded-response/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "bond_loss_detected": true,
+        "shutdown_seconds": 0.165
+      },
+      "run": "shutdown-dead-1790992400359548248"
+    },
+    {
+      "result": {
+        "mode": "alive",
+        "graceful_manager_shutdown": true,
+        "manager_executable": "/home/learner/nav2-shutdown-build/bounded-response/install/lib/nav2_lifecycle_manager/lifecycle_manager",
+        "variant": "bounded-response",
+        "bond_startup_confirmed": true,
+        "loaded_nav2_libraries": [
+          "/home/learner/nav2-shutdown-build/baseline/install/lib/libnav2_util_core.so",
+          "/home/learner/nav2-shutdown-build/bounded-response/install/lib/libnav2_lifecycle_manager_core.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_generator_c.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_cpp.so",
+          "/opt/ros/jazzy/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ],
+        "shutdown_seconds": 0.165
+      },
+      "run": "shutdown-alive-1790992437957767456"
+    }
+  ],
+  "decision": "Reject blanket two-second deadline as a production fix"
+}

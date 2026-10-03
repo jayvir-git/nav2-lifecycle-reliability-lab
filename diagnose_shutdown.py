@@ -21,16 +21,21 @@ out.mkdir(parents=True)
 os.environ['ROS_DOMAIN_ID']='74'
 log=(out/'process.log').open('w')
 children=[]
-result={'mode':mode,'graceful_manager_shutdown':False}
+manager_executable=os.environ.get('NAV2_PROBE_MANAGER','/opt/ros/jazzy/lib/nav2_lifecycle_manager/lifecycle_manager')
+manager_env=os.environ.copy()
+if 'NAV2_PROBE_PREFIX' in os.environ:
+    manager_env['LD_LIBRARY_PATH']=os.environ['NAV2_PROBE_PREFIX']+'/lib:/home/learner/nav2-shutdown-build/baseline/install/lib:'+os.environ.get('LD_LIBRARY_PATH','')
+result={'mode':mode,'graceful_manager_shutdown':False,'manager_executable':manager_executable,
+        'variant':os.environ.get('NAV2_PROBE_VARIANT','installed')}
 rclpy.init(); observer=Node('shutdown_probe')
 try:
     server=subprocess.Popen(['/opt/ros/jazzy/lib/nav2_map_server/map_server','--ros-args','-p',
         'yaml_filename:='+str(out/'room.yaml')],stdout=log,stderr=log,start_new_session=True)
     children.append(server)
-    manager=subprocess.Popen(['/opt/ros/jazzy/lib/nav2_lifecycle_manager/lifecycle_manager',
+    manager=subprocess.Popen([manager_executable,
         '--ros-args','-r','__node:=probe_manager','-p','node_names:=[map_server]',
         '-p','autostart:=True','-p','bond_timeout:=4.0',
-        '-p','use_sim_time:='+('True' if mode=='dead-sim' else 'False')],stdout=log,stderr=log,start_new_session=True)
+        '-p','use_sim_time:='+('True' if mode=='dead-sim' else 'False')],stdout=log,stderr=log,start_new_session=True,env=manager_env)
     children.append(manager)
     client=observer.create_client(GetState,'/map_server/get_state')
     deadline=time.monotonic()+20
@@ -45,6 +50,7 @@ try:
         if time.monotonic()>deadline: raise TimeoutError('Manager did not complete bond startup')
         time.sleep(0.1)
     result['bond_startup_confirmed']=True
+    result['loaded_nav2_libraries']=sorted(set(line.split()[-1] for line in Path(f'/proc/{manager.pid}/maps').read_text().splitlines() if '/libnav2_' in line))
     time.sleep(2)
     if mode.startswith('dead'):
         server.kill(); server.wait(timeout=3)

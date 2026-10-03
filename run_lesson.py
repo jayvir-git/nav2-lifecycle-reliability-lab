@@ -27,7 +27,8 @@ log = (out / 'launch.log').open('w')
 launch = subprocess.Popen(['ros2','launch','nav2_bringup','tb3_loopback_simulation.launch.py',
     'use_rviz:=False','use_composition:=False',f'map:={out / "room.yaml"}'],
     stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
-result = {'simulation':'Upstream Nav2 loopback; idealized motion, no physical robot', 'goals':[]}
+result = {'simulation':'Upstream Nav2 loopback; idealized motion, no physical robot', 'goals':[],
+          'variant':os.environ.get('NAV2_PROBE_VARIANT','installed')}
 try:
     fault = '--fault' in sys.argv
     mission_script = 'fault_mission.py' if fault else 'mission.py'

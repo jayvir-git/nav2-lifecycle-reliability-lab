@@ -76,6 +76,8 @@ The combined report's `success` means the action-abort, peer-deactivation and fr
 
 Open `docs/index.html#failure` for the interactive event sequence, healthy/fault comparison, and explicit recovery limits. The subsequent [shutdown diagnosis](docs/shutdown-diagnosis.md) reduces the hang to two processes and captures the blocked threads. `docs/index.html#shutdown` explains the mechanism visually. This diagnosis does not claim a tested fix or a new upstream defect.
 
+The [isolated source comparison](docs/source-comparison.md) confirms the upstream cancellation additions are already present. An experimental bounded-response call passes the small shutdown test but breaks full-stack startup, so it is rejected as a fix. The normal lesson continues to use installed Nav2. Open `docs/index.html#comparison` for that comparison.
+
 ## Sources
 
 - [Nav2 lifecycle manager](https://github.com/ros-navigation/navigation2/blob/jazzy/nav2_lifecycle_manager/README.md)
