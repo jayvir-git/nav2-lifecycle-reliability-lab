@@ -1,0 +1,33 @@
+[
+  {
+    "run": "shutdown-alive-1790991751335919170",
+    "result": {
+      "mode": "alive",
+      "graceful_manager_shutdown": true,
+      "bond_startup_confirmed": true,
+      "shutdown_seconds": 0.165
+    }
+  },
+  {
+    "run": "shutdown-dead-1790991705338641851",
+    "result": {
+      "mode": "dead",
+      "graceful_manager_shutdown": false,
+      "bond_startup_confirmed": true,
+      "bond_loss_detected": true,
+      "manager_alive_after_5_seconds": true,
+      "shutdown_seconds": 5.0
+    }
+  },
+  {
+    "run": "shutdown-dead-1790991808938017821",
+    "result": {
+      "mode": "dead",
+      "graceful_manager_shutdown": false,
+      "bond_startup_confirmed": true,
+      "bond_loss_detected": true,
+      "manager_alive_after_5_seconds": true,
+      "shutdown_seconds": 6.585
+    }
+  }
+]

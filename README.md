@@ -74,7 +74,7 @@ Two trials on 2 October 2026 evening (America/New_York; 3 October UTC) observed:
 
 The combined report's `success` means the action-abort, peer-deactivation and fresh-navigation checks passed. It does not mean every component shut down gracefully. `forced_shutdown_observed` and selected raw log excerpts preserve that distinction. Full local logs remain in `results/`; selected shareable evidence and installed Nav2 package versions live in `docs/`.
 
-Open `docs/index.html#failure` for the interactive event sequence, healthy/fault comparison, and explicit recovery limits. The next investigation is why the lifecycle manager needed forced termination; its root cause is not established here.
+Open `docs/index.html#failure` for the interactive event sequence, healthy/fault comparison, and explicit recovery limits. The subsequent [shutdown diagnosis](docs/shutdown-diagnosis.md) reduces the hang to two processes and captures the blocked threads. `docs/index.html#shutdown` explains the mechanism visually. This diagnosis does not claim a tested fix or a new upstream defect.
 
 ## Sources
 
