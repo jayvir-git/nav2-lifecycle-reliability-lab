@@ -101,3 +101,7 @@ The [cancellation validation](docs/cancellation-validation.md) tests a manager-l
 ## Coordinated initialization/shutdown candidate
 
 The [revised candidate](docs/coordinated-validation.md) adds a guarded initialization handoff, handles cancellation inside initialization, and joins the worker before clearing shared state. The notebook explains the ordering at `docs/index.html#coordination`. It is a separate 1.3.13 build; the earlier prototype and its failing discovery evidence remain available. This is not a submitted or accepted upstream fix.
+
+## Pinned-main port
+
+The coordinated candidate now has a separate port to upstream commit d7bf2ac0. Ten candidate probes passed alongside healthy/hanging upstream controls on the Jazzy runtime. See [review and reproduction](docs/main-port-review.md), [all twelve trials](docs/main-matrix.json), and the [interactive comparison](http://127.0.0.1:5180/#main-port). Native Rolling, full navigation for this port, and sanitizer validation remain outstanding.

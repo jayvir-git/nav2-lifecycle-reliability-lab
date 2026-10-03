@@ -5,6 +5,7 @@ import sys
 
 subprocess.run([sys.executable,str(Path(__file__).with_name('patch_cancellation.py')),sys.argv[1]],check=True)
 root=Path(sys.argv[1])/'nav2_lifecycle_manager'
+upstream_main='--upstream-main' in sys.argv[2:]
 header=root/'include/nav2_lifecycle_manager/lifecycle_manager.hpp'
 source=root/'src/lifecycle_manager.cpp'
 h=header.read_text()
@@ -35,6 +36,10 @@ if 'initialization_mutex_' not in s:
       if (shutdown_requested_->load()) {
         return;
       }'''
+    if upstream_main:
+        old=old.replace('      createLifecycleServiceClients();', '      createLifecyclePublishers();\n      createLifecycleServiceClients();\n      createLifecycleServiceServers();')
+        new=new.replace('        createLifecycleServiceClients();', '        createLifecyclePublishers();\n        createLifecycleServiceClients();\n        createLifecycleServiceServers();')
+        new=new.replace('const std::runtime_error &', 'const ShutdownCancelled &')
     assert s.count(old)==1
     s=s.replace(old,new,1)
     old='''          [this]() -> void {

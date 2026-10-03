@@ -25,7 +25,8 @@ children=[]
 manager_executable=os.environ.get('NAV2_PROBE_MANAGER','/opt/ros/jazzy/lib/nav2_lifecycle_manager/lifecycle_manager')
 manager_env=os.environ.copy()
 if 'NAV2_PROBE_PREFIX' in os.environ:
-    manager_env['LD_LIBRARY_PATH']=os.environ['NAV2_PROBE_PREFIX']+'/lib:/home/learner/nav2-shutdown-build/baseline/install/lib:'+os.environ.get('LD_LIBRARY_PATH','')
+    dependency='upstream-main' if os.environ.get('NAV2_PROBE_VARIANT')=='main-coordinated' else 'baseline'
+    manager_env['LD_LIBRARY_PATH']=os.environ['NAV2_PROBE_PREFIX']+f'/lib:/home/learner/nav2-shutdown-build/{dependency}/install/lib:'+os.environ.get('LD_LIBRARY_PATH','')
 shutdown_delay=float(os.environ.get('NAV2_PROBE_SHUTDOWN_DELAY','2'))
 result={'mode':mode,'graceful_manager_shutdown':False,'manager_executable':manager_executable,
         'shutdown_delay_after_detection':shutdown_delay,

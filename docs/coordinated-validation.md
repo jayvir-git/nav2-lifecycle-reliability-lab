@@ -49,3 +49,7 @@ The [upstream review](upstream-review.md) still applies: related reports already
 Two alternating baseline/coordinated pairs completed successfully under their respective checks. Candidate fault runs `20261003T025555Z` and `20261003T025748Z`, with restart runs `20261003T025625Z` and `20261003T025820Z`, passed all six combined checks. Both paired baseline fault runs still required forced shutdown. All four candidate recovery goals succeeded, with pause/resume and clean manager exits in both phases. No response-delivery warning occurred in this batch. See `coordinated-reliability.json` for the checks, run IDs, and resource summaries.
 
 The exported `coordinated-prototype.patch` passed a dry-run against the clean 1.3.13 source. Python parsing, shell syntax checks, and JavaScript syntax checks passed. These checks and the finite timing matrix do not establish exhaustive concurrency correctness.
+
+## Subsequent checkpoint
+
+A separate pinned-main port and its focused validation are recorded in [main-port-review.md](main-port-review.md). This document and its full-navigation evidence describe the historical 1.3.13 candidate.
