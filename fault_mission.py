@@ -38,19 +38,29 @@ def record_odom(msg):
 sub = node.create_subscription(Odometry, '/odom', record_odom, 10)
 try:
     pub = node.create_publisher(PoseWithCovarianceStamped, '/initialpose', 10)
-    clients = {name: node.create_client(GetState, '/'+name+'/get_state') for name in
-               ['map_server', 'planner_server', 'controller_server', 'bt_navigator']}
-    deadline = time.monotonic()+90
-    while time.monotonic()<deadline:
+    def initialize_pose():
         pose = PoseWithCovarianceStamped(); pose.header.frame_id = 'map'
         pose.header.stamp = node.get_clock().now().to_msg()
         pose.pose.pose.position.x = -2.0; pose.pose.pose.orientation.w = 1.0
         pub.publish(pose)
-        states = {name: wait(c.call_async(GetState.Request()), 3).current_state.label
-                  for name,c in clients.items() if c.service_is_ready()}
+    pose_timer = node.create_timer(0.2, initialize_pose)
+    clients = {name: node.create_client(GetState, '/'+name+'/get_state') for name in
+               ['map_server', 'planner_server', 'controller_server', 'bt_navigator']}
+    deadline = time.monotonic()+90
+    while time.monotonic()<deadline:
+        states = {}
+        for name,c in clients.items():
+            if c.service_is_ready():
+                future = c.call_async(GetState.Request())
+                try:
+                    states[name] = wait(future,3).current_state.label
+                except TimeoutError:
+                    c.remove_pending_request(future)
+                    future.cancel()
         if len(states)==4 and all(v=='active' for v in states.values()): break
         rclpy.spin_once(node, timeout_sec=0.2)
     else: raise TimeoutError('Stack not ready: '+str(states))
+    pose_timer.cancel()
     event('ready', states=states)
     # Verify executable, UID and process group before targeting any PID.
     candidates = []

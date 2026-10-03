@@ -2,7 +2,7 @@
 set -eo pipefail
 variant=${1:?variant required}
 mode=${2:-dead}
-case "$variant" in baseline|bounded-response) ;; *) exit 2;; esac
+case "$variant" in baseline|bounded-response|shutdown-cancellation) ;; *) exit 2;; esac
 source /opt/ros/jazzy/setup.bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
 export NAV2_PROBE_PREFIX="/home/learner/nav2-shutdown-build/$variant/install"

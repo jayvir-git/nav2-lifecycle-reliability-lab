@@ -9,10 +9,11 @@ import time
 import rclpy
 from rclpy.node import Node
 from lifecycle_msgs.srv import GetState
+from nav2_msgs.srv import ManageLifecycleNodes
 
 root=Path(__file__).resolve().parent
 mode=sys.argv[1] if len(sys.argv)>1 else 'dead'
-if mode not in ('alive','dead','dead-sim'): raise SystemExit('Mode must be alive, dead or dead-sim')
+if mode not in ('alive','dead','dead-sim','slow'): raise SystemExit('Mode must be alive, dead, dead-sim or slow')
 out=root/'results'/('shutdown-'+mode+'-'+str(time.time_ns()))
 out.mkdir(parents=True)
 # Generate the small map locally so the repro does not depend on old results.
@@ -25,7 +26,9 @@ manager_executable=os.environ.get('NAV2_PROBE_MANAGER','/opt/ros/jazzy/lib/nav2_
 manager_env=os.environ.copy()
 if 'NAV2_PROBE_PREFIX' in os.environ:
     manager_env['LD_LIBRARY_PATH']=os.environ['NAV2_PROBE_PREFIX']+'/lib:/home/learner/nav2-shutdown-build/baseline/install/lib:'+os.environ.get('LD_LIBRARY_PATH','')
+shutdown_delay=float(os.environ.get('NAV2_PROBE_SHUTDOWN_DELAY','2'))
 result={'mode':mode,'graceful_manager_shutdown':False,'manager_executable':manager_executable,
+        'shutdown_delay_after_detection':shutdown_delay,
         'variant':os.environ.get('NAV2_PROBE_VARIANT','installed')}
 rclpy.init(); observer=Node('shutdown_probe')
 try:
@@ -59,7 +62,20 @@ try:
             if time.monotonic()>deadline: raise TimeoutError('Bond loss was not detected; invalid reproduction')
             time.sleep(0.1)
         result['bond_loss_detected']=True
-    time.sleep(2)
+    if mode=='slow':
+        control=observer.create_client(ManageLifecycleNodes,'/probe_manager/manage_nodes')
+        if not control.wait_for_service(timeout_sec=3): raise TimeoutError('Manager control unavailable')
+        server.send_signal(signal.SIGSTOP)
+        request=ManageLifecycleNodes.Request(); request.command=1
+        pause_started=time.monotonic()
+        future=control.call_async(request)
+        time.sleep(3)
+        server.send_signal(signal.SIGCONT)
+        rclpy.spin_until_future_complete(observer,future,timeout_sec=6)
+        result['delayed_pause_seconds']=round(time.monotonic()-pause_started,3)
+        result['delayed_pause_succeeded']=future.done() and future.result().success
+        if not result['delayed_pause_succeeded']: raise RuntimeError('Delayed pause failed')
+    time.sleep(shutdown_delay)
     manager.send_signal(signal.SIGINT)
     started=time.monotonic()
     try:
@@ -77,6 +93,7 @@ except Exception as e: result['error']=str(e)
 finally:
     for process in reversed(children):
         if process.poll() is None:
+            process.send_signal(signal.SIGCONT)
             process.send_signal(signal.SIGINT)
             try: process.wait(timeout=2)
             except subprocess.TimeoutExpired: process.kill(); process.wait(timeout=3)

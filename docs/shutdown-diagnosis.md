@@ -30,7 +30,7 @@ Earlier small tests were invalid for this failure: one killed the node before bo
 1. The signal/shutdown thread is in `LifecycleManager::onRclPreshutdown`, destroying `NodeThread`, then waiting in `std::thread::join`.
 2. That worker is in `checkBondConnections → reset → changeStateForNode → LifecycleServiceClient::change_state → spin_until_future_complete_impl`.
 
-Thus the manager is joining a worker which is still waiting for a lifecycle service response from the killed server. The installed `ServiceClient` overload used by `change_state(uint8_t)` waits without an explicit response deadline. Cancelling the worker's outer executor does not, in this observed run, release the inner service executor. This explains the observed shutdown blockage. We have not patched or rebuilt Nav2, established behavior on every middleware, or tested current upstream main.
+Thus the manager is joining a worker which is still waiting for a lifecycle service response from the killed server. The installed `ServiceClient` overload used by `change_state(uint8_t)` waits without an explicit response deadline. Cancelling the worker's outer executor does not, in this observed run, release the inner service executor. This explains the observed shutdown blockage. At this diagnosis stage no patch was tested. Subsequent isolated builds are documented below; behavior on every middleware and current upstream main remains untested.
 
 Ranked hypotheses considered were simulated-clock effects, group-wide shutdown interference, and blocked lifecycle service handling. The validated reproduction uses wall time and direct process signals, eliminating the first two as necessary conditions. The debugger supports the third.
 
@@ -41,4 +41,6 @@ Ranked hypotheses considered were simulated-clock effects, group-wide shutdown i
 - [Issue 6041](https://github.com/ros-navigation/navigation2/issues/6041) reports related behavior on Humble.
 - Versioned implementation: [manager](https://github.com/ros-navigation/navigation2/blob/1.3.13/nav2_lifecycle_manager/src/lifecycle_manager.cpp), [lifecycle client](https://github.com/ros-navigation/navigation2/blob/1.3.13/nav2_util/src/lifecycle_service_client.cpp), [worker thread](https://github.com/ros-navigation/navigation2/blob/1.3.13/nav2_util/src/node_thread.cpp).
 
-Follow-up: the installed headers and 1.3.13 source already contain the cited cancellation additions. The clean source build still reproduces our crash-triggered hang. A bounded-response diagnostic passes the small test but fails full-stack startup; see [source comparison](source-comparison.md). No upstream issue or PR has been created, and current main has not been tested.
+Follow-up: the installed headers and 1.3.13 source already contain the cited cancellation additions. The clean source build still reproduces our crash-triggered hang. A bounded-response diagnostic passes the small test but rejects deliberately delayed healthy work; see [source comparison](source-comparison.md). No upstream issue or PR has been created, and current main has not been tested.
+
+The next [cancellation experiment](cancellation-validation.md) implements an isolated manager-local candidate, corrects test-harness issues, and repeats baseline and candidate validation.

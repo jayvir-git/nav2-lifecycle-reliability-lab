@@ -1,0 +1,36 @@
+// Recorded evidence and a conceptual animation; never sends ROS commands.
+const evidence = window.CANCELLATION;
+const cancelSection = document.createElement('section');
+cancelSection.className = 'evidence'; cancelSection.id = 'cancellation';
+cancelSection.innerHTML = `<div class="eyebrow">09 / Cancellation · bounded experiment</div>
+<h2>Let healthy work take its time.<br>Give shutdown a way to stop waiting.</h2>
+<p>A worker can wait for a reply that will never arrive. Our prototype gives it a shared stop flag. Shutdown sets that flag <em>before</em> waiting for the worker to finish. The worker checks it between short waits, releases its pending request, and returns.</p>
+<div class="layout"><div class="diagram"><div class="eyebrow">Conceptual sequence / not a measured timeline</div>
+<svg viewBox="0 0 640 310" role="img" aria-label="Shutdown sets a stop flag, the service worker observes it and returns, then the thread join completes.">
+<path class="flow" id="cancel-flow" d="M320 75V115M320 190V235"/>
+<rect class="node" id="cancel-node-0" x="20" y="15" width="600" height="60"/><text x="40" y="42" font-size="15">1 / SHUTDOWN REQUESTED</text><text x="40" y="62" font-size="12">Store stop = true before joining the worker</text>
+<rect class="node" id="cancel-node-1" x="20" y="115" width="600" height="75"/><text x="40" y="144" font-size="15">2 / WORKER OBSERVES STOP</text><text x="40" y="169" font-size="12">Leave service wait; remove pending request; return</text>
+<rect class="node" id="cancel-node-2" x="20" y="235" width="600" height="60"/><text x="40" y="262" font-size="15">3 / JOIN COMPLETES</text><text x="40" y="282" font-size="12">Shutdown can finish without a reply from the dead node</text></svg>
+<div class="controls" id="cancel-steps"></div><button id="cancel-play" class="primary">Play shutdown sequence</button>
+</div><div class="lesson" aria-live="polite"><div class="eyebrow" id="cancel-step-label"></div><h2 id="cancel-step-title"></h2><p id="cancel-step-detail"></p><p class="small">The worker checks between waits of at most 50 ms. Scheduling and other shutdown work add time; 50 ms is not an exit-time guarantee.</p></div></div>
+<div class="lower"><div><div class="eyebrow">Two-process killed-node probes</div><div class="stat">0.165–0.215 s</div><p>Three candidate runs exited cleanly, with shutdown requested at different delays after bond-loss detection. The clean-source baseline was still alive after five seconds.</p></div><div><div class="eyebrow">Healthy but deliberately delayed</div><div class="stat">3.760 s · PASS</div><p>The healthy map server was suspended for three seconds during pause, then resumed. Cancellation preserved the successful transition. The two-second timeout candidate rejected the same kind of delay.</p></div></div>
+<div class="eyebrow">Full navigation / same final harness</div><h2 id="cancel-full-result"></h2><p id="cancel-full-detail"></p>
+<details><summary>What changed in the test harness?</summary><p>Early trials exposed problems in our observer: initial-pose publication could be delayed by state queries, a single three-second readiness query timeout ended startup prematurely, and group-wide SIGINT duplicated the launcher's forwarded signals. We now publish the pose on a timer while spinning, retry startup queries within the existing 90-second readiness deadline, and signal the launcher once. Baseline and candidate were then repeated with the same harness. Failed trials are retained in the evidence.</p></details>
+<p><strong>Unresolved reliability finding:</strong> an earlier candidate restart stalled after the smoother server failed to deliver a service response. The successful repeat does not prove that intermittent failure is fixed.</p><p><strong>Practical value:</strong> predictable shutdown helps a supervisor restart a failed software stack without resorting to forced termination. This lab demonstrates that mechanism in Nav2 1.3.13; it does not prove robot safety or demand for a new product.</p>
+<p class="small">Single-machine WSL / ROS 2 Jazzy / idealized simulation. Current upstream main, other middleware, shutdown during discovery, and exhaustive concurrency behavior remain untested. This is a candidate for further review, not a production fix.</p>
+<p><a href="cancellation-results.json">Download the recorded evidence</a> · <a href="cancellation-validation.md">Reproduce and inspect the design</a></p>`;
+document.querySelector('main').appendChild(cancelSection);
+const cancelSteps = [
+  ['Set a lasting stop flag.', 'The shutdown callback records the intent to stop before joining the service thread. Every manager-local client shares this flag; a later request cannot reset it.'],
+  ['Stop waiting for the dead server.', 'The inner service executor waits in short slices and checks the flag. On interruption it removes its pending request and throws back to the manager’s existing exception handler. This cancels local waiting; it cannot undo work already performed by a server.'],
+  ['Let the worker finish.', 'Once the callback returns, the worker can exit and the shutdown thread can finish joining it. Healthy transitions retain their unbounded response wait while shutdown has not been requested.']
+];
+let cancelIndex=0, cancelTimer=null;
+function showCancelStep(i){cancelIndex=i;document.getElementById('cancel-step-label').textContent=`STEP ${i+1} / 3`;document.getElementById('cancel-step-title').textContent=cancelSteps[i][0];document.getElementById('cancel-step-detail').textContent=cancelSteps[i][1];for(let n=0;n<3;n++){document.getElementById(`cancel-node-${n}`).classList.toggle('lit',i===n);document.getElementById('cancel-steps').children[n].setAttribute('aria-pressed',String(i===n));}}
+function stopCancel(){clearInterval(cancelTimer);cancelTimer=null;document.getElementById('cancel-play').textContent='Play shutdown sequence';document.getElementById('cancel-flow').classList.remove('moving');}
+cancelSteps.forEach((_,i)=>{const b=document.createElement('button');b.textContent=String(i+1).padStart(2,'0');b.setAttribute('aria-label',`Shutdown step ${i+1}`);b.onclick=()=>{stopCancel();showCancelStep(i)};document.getElementById('cancel-steps').appendChild(b)});
+document.getElementById('cancel-play').onclick=()=>{if(cancelTimer){stopCancel();return}showCancelStep(0);document.getElementById('cancel-flow').classList.add('moving');document.getElementById('cancel-play').textContent='Stop sequence';cancelTimer=setInterval(()=>{if(cancelIndex===2){stopCancel();return}showCancelStep(cancelIndex+1)},3500)};
+showCancelStep(0);
+const finalCandidate=evidence.full_candidate;
+document.getElementById('cancel-full-result').textContent=finalCandidate.success?'Failure → clean shutdown → successful restart.':'Full validation has an unresolved failure.';
+document.getElementById('cancel-full-detail').textContent=`Baseline: ${evidence.full_baseline.runs[0].forced_shutdown_observed?'forced shutdown observed':'no forced shutdown observed'}. Candidate: ${finalCandidate.checks.no_forced_shutdown?'no forced shutdown':'forced shutdown observed'}; manager clean-exit check ${finalCandidate.checks.lifecycle_managers_clean_exit?'passed':'failed'}; restart navigation ${finalCandidate.checks.restart_navigation_succeeded?'passed':'failed'}. Run ${finalCandidate.runs[0].run}.`;

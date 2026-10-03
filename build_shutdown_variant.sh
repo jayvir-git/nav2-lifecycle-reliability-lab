@@ -2,7 +2,7 @@
 # Build only nav2_util and nav2_lifecycle_manager; never replace /opt/ros.
 set -eo pipefail
 variant=${1:-baseline}
-case "$variant" in baseline|bounded-response) ;; *) exit 2;; esac
+case "$variant" in baseline|bounded-response|shutdown-cancellation) ;; *) exit 2;; esac
 source /opt/ros/jazzy/setup.bash
 base=/home/learner/nav2-shutdown-build
 mkdir -p "$base"
@@ -19,7 +19,10 @@ if [[ "$variant" == bounded-response ]]; then
   python3 "$(dirname "$0")/patch_shutdown_variant.py" "$base/$variant/src/navigation2-1.3.13"
 fi
 packages="nav2_util nav2_lifecycle_manager"
-if [[ "$variant" == bounded-response ]]; then packages="nav2_lifecycle_manager"; fi
+if [[ "$variant" == shutdown-cancellation ]]; then
+  python3 "$(dirname "$0")/patch_cancellation.py" "$base/$variant/src/navigation2-1.3.13"
+fi
+if [[ "$variant" != baseline ]]; then packages="nav2_lifecycle_manager"; fi
 for package in $packages; do
   cmake -S "$base/$variant/src/navigation2-1.3.13/$package" -B "$base/$variant/build/$package" \
     -DCMAKE_INSTALL_PREFIX="$base/$variant/install" -DBUILD_TESTING=OFF -DCMAKE_BUILD_TYPE=RelWithDebInfo \

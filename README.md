@@ -76,7 +76,7 @@ The combined report's `success` means the action-abort, peer-deactivation and fr
 
 Open `docs/index.html#failure` for the interactive event sequence, healthy/fault comparison, and explicit recovery limits. The subsequent [shutdown diagnosis](docs/shutdown-diagnosis.md) reduces the hang to two processes and captures the blocked threads. `docs/index.html#shutdown` explains the mechanism visually. This diagnosis does not claim a tested fix or a new upstream defect.
 
-The [isolated source comparison](docs/source-comparison.md) confirms the upstream cancellation additions are already present. An experimental bounded-response call passes the small shutdown test but breaks full-stack startup, so it is rejected as a fix. The normal lesson continues to use installed Nav2. Open `docs/index.html#comparison` for that comparison.
+The [isolated source comparison](docs/source-comparison.md) confirms the upstream cancellation additions are already present. An experimental bounded-response call passes the small shutdown test but rejects a deliberately delayed healthy transition, so it is rejected as a fix. Its earlier startup failure was confounded by a harness issue, documented in the follow-up. The normal lesson continues to use installed Nav2. Open `docs/index.html#comparison` for that comparison.
 
 ## Sources
 
@@ -93,3 +93,7 @@ Check an actual run's `summary.json` for its outcome. Installation or file creat
 `results/20261002T053530Z` retains the initial failed attempt: lowercase `false` in our invocation caused a Python expression error in the launch path. The runner now uses `False`. No navigation ran in that failed attempt, but a simulator child survived the failed launcher.
 
 `results/20261002T053727Z` completed its goals but is superseded as baseline evidence because that earlier simulator was still running. We identified and stopped the leftover process, strengthened cleanup of the runner's own process group, and repeated the lesson from a clean state to produce the verified run above.
+
+## Shutdown cancellation prototype
+
+The [cancellation validation](docs/cancellation-validation.md) tests a manager-local C++ client that observes a shared stop flag before shutdown joins its worker. The visual explanation is at `docs/index.html#cancellation`, with recorded evidence in `docs/cancellation-results.json`. This remains an isolated Nav2 1.3.13 experiment; installed packages are unchanged and current upstream main has not been tested.

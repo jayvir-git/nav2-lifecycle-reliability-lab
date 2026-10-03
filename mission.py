@@ -24,22 +24,30 @@ def wait(future, seconds=10):
 
 try:
     pose_pub=node.create_publisher(PoseWithCovarianceStamped,'/initialpose',10)
+    def initialize_pose():
+        pose=PoseWithCovarianceStamped(); pose.header.frame_id='map'
+        pose.header.stamp=node.get_clock().now().to_msg()
+        pose.pose.pose.position.x=-2.0; pose.pose.pose.orientation.w=1.0
+        pose_pub.publish(pose)
+    pose_timer=node.create_timer(0.2,initialize_pose)
     states={name:node.create_client(GetState,f'/{name}/get_state') for name in
             ['map_server','planner_server','controller_server','bt_navigator']}
     deadline=time.monotonic()+90
     active={}
     while time.monotonic()<deadline:
-        if pose_pub.get_subscription_count():
-            pose=PoseWithCovarianceStamped(); pose.header.frame_id='map'
-            pose.header.stamp=node.get_clock().now().to_msg()
-            pose.pose.pose.position.x=-2.0; pose.pose.pose.orientation.w=1.0
-            pose_pub.publish(pose)
+        active={}
         for name,client in states.items():
             if client.service_is_ready():
-                active[name]=wait(client.call_async(GetState.Request()),3).current_state.label
+                future=client.call_async(GetState.Request())
+                try:
+                    active[name]=wait(future,3).current_state.label
+                except TimeoutError:
+                    client.remove_pending_request(future)
+                    future.cancel()
         if len(active)==len(states) and all(s=='active' for s in active.values()): break
         rclpy.spin_once(node,timeout_sec=0.5)
     else: raise TimeoutError(f'Stack did not activate: {active}')
+    pose_timer.cancel()
     data['initial_states']=active
     print('READY:',active,flush=True)
     action=ActionClient(node,NavigateToPose,'/navigate_to_pose')

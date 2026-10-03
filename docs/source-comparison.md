@@ -23,7 +23,7 @@ The diagnostic changes one call to use the existing two-second bounded `change_s
 
 We then ran the original full navigation failure experiment with the diagnostic overlay. Before any controller kill, controller startup exceeded the two-second call deadline. The manager logged `async_send_request failed` and aborted bringup. The observer subsequently timed out waiting for readiness. No recovery phase was attempted after this failed setup.
 
-The candidate improves the minimal shutdown symptom but breaks valid startup in the broader setup. We have not promoted it into the normal lab or altered `/opt/ros`. A robust next candidate needs explicit cancellation before joining the worker, with synchronization that prevents racing a new service call, rather than a blanket two-second limit on every lifecycle transition. That design and regression coverage remain unimplemented.
+The candidate improves the minimal shutdown symptom, but the startup observation was later found to be confounded by our observer delaying initial-pose publication while waiting on lifecycle queries. It does not alone establish that healthy controller initialization requires more than two seconds. We corrected the harness and added an independent negative control: suspend a healthy map server for three seconds during a pause request, then resume it. The bounded-response candidate rejected that transition; the shutdown-cancellation candidate completed it. This directly demonstrates the timeout's behavior change. See [cancellation validation](cancellation-validation.md) for the subsequent design and paired tests. The normal lab and `/opt/ros` remain unchanged.
 
 ## Repeat
 

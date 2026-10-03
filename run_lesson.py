@@ -44,7 +44,9 @@ except Exception as exc:
     result['success'] = False
     result['error'] = str(exc)
 finally:
-    os.killpg(launch.pid,signal.SIGINT) if launch.poll() is None else None
+    # Let ROS launch forward one interrupt to its children. Signalling the whole
+    # group here also delivers a second interrupt during child teardown.
+    launch.send_signal(signal.SIGINT) if launch.poll() is None else None
     try: launch.wait(timeout=15)
     except subprocess.TimeoutExpired:
         os.killpg(launch.pid,signal.SIGKILL)
