@@ -1,0 +1,726 @@
+{
+  "source_file": "reliability-1790994933884297489.json",
+  "pairs": 3,
+  "completed_sequences": {
+    "baseline": 3,
+    "shutdown-cancellation": 3
+  },
+  "definition": "Baseline success excludes clean shutdown; candidate additionally requires clean lifecycle-manager exits and no launcher escalation.",
+  "response_delivery_warning_count": 0,
+  "runs": [
+    {
+      "pair": 1,
+      "variant": "baseline",
+      "success": true,
+      "checks": {
+        "navigation_aborted": true,
+        "planner_observed_inactive": true,
+        "navigator_observed_inactive": true,
+        "restart_navigation_succeeded": true
+      },
+      "evidence_file": "failure-experiment-20261003T023535Z.json",
+      "phases": [
+        {
+          "phase": "fault",
+          "run": "20261003T023535Z",
+          "forced_shutdown_observed": true,
+          "lifecycle_managers_clean_exit": false,
+          "result": {
+            "success": true,
+            "events": [
+              {
+                "seconds": 6.811,
+                "event": "ready",
+                "states": {
+                  "map_server": "active",
+                  "planner_server": "active",
+                  "controller_server": "active",
+                  "bt_navigator": "active"
+                }
+              },
+              {
+                "seconds": 6.937,
+                "event": "goal_accepted",
+                "target": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "seconds": 9.76,
+                "event": "controller_killed",
+                "pid": 47,
+                "x": -1.8491023525246006
+              },
+              {
+                "seconds": 10.069,
+                "event": "action_terminal",
+                "status": 6
+              },
+              {
+                "seconds": 29.771,
+                "event": "observation_complete"
+              }
+            ],
+            "action_status": 6,
+            "mission_exit_code": 0,
+            "launch_exit_code": 0,
+            "residual_group_cleanup_needed": false
+          },
+          "goals": []
+        },
+        {
+          "phase": "recovery",
+          "run": "20261003T023620Z",
+          "forced_shutdown_observed": false,
+          "lifecycle_managers_clean_exit": true,
+          "result": {
+            "success": true,
+            "initial_states": {
+              "map_server": "active",
+              "planner_server": "active",
+              "controller_server": "active",
+              "bt_navigator": "active"
+            },
+            "lifecycle": [
+              {
+                "operation": "pause",
+                "success": true,
+                "controller_state": "inactive"
+              },
+              {
+                "operation": "resume",
+                "success": true,
+                "controller_state": "active"
+              }
+            ],
+            "mission_exit_code": 0,
+            "launch_exit_code": 0,
+            "residual_group_cleanup_needed": false
+          },
+          "goals": [
+            {
+              "target": [
+                -1.0,
+                0.0
+              ],
+              "status": 4,
+              "seconds": 2.454373495000027
+            },
+            {
+              "target": [
+                0.0,
+                0.0
+              ],
+              "status": 4,
+              "seconds": 2.802777630000037
+            }
+          ]
+        }
+      ],
+      "response_delivery_warnings": [],
+      "resource_summary": {
+        "scope": "Aggregate WSL guest; no claim about individual thread starvation or Windows host",
+        "cpu_count": 16,
+        "maximum_sampled_cpu_busy_percent": 53.13,
+        "minimum_memory_available_kib": 6898836
+      }
+    },
+    {
+      "pair": 1,
+      "variant": "shutdown-cancellation",
+      "success": true,
+      "checks": {
+        "navigation_aborted": true,
+        "planner_observed_inactive": true,
+        "navigator_observed_inactive": true,
+        "restart_navigation_succeeded": true,
+        "no_forced_shutdown": true,
+        "lifecycle_managers_clean_exit": true
+      },
+      "evidence_file": "failure-experiment-20261003T023641Z.json",
+      "phases": [
+        {
+          "phase": "fault",
+          "run": "20261003T023641Z",
+          "forced_shutdown_observed": false,
+          "lifecycle_managers_clean_exit": true,
+          "result": {
+            "success": true,
+            "events": [
+              {
+                "seconds": 6.803,
+                "event": "ready",
+                "states": {
+                  "map_server": "active",
+                  "planner_server": "active",
+                  "controller_server": "active",
+                  "bt_navigator": "active"
+                }
+              },
+              {
+                "seconds": 6.85,
+                "event": "goal_accepted",
+                "target": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "seconds": 7.562,
+                "event": "controller_killed",
+                "pid": 669,
+                "x": -1.8497251263065804
+              },
+              {
+                "seconds": 7.932,
+                "event": "action_terminal",
+                "status": 6
+              },
+              {
+                "seconds": 27.577,
+                "event": "observation_complete"
+              }
+            ],
+            "action_status": 6,
+            "mission_exit_code": 0,
+            "launch_exit_code": 0,
+            "residual_group_cleanup_needed": false
+          },
+          "goals": []
+        },
+        {
+          "phase": "recovery",
+          "run": "20261003T023712Z",
+          "forced_shutdown_observed": false,
+          "lifecycle_managers_clean_exit": true,
+          "result": {
+            "success": true,
+            "initial_states": {
+              "map_server": "active",
+              "planner_server": "active",
+              "controller_server": "active",
+              "bt_navigator": "active"
+            },
+            "lifecycle": [
+              {
+                "operation": "pause",
+                "success": true,
+                "controller_state": "inactive"
+              },
+              {
+                "operation": "resume",
+                "success": true,
+                "controller_state": "active"
+              }
+            ],
+            "mission_exit_code": 0,
+            "launch_exit_code": 0,
+            "residual_group_cleanup_needed": false
+          },
+          "goals": [
+            {
+              "target": [
+                -1.0,
+                0.0
+              ],
+              "status": 4,
+              "seconds": 2.454440630000022
+            },
+            {
+              "target": [
+                0.0,
+                0.0
+              ],
+              "status": 4,
+              "seconds": 2.903162193999947
+            }
+          ]
+        }
+      ],
+      "response_delivery_warnings": [],
+      "resource_summary": {
+        "scope": "Aggregate WSL guest; no claim about individual thread starvation or Windows host",
+        "cpu_count": 16,
+        "maximum_sampled_cpu_busy_percent": 48.54,
+        "minimum_memory_available_kib": 6888668
+      }
+    },
+    {
+      "pair": 2,
+      "variant": "baseline",
+      "success": true,
+      "checks": {
+        "navigation_aborted": true,
+        "planner_observed_inactive": true,
+        "navigator_observed_inactive": true,
+        "restart_navigation_succeeded": true
+      },
+      "evidence_file": "failure-experiment-20261003T023734Z.json",
+      "phases": [
+        {
+          "phase": "fault",
+          "run": "20261003T023734Z",
+          "forced_shutdown_observed": true,
+          "lifecycle_managers_clean_exit": false,
+          "result": {
+            "success": true,
+            "events": [
+              {
+                "seconds": 6.249,
+                "event": "ready",
+                "states": {
+                  "map_server": "active",
+                  "planner_server": "active",
+                  "controller_server": "active",
+                  "bt_navigator": "active"
+                }
+              },
+              {
+                "seconds": 6.299,
+                "event": "goal_accepted",
+                "target": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "seconds": 7.053,
+                "event": "controller_killed",
+                "pid": 1263,
+                "x": -1.847559173640993
+              },
+              {
+                "seconds": 7.401,
+                "event": "action_terminal",
+                "status": 6
+              },
+              {
+                "seconds": 27.075,
+                "event": "observation_complete"
+              }
+            ],
+            "action_status": 6,
+            "mission_exit_code": 0,
+            "launch_exit_code": 0,
+            "residual_group_cleanup_needed": false
+          },
+          "goals": []
+        },
+        {
+          "phase": "recovery",
+          "run": "20261003T023814Z",
+          "forced_shutdown_observed": false,
+          "lifecycle_managers_clean_exit": true,
+          "result": {
+            "success": true,
+            "initial_states": {
+              "map_server": "active",
+              "planner_server": "active",
+              "controller_server": "active",
+              "bt_navigator": "active"
+            },
+            "lifecycle": [
+              {
+                "operation": "pause",
+                "success": true,
+                "controller_state": "inactive"
+              },
+              {
+                "operation": "resume",
+                "success": true,
+                "controller_state": "active"
+              }
+            ],
+            "mission_exit_code": 0,
+            "launch_exit_code": 0,
+            "residual_group_cleanup_needed": false
+          },
+          "goals": [
+            {
+              "target": [
+                -1.0,
+                0.0
+              ],
+              "status": 4,
+              "seconds": 10.65467363100015
+            },
+            {
+              "target": [
+                0.0,
+                0.0
+              ],
+              "status": 4,
+              "seconds": 12.595183802000065
+            }
+          ]
+        }
+      ],
+      "response_delivery_warnings": [],
+      "resource_summary": {
+        "scope": "Aggregate WSL guest; no claim about individual thread starvation or Windows host",
+        "cpu_count": 16,
+        "maximum_sampled_cpu_busy_percent": 49.47,
+        "minimum_memory_available_kib": 6885056
+      }
+    },
+    {
+      "pair": 2,
+      "variant": "shutdown-cancellation",
+      "success": true,
+      "checks": {
+        "navigation_aborted": true,
+        "planner_observed_inactive": true,
+        "navigator_observed_inactive": true,
+        "restart_navigation_succeeded": true,
+        "no_forced_shutdown": true,
+        "lifecycle_managers_clean_exit": true
+      },
+      "evidence_file": "failure-experiment-20261003T023853Z.json",
+      "phases": [
+        {
+          "phase": "fault",
+          "run": "20261003T023853Z",
+          "forced_shutdown_observed": false,
+          "lifecycle_managers_clean_exit": true,
+          "result": {
+            "success": true,
+            "events": [
+              {
+                "seconds": 6.274,
+                "event": "ready",
+                "states": {
+                  "map_server": "active",
+                  "planner_server": "active",
+                  "controller_server": "active",
+                  "bt_navigator": "active"
+                }
+              },
+              {
+                "seconds": 6.319,
+                "event": "goal_accepted",
+                "target": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "seconds": 7.082,
+                "event": "controller_killed",
+                "pid": 1875,
+                "x": -1.8433215646318104
+              },
+              {
+                "seconds": 7.391,
+                "event": "action_terminal",
+                "status": 6
+              },
+              {
+                "seconds": 27.108,
+                "event": "observation_complete"
+              }
+            ],
+            "action_status": 6,
+            "mission_exit_code": 0,
+            "launch_exit_code": 0,
+            "residual_group_cleanup_needed": false
+          },
+          "goals": []
+        },
+        {
+          "phase": "recovery",
+          "run": "20261003T023924Z",
+          "forced_shutdown_observed": false,
+          "lifecycle_managers_clean_exit": true,
+          "result": {
+            "success": true,
+            "initial_states": {
+              "map_server": "active",
+              "planner_server": "active",
+              "controller_server": "active",
+              "bt_navigator": "active"
+            },
+            "lifecycle": [
+              {
+                "operation": "pause",
+                "success": true,
+                "controller_state": "inactive"
+              },
+              {
+                "operation": "resume",
+                "success": true,
+                "controller_state": "active"
+              }
+            ],
+            "mission_exit_code": 0,
+            "launch_exit_code": 0,
+            "residual_group_cleanup_needed": false
+          },
+          "goals": [
+            {
+              "target": [
+                -1.0,
+                0.0
+              ],
+              "status": 4,
+              "seconds": 2.353394918000049
+            },
+            {
+              "target": [
+                0.0,
+                0.0
+              ],
+              "status": 4,
+              "seconds": 2.8325901939999767
+            }
+          ]
+        }
+      ],
+      "response_delivery_warnings": [],
+      "resource_summary": {
+        "scope": "Aggregate WSL guest; no claim about individual thread starvation or Windows host",
+        "cpu_count": 16,
+        "maximum_sampled_cpu_busy_percent": 47.47,
+        "minimum_memory_available_kib": 6882464
+      }
+    },
+    {
+      "pair": 3,
+      "variant": "baseline",
+      "success": true,
+      "checks": {
+        "navigation_aborted": true,
+        "planner_observed_inactive": true,
+        "navigator_observed_inactive": true,
+        "restart_navigation_succeeded": true
+      },
+      "evidence_file": "failure-experiment-20261003T023945Z.json",
+      "phases": [
+        {
+          "phase": "fault",
+          "run": "20261003T023945Z",
+          "forced_shutdown_observed": true,
+          "lifecycle_managers_clean_exit": false,
+          "result": {
+            "success": true,
+            "events": [
+              {
+                "seconds": 8.216,
+                "event": "ready",
+                "states": {
+                  "map_server": "active",
+                  "planner_server": "active",
+                  "controller_server": "active",
+                  "bt_navigator": "active"
+                }
+              },
+              {
+                "seconds": 8.26,
+                "event": "goal_accepted",
+                "target": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "seconds": 9.013,
+                "event": "controller_killed",
+                "pid": 2485,
+                "x": -1.847559173640993
+              },
+              {
+                "seconds": 9.373,
+                "event": "action_terminal",
+                "status": 6
+              },
+              {
+                "seconds": 29.037,
+                "event": "observation_complete"
+              }
+            ],
+            "action_status": 6,
+            "mission_exit_code": 0,
+            "launch_exit_code": 0,
+            "residual_group_cleanup_needed": false
+          },
+          "goals": []
+        },
+        {
+          "phase": "recovery",
+          "run": "20261003T024027Z",
+          "forced_shutdown_observed": false,
+          "lifecycle_managers_clean_exit": true,
+          "result": {
+            "success": true,
+            "initial_states": {
+              "map_server": "active",
+              "planner_server": "active",
+              "controller_server": "active",
+              "bt_navigator": "active"
+            },
+            "lifecycle": [
+              {
+                "operation": "pause",
+                "success": true,
+                "controller_state": "inactive"
+              },
+              {
+                "operation": "resume",
+                "success": true,
+                "controller_state": "active"
+              }
+            ],
+            "mission_exit_code": 0,
+            "launch_exit_code": 0,
+            "residual_group_cleanup_needed": false
+          },
+          "goals": [
+            {
+              "target": [
+                -1.0,
+                0.0
+              ],
+              "status": 4,
+              "seconds": 2.356355477000079
+            },
+            {
+              "target": [
+                0.0,
+                0.0
+              ],
+              "status": 4,
+              "seconds": 2.846591793000016
+            }
+          ]
+        }
+      ],
+      "response_delivery_warnings": [],
+      "resource_summary": {
+        "scope": "Aggregate WSL guest; no claim about individual thread starvation or Windows host",
+        "cpu_count": 16,
+        "maximum_sampled_cpu_busy_percent": 51.86,
+        "minimum_memory_available_kib": 6872340
+      }
+    },
+    {
+      "pair": 3,
+      "variant": "shutdown-cancellation",
+      "success": true,
+      "checks": {
+        "navigation_aborted": true,
+        "planner_observed_inactive": true,
+        "navigator_observed_inactive": true,
+        "restart_navigation_succeeded": true,
+        "no_forced_shutdown": true,
+        "lifecycle_managers_clean_exit": true
+      },
+      "evidence_file": "failure-experiment-20261003T024048Z.json",
+      "phases": [
+        {
+          "phase": "fault",
+          "run": "20261003T024048Z",
+          "forced_shutdown_observed": false,
+          "lifecycle_managers_clean_exit": true,
+          "result": {
+            "success": true,
+            "events": [
+              {
+                "seconds": 7.216,
+                "event": "ready",
+                "states": {
+                  "map_server": "active",
+                  "planner_server": "active",
+                  "controller_server": "active",
+                  "bt_navigator": "active"
+                }
+              },
+              {
+                "seconds": 7.262,
+                "event": "goal_accepted",
+                "target": [
+                  2,
+                  0
+                ]
+              },
+              {
+                "seconds": 8.025,
+                "event": "controller_killed",
+                "pid": 3080,
+                "x": -1.8433215646318104
+              },
+              {
+                "seconds": 8.364,
+                "event": "action_terminal",
+                "status": 6
+              },
+              {
+                "seconds": 28.033,
+                "event": "observation_complete"
+              }
+            ],
+            "action_status": 6,
+            "mission_exit_code": 0,
+            "launch_exit_code": 0,
+            "residual_group_cleanup_needed": false
+          },
+          "goals": []
+        },
+        {
+          "phase": "recovery",
+          "run": "20261003T024120Z",
+          "forced_shutdown_observed": false,
+          "lifecycle_managers_clean_exit": true,
+          "result": {
+            "success": true,
+            "initial_states": {
+              "map_server": "active",
+              "planner_server": "active",
+              "controller_server": "active",
+              "bt_navigator": "active"
+            },
+            "lifecycle": [
+              {
+                "operation": "pause",
+                "success": true,
+                "controller_state": "inactive"
+              },
+              {
+                "operation": "resume",
+                "success": true,
+                "controller_state": "active"
+              }
+            ],
+            "mission_exit_code": 0,
+            "launch_exit_code": 0,
+            "residual_group_cleanup_needed": false
+          },
+          "goals": [
+            {
+              "target": [
+                -1.0,
+                0.0
+              ],
+              "status": 4,
+              "seconds": 2.3538877400001184
+            },
+            {
+              "target": [
+                0.0,
+                0.0
+              ],
+              "status": 4,
+              "seconds": 2.8539587429997937
+            }
+          ]
+        }
+      ],
+      "response_delivery_warnings": [],
+      "resource_summary": {
+        "scope": "Aggregate WSL guest; no claim about individual thread starvation or Windows host",
+        "cpu_count": 16,
+        "maximum_sampled_cpu_busy_percent": 50.95,
+        "minimum_memory_available_kib": 6877400
+      }
+    }
+  ]
+}

@@ -46,3 +46,7 @@ The pinned source hash and build dependencies are in [source comparison](source-
 ## Limits and next review boundary
 
 This is an experimental candidate, not a production fix or an accepted upstream contribution. We have not tested current upstream main, other middleware, shutdown during initial service discovery, every transition, physical hardware, or exhaustive concurrency interleavings. The manager-local adapter duplicates utility behavior and needs design review before proposing an upstream implementation. The intermittent service-response delivery failure is retained as an unresolved reliability finding. No upstream message or PR has been submitted.
+
+## Subsequent review
+
+The [upstream review](upstream-review.md) supersedes the earlier coverage boundary: it tests newer source and additional shutdown phases. Both candidate and baseline abort when interrupted during initial service discovery. The candidate is not ready for promotion despite the successful full run above.

@@ -8,6 +8,7 @@ import signal
 import subprocess
 import sys
 import time
+import threading
 
 ROOT = Path(__file__).resolve().parent
 lock = open('/tmp/nav2-first-lesson.lock', 'w')
@@ -24,6 +25,29 @@ pixels = bytes(0 if x < 3 or y < 3 or x >= n-3 or y >= n-3 else 254
 (out / 'room.pgm').write_bytes(f'P5\n{n} {n}\n255\n'.encode() + pixels)
 (out / 'room.yaml').write_text('image: room.pgm\nresolution: 0.05\norigin: [-5.0, -5.0, 0.0]\nnegate: 0\noccupied_thresh: 0.65\nfree_thresh: 0.25\n')
 log = (out / 'launch.log').open('w')
+resource_stop=threading.Event()
+resources={'scope':'Aggregate WSL guest CPU and memory; not Windows host utilization',
+           'cpu_count':os.cpu_count(),'samples':[]}
+def sample_resources():
+    previous=None
+    started=time.monotonic()
+    while not resource_stop.is_set():
+        try:
+            cpu=[int(x) for x in Path('/proc/stat').read_text().splitlines()[0].split()[1:9]]
+            total=sum(cpu); idle=cpu[3]+cpu[4]
+            memory={line.split(':')[0]:int(line.split()[1]) for line in Path('/proc/meminfo').read_text().splitlines() if line.startswith(('MemTotal:','MemAvailable:'))}
+            sample={'seconds':round(time.monotonic()-started,2),'memory_available_kib':memory['MemAvailable'],
+                    'memory_total_kib':memory['MemTotal'],'load_1m':os.getloadavg()[0]}
+            if previous and total>previous[0]:
+                sample['cpu_busy_percent']=round(100*(1-(idle-previous[1])/(total-previous[0])),2)
+            resources['samples'].append(sample)
+            previous=(total,idle)
+        except (OSError,ValueError,KeyError) as exc:
+            resources['sampling_error']=str(exc)
+            break
+        resource_stop.wait(1)
+resource_thread=threading.Thread(target=sample_resources,daemon=True)
+resource_thread.start()
 launch = subprocess.Popen(['ros2','launch','nav2_bringup','tb3_loopback_simulation.launch.py',
     'use_rviz:=False','use_composition:=False',f'map:={out / "room.yaml"}'],
     stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
@@ -64,6 +88,8 @@ finally:
     except ProcessLookupError:
         pass
     log.close()
+    resource_stop.set(); resource_thread.join(timeout=2)
+    (out/'resources.json').write_text(json.dumps(resources,indent=2))
     result['launch_exit_code']=launch.returncode
     (out/'summary.json').write_text(json.dumps(result,indent=2))
     print('Evidence:',out,flush=True)

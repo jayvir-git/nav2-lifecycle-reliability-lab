@@ -1,0 +1,152 @@
+--- a/nav2_lifecycle_manager/include/nav2_lifecycle_manager/lifecycle_manager.hpp
++++ b/nav2_lifecycle_manager/include/nav2_lifecycle_manager/lifecycle_manager.hpp
+@@ -18,6 +18,7 @@
+ 
+ #include <map>
+ #include <memory>
++#include "nav2_lifecycle_manager/shutdown_lifecycle_client.hpp"
+ #include <string>
+ #include <thread>
+ #include <unordered_map>
+@@ -69,6 +70,7 @@
+   ~LifecycleManager();
+ 
+ protected:
++  std::shared_ptr<std::atomic_bool> shutdown_requested_ = std::make_shared<std::atomic_bool>(false);
+   // Callback group used by services and timers
+   rclcpp::CallbackGroup::SharedPtr callback_group_;
+   std::unique_ptr<nav2_util::NodeThread> service_thread_;
+@@ -237,7 +239,7 @@
+   std::map<std::string, std::shared_ptr<bond::Bond>> bond_map_;
+ 
+   // A map of all nodes to be controlled
+-  std::map<std::string, std::shared_ptr<nav2_util::LifecycleServiceClient>> node_map_;
++  std::map<std::string, std::shared_ptr<ShutdownLifecycleClient>> node_map_;
+ 
+   std::map<std::uint8_t, std::string> transition_label_map_;
+ 
+--- a/nav2_lifecycle_manager/src/lifecycle_manager.cpp
++++ b/nav2_lifecycle_manager/src/lifecycle_manager.cpp
+@@ -27,7 +27,7 @@
+ 
+ using lifecycle_msgs::msg::Transition;
+ using lifecycle_msgs::msg::State;
+-using nav2_util::LifecycleServiceClient;
++using LifecycleServiceClient = nav2_lifecycle_manager::ShutdownLifecycleClient;
+ 
+ namespace nav2_lifecycle_manager
+ {
+@@ -197,7 +197,7 @@
+   message("Creating and initializing lifecycle service clients");
+   for (auto & node_name : node_names_) {
+     node_map_[node_name] =
+-      std::make_shared<LifecycleServiceClient>(node_name, shared_from_this());
++      std::make_shared<LifecycleServiceClient>(node_name, shared_from_this(), shutdown_requested_);
+   }
+ }
+ 
+@@ -447,6 +447,7 @@
+ void
+ LifecycleManager::onRclPreshutdown()
+ {
++  shutdown_requested_->store(true);
+   RCLCPP_INFO(
+     get_logger(), "Running Nav2 LifecycleManager rcl preshutdown (%s)",
+     this->get_name());
+--- /dev/null
++++ b/nav2_lifecycle_manager/include/nav2_lifecycle_manager/shutdown_lifecycle_client.hpp
+@@ -0,0 +1,94 @@
++// Experimental manager-local client. No changes to installed nav2_util ABI.
++#pragma once
++#include <algorithm>
++#include <atomic>
++#include <chrono>
++#include <memory>
++#include <stdexcept>
++#include <string>
++#include "rclcpp/rclcpp.hpp"
++#include "lifecycle_msgs/srv/change_state.hpp"
++#include "lifecycle_msgs/srv/get_state.hpp"
++
++namespace nav2_lifecycle_manager {
++class ShutdownLifecycleClient {
++  using Change = lifecycle_msgs::srv::ChangeState;
++  using State = lifecycle_msgs::srv::GetState;
++public:
++  ShutdownLifecycleClient(const std::string & name, rclcpp::Node::SharedPtr node,
++    std::shared_ptr<std::atomic_bool> stopping)
++  : stopping_(stopping) {
++    group_ = node->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive, false);
++    executor_.add_callback_group(group_, node->get_node_base_interface());
++    change_ = node->create_client<Change>(name + "/change_state", rclcpp::SystemDefaultsQoS(), group_);
++    state_ = node->create_client<State>(name + "/get_state", rclcpp::SystemDefaultsQoS(), group_);
++    while (!discover<State>(state_, std::chrono::seconds(2))) { check_stop(); }
++  }
++  bool change_state(uint8_t transition) {
++    auto request = std::make_shared<Change::Request>();
++    request->transition.id = transition;
++    return invoke<Change>(change_, request, std::chrono::seconds(5),
++      std::chrono::nanoseconds(-1))->success;
++  }
++  uint8_t get_state() {
++    return invoke<State>(state_, std::make_shared<State::Request>(),
++      std::chrono::seconds(2), std::chrono::seconds(2))->current_state.id;
++  }
++private:
++  void check_stop() const {
++    if (stopping_->load() || !rclcpp::ok()) {
++      throw std::runtime_error("Lifecycle service wait interrupted by shutdown");
++    }
++  }
++  template<class Service>
++  bool discover(typename rclcpp::Client<Service>::SharedPtr client,
++    std::chrono::nanoseconds timeout) {
++    const auto start = std::chrono::steady_clock::now();
++    while (true) {
++      check_stop();
++      if (client->service_is_ready()) { return true; }
++      const auto elapsed = std::chrono::steady_clock::now() - start;
++      if (elapsed >= timeout) { return false; }
++      const auto remaining = timeout - elapsed;
++      client->wait_for_service(std::min(remaining,
++        std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::milliseconds(50))));
++    }
++  }
++  template<class Service>
++  typename Service::Response::SharedPtr invoke(
++    typename rclcpp::Client<Service>::SharedPtr client,
++    typename Service::Request::SharedPtr request,
++    std::chrono::nanoseconds discovery_timeout, std::chrono::nanoseconds response_timeout) {
++    if (!discover<Service>(client, discovery_timeout)) {
++      throw std::runtime_error("Lifecycle service unavailable");
++    }
++    check_stop();
++    auto future = client->async_send_request(request);
++    const auto start = std::chrono::steady_clock::now();
++    try {
++      while (true) {
++        check_stop();
++        auto slice = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::milliseconds(50));
++        if (response_timeout.count() >= 0) {
++          const auto elapsed = std::chrono::steady_clock::now() - start;
++          if (elapsed >= response_timeout) { throw std::runtime_error("Lifecycle response timed out"); }
++          slice = std::min(slice, response_timeout - elapsed);
++        }
++        auto status = executor_.spin_until_future_complete(future, slice);
++        if (status == rclcpp::FutureReturnCode::SUCCESS) { return future.get(); }
++        if (status == rclcpp::FutureReturnCode::INTERRUPTED) {
++          throw std::runtime_error("Lifecycle executor interrupted");
++        }
++      }
++    } catch (...) {
++      client->remove_pending_request(future);
++      throw;
++    }
++  }
++  std::shared_ptr<std::atomic_bool> stopping_;
++  rclcpp::CallbackGroup::SharedPtr group_;
++  rclcpp::executors::SingleThreadedExecutor executor_;
++  rclcpp::Client<Change>::SharedPtr change_;
++  rclcpp::Client<State>::SharedPtr state_;
++};
++} // namespace nav2_lifecycle_manager

@@ -96,4 +96,4 @@ Check an actual run's `summary.json` for its outcome. Installation or file creat
 
 ## Shutdown cancellation prototype
 
-The [cancellation validation](docs/cancellation-validation.md) tests a manager-local C++ client that observes a shared stop flag before shutdown joins its worker. The visual explanation is at `docs/index.html#cancellation`, with recorded evidence in `docs/cancellation-results.json`. This remains an isolated Nav2 1.3.13 experiment; installed packages are unchanged and current upstream main has not been tested.
+The [cancellation validation](docs/cancellation-validation.md) tests a manager-local C++ client that observes a shared stop flag before shutdown joins its worker. The visual explanation is at `docs/index.html#cancellation`, with recorded evidence in `docs/cancellation-results.json`. This remains an isolated Nav2 1.3.13 experiment; installed packages are unchanged. See the subsequent [upstream review](docs/upstream-review.md) for newer source checks, repeated runs, and the discovered startup-cancellation gap. The prototype is not ready for upstream submission.

@@ -13,7 +13,7 @@ from nav2_msgs.srv import ManageLifecycleNodes
 
 root=Path(__file__).resolve().parent
 mode=sys.argv[1] if len(sys.argv)>1 else 'dead'
-if mode not in ('alive','dead','dead-sim','slow'): raise SystemExit('Mode must be alive, dead, dead-sim or slow')
+if mode not in ('alive','dead','dead-sim','slow','transition'): raise SystemExit('Unknown probe mode')
 out=root/'results'/('shutdown-'+mode+'-'+str(time.time_ns()))
 out.mkdir(parents=True)
 # Generate the small map locally so the repro does not depend on old results.
@@ -62,19 +62,26 @@ try:
             if time.monotonic()>deadline: raise TimeoutError('Bond loss was not detected; invalid reproduction')
             time.sleep(0.1)
         result['bond_loss_detected']=True
-    if mode=='slow':
+    if mode in ('slow','transition'):
         control=observer.create_client(ManageLifecycleNodes,'/probe_manager/manage_nodes')
         if not control.wait_for_service(timeout_sec=3): raise TimeoutError('Manager control unavailable')
         server.send_signal(signal.SIGSTOP)
         request=ManageLifecycleNodes.Request(); request.command=1
         pause_started=time.monotonic()
         future=control.call_async(request)
-        time.sleep(3)
-        server.send_signal(signal.SIGCONT)
-        rclpy.spin_until_future_complete(observer,future,timeout_sec=6)
-        result['delayed_pause_seconds']=round(time.monotonic()-pause_started,3)
-        result['delayed_pause_succeeded']=future.done() and future.result().success
-        if not result['delayed_pause_succeeded']: raise RuntimeError('Delayed pause failed')
+        if mode=='transition':
+            deadline=time.monotonic()+3
+            while 'Deactivating map_server' not in (out/'process.log').read_text():
+                if time.monotonic()>deadline: raise TimeoutError('Pause did not reach transition')
+                rclpy.spin_once(observer,timeout_sec=0.05)
+            result['transition_wait_confirmed']=True
+        else:
+            time.sleep(3)
+            server.send_signal(signal.SIGCONT)
+            rclpy.spin_until_future_complete(observer,future,timeout_sec=6)
+            result['delayed_pause_seconds']=round(time.monotonic()-pause_started,3)
+            result['delayed_pause_succeeded']=future.done() and future.result().success
+            if not result['delayed_pause_succeeded']: raise RuntimeError('Delayed pause failed')
     time.sleep(shutdown_delay)
     manager.send_signal(signal.SIGINT)
     started=time.monotonic()
