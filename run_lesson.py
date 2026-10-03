@@ -29,7 +29,9 @@ launch = subprocess.Popen(['ros2','launch','nav2_bringup','tb3_loopback_simulati
     stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
 result = {'simulation':'Upstream Nav2 loopback; idealized motion, no physical robot', 'goals':[]}
 try:
-    mission = subprocess.run([sys.executable,str(ROOT/'mission.py'),str(out)],timeout=240)
+    fault = '--fault' in sys.argv
+    mission_script = 'fault_mission.py' if fault else 'mission.py'
+    mission = subprocess.run([sys.executable,str(ROOT/mission_script),str(out),str(launch.pid)],timeout=240)
     result.update(json.loads((out/'mission.json').read_text()) if (out/'mission.json').exists() else {})
     result['mission_exit_code'] = mission.returncode
     for label,args in [('nodes',['ros2','node','list']),('topics',['ros2','topic','list','-t']),

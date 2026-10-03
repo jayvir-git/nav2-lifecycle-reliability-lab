@@ -10,7 +10,7 @@ Open `docs/index.html` in a browser. It works offline with the adjacent `baselin
 
 Use Ubuntu 24.04 (native or a dedicated WSL distribution) with internet access. Review `setup.sh`, then run `sudo bash setup.sh` to install official ROS 2 Jazzy and Nav2 packages. This creates an unprivileged `learner` account if absent and installs a substantial dependency set. Clone this repository into a directory writable by the runtime user. Run `bash run.sh` as that user, not root. The Windows wrapper expects a WSL distribution named `Nav2-Jazzy`; other installations can use the Linux command directly.
 
-This repository includes the lesson code and selected baseline evidence, not the installed WSL disk, package downloads, or local installation logs. The healthy baseline and pause/resume lesson are implemented; deliberate fault injection is future work.
+This repository includes the lesson code and selected experiment evidence, not the installed WSL disk, package downloads, or local installation logs. The healthy baseline, pause/resume lesson, and controller interruption with full-stack restart recovery are implemented.
 
 ## Environment
 
@@ -50,7 +50,31 @@ These are ROS nodes, which are software components. With composition disabled fo
 4. Resume should return the controller to active.
 5. `launch.log` records startup and shutdown, including failures. `nodes.txt`, `topics.txt`, `processes.txt` and `packages.txt` capture the software that ran.
 
-The first exercise is to explain why an existing process does not necessarily mean navigation is ready. After that, inspect `launch.log` and identify the configure/activate transitions for the controller. Future lessons can introduce a deliberate startup failure or lost component after the healthy baseline is established.
+The first exercise is to explain why an existing process does not necessarily mean navigation is ready. After that, inspect `launch.log` and identify the configure/activate transitions for the controller. The second lesson below interrupts that controller while navigation is underway.
+
+## Controller failure and restart experiment
+
+Run from the repository directory in PowerShell:
+
+```powershell
+.\run.ps1 --failure-experiment
+```
+
+On Ubuntu, use `bash run.sh --failure-experiment`. Use only the dedicated simulation environment, with one lesson running at a time. The observer verifies the exact controller executable, runtime UID, and the launch process group before sending SIGKILL. It waits for map-frame action feedback to move from x=-2 past x=-1.85 before interruption. The requested destination is (2, 0).
+
+The observer records action completion, lifecycle service samples, and odometry for 20 seconds after interruption. Then the runner cleans up the failed stack and starts a completely fresh stack, resets the pose, and verifies two successful goals plus lifecycle pause/resume. This is deliberate full-stack restart recovery, not automatic respawn or resumption of the interrupted goal.
+
+Two trials on 2 October 2026 evening (America/New_York; 3 October UTC) observed:
+
+- First fault run `20261003T013022Z`: navigation ABORTED 1.091 seconds after SIGKILL; planner first observed inactive after 5.131 seconds. Restart run `20261003T013107Z` passed both goals and pause/resume.
+- Repeat fault run `20261003T013207Z`: navigation ABORTED after 0.109 seconds; planner first observed inactive after 5.187 seconds. The corresponding recovery evidence is included in `docs/failure.json`.
+- Both fault runs logged a missed controller heartbeat with a 4000 ms threshold and deactivated related nodes. The separately managed map server stayed active. Lifecycle sampling is roughly once per second; first observation is not an exact transition timestamp. Two runs do not establish latency guarantees.
+- Both fault runs required SIGINT → SIGTERM → SIGKILL escalation for the navigation lifecycle manager during cleanup. The launch exit code was nevertheless zero. This is a reproducible observation, not an established upstream defect or a claim of graceful recovery.
+- Final odometry samples reported zero longitudinal velocity and unchanged position, then stopped arriving. The installed simulator stops integrating commands after one second without fresh velocity, and that path does not publish odometry. We have not isolated the cause of stopping, or measured continuous standstill over the whole observation window. Odometry and map coordinates use different frames.
+
+The combined report's `success` means the action-abort, peer-deactivation and fresh-navigation checks passed. It does not mean every component shut down gracefully. `forced_shutdown_observed` and selected raw log excerpts preserve that distinction. Full local logs remain in `results/`; selected shareable evidence and installed Nav2 package versions live in `docs/`.
+
+Open `docs/index.html#failure` for the interactive event sequence, healthy/fault comparison, and explicit recovery limits. The next investigation is why the lifecycle manager needed forced termination; its root cause is not established here.
 
 ## Sources
 

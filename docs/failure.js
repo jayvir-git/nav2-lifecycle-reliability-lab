@@ -1,0 +1,12670 @@
+window.FAILURE = {
+  "recovery_method": "Deliberate full-stack restart with pose reset; not automatic recovery or in-place controller restart",
+  "runs": [
+    {
+      "phase": "fault",
+      "run": "20261003T013207Z",
+      "result": {
+        "simulation": "Upstream Nav2 loopback; idealized motion, no physical robot",
+        "goals": [],
+        "success": true,
+        "events": [
+          {
+            "seconds": 7.055,
+            "event": "ready",
+            "states": {
+              "map_server": "active",
+              "planner_server": "active",
+              "controller_server": "active",
+              "bt_navigator": "active"
+            }
+          },
+          {
+            "seconds": 7.131,
+            "event": "goal_accepted",
+            "target": [
+              2,
+              0
+            ]
+          },
+          {
+            "seconds": 10.133,
+            "event": "controller_killed",
+            "pid": 49,
+            "x": -1.8486869567831334
+          },
+          {
+            "seconds": 10.242,
+            "event": "action_terminal",
+            "status": 6
+          },
+          {
+            "seconds": 30.148,
+            "event": "observation_complete"
+          }
+        ],
+        "odometry": [
+          {
+            "seconds": 7.353,
+            "x": 0.0009158774465322495,
+            "y": 0.0,
+            "vx": 0.04579387232661247
+          },
+          {
+            "seconds": 7.554,
+            "x": 0.004536536671726817,
+            "y": 4.388129499848814e-07,
+            "vx": 0.1054566279053688
+          },
+          {
+            "seconds": 7.664,
+            "x": 0.006942922654699221,
+            "y": 2.8330571359255013e-07,
+            "vx": 0.12031929939985275
+          },
+          {
+            "seconds": 7.772,
+            "x": 0.009958032252927372,
+            "y": 2.336750030408072e-07,
+            "vx": 0.15075547993183136
+          },
+          {
+            "seconds": 7.878,
+            "x": 0.013335426592423935,
+            "y": 7.448834298927667e-07,
+            "vx": 0.1688697189092636
+          },
+          {
+            "seconds": 7.986,
+            "x": 0.01724105061957627,
+            "y": 1.7293631631618136e-06,
+            "vx": 0.19528120756149292
+          },
+          {
+            "seconds": 8.09,
+            "x": 0.021608517723054492,
+            "y": 2.462391149932857e-06,
+            "vx": 0.2183733582496643
+          },
+          {
+            "seconds": 8.204,
+            "x": 0.026265486701257834,
+            "y": 1.911136251485268e-06,
+            "vx": 0.23284845054149628
+          },
+          {
+            "seconds": 8.31,
+            "x": 0.03121005987549606,
+            "y": 6.200384709204538e-07,
+            "vx": 0.24722866714000702
+          },
+          {
+            "seconds": 8.414,
+            "x": 0.03654235563048339,
+            "y": -6.002710090976603e-07,
+            "vx": 0.26661479473114014
+          },
+          {
+            "seconds": 8.525,
+            "x": 0.04237270782452396,
+            "y": -1.7447330229675066e-06,
+            "vx": 0.29151761531829834
+          },
+          {
+            "seconds": 8.626,
+            "x": 0.048544724464653556,
+            "y": -3.388636043131582e-06,
+            "vx": 0.30860084295272827
+          },
+          {
+            "seconds": 8.729,
+            "x": 0.055055655433486964,
+            "y": -6.775028650011476e-06,
+            "vx": 0.32554659247398376
+          },
+          {
+            "seconds": 8.928,
+            "x": 0.06864999954421755,
+            "y": -1.95232808151801e-05,
+            "vx": 0.341999351978302
+          },
+          {
+            "seconds": 9.036,
+            "x": 0.07569825416828657,
+            "y": -2.717862787530035e-05,
+            "vx": 0.3524129390716553
+          },
+          {
+            "seconds": 9.255,
+            "x": 0.09076724460381529,
+            "y": -4.574642119427052e-05,
+            "vx": 0.38545477390289307
+          },
+          {
+            "seconds": 9.374,
+            "x": 0.09872016361963024,
+            "y": -5.5951138659343346e-05,
+            "vx": 0.3976462781429291
+          },
+          {
+            "seconds": 9.482,
+            "x": 0.10681346893559687,
+            "y": -6.751325099971021e-05,
+            "vx": 0.40466567873954773
+          },
+          {
+            "seconds": 9.594,
+            "x": 0.11514598679500339,
+            "y": -8.081206576353111e-05,
+            "vx": 0.4166264235973358
+          },
+          {
+            "seconds": 9.703,
+            "x": 0.12357954655546621,
+            "y": -9.449592417084342e-05,
+            "vx": 0.4216785430908203
+          },
+          {
+            "seconds": 9.805,
+            "x": 0.13211603601565633,
+            "y": -0.000108849100757493,
+            "vx": 0.42682507634162903
+          },
+          {
+            "seconds": 9.91,
+            "x": 0.14068216994887586,
+            "y": -0.00012351801219502378,
+            "vx": 0.42830732464790344
+          },
+          {
+            "seconds": 10.017,
+            "x": 0.1493641662335288,
+            "y": -0.00013937742456546174,
+            "vx": 0.43410053849220276
+          },
+          {
+            "seconds": 10.125,
+            "x": 0.1582559633200752,
+            "y": -0.00015596736691330076,
+            "vx": 0.44459062814712524
+          },
+          {
+            "seconds": 10.236,
+            "x": 0.16721970083762533,
+            "y": -0.00017229546984503822,
+            "vx": 0.44818761944770813
+          },
+          {
+            "seconds": 10.348,
+            "x": 0.17612954930906283,
+            "y": -0.00018851449814109535,
+            "vx": 0.4454931616783142
+          },
+          {
+            "seconds": 10.457,
+            "x": 0.18511789720337263,
+            "y": -0.00020474639021587362,
+            "vx": 0.4494181275367737
+          },
+          {
+            "seconds": 10.565,
+            "x": 0.1943572724374217,
+            "y": -0.00022052338566684953,
+            "vx": 0.46196943521499634
+          },
+          {
+            "seconds": 10.764,
+            "x": 0.2128994049872231,
+            "y": -0.00025088180456648413,
+            "vx": 0.46355393528938293
+          },
+          {
+            "seconds": 10.865,
+            "x": 0.22217046977661375,
+            "y": -0.0002669454227770448,
+            "vx": 0.46355393528938293
+          },
+          {
+            "seconds": 10.968,
+            "x": 0.2314415335256687,
+            "y": -0.00028359864674227034,
+            "vx": 0.46355393528938293
+          },
+          {
+            "seconds": 11.07,
+            "x": 0.2407125961968912,
+            "y": -0.00030084147639480684,
+            "vx": 0.46355393528938293
+          },
+          {
+            "seconds": 11.176,
+            "x": 0.24998365775278444,
+            "y": -0.0003186739116649158,
+            "vx": 0.46355393528938293
+          },
+          {
+            "seconds": 11.296,
+            "x": 0.2592547181558517,
+            "y": -0.00033709595248047403,
+            "vx": 0.46355393528938293
+          },
+          {
+            "seconds": 11.401,
+            "x": 0.26852577736859623,
+            "y": -0.0003561075987669737,
+            "vx": 0.46355393528938293
+          },
+          {
+            "seconds": 11.503,
+            "x": 0.27779683535352123,
+            "y": -0.0003757088504475223,
+            "vx": 0.46355393528938293
+          },
+          {
+            "seconds": 11.604,
+            "x": 0.28706789207313,
+            "y": -0.00039589970744284265,
+            "vx": 0.46355393528938293
+          },
+          {
+            "seconds": 11.708,
+            "x": 0.2963389474899258,
+            "y": -0.000416680169671273,
+            "vx": 0.46355393528938293
+          },
+          {
+            "seconds": 11.811,
+            "x": 0.3056100015664119,
+            "y": -0.00043805023704876684,
+            "vx": 0.46355393528938293
+          },
+          {
+            "seconds": 11.916,
+            "x": 0.31238106127805865,
+            "y": -0.0004540883567934075,
+            "vx": 0.33855393528938293
+          },
+          {
+            "seconds": 12.019,
+            "x": 0.3166521280026725,
+            "y": -0.00046420492384256263,
+            "vx": 0.21355393528938293
+          },
+          {
+            "seconds": 12.123,
+            "x": 0.31842320174025346,
+            "y": -0.0004683999381962322,
+            "vx": 0.08855393528938293
+          },
+          {
+            "seconds": 12.232,
+            "x": 0.31842320174025346,
+            "y": -0.0004683999381962322,
+            "vx": 0.0
+          },
+          {
+            "seconds": 12.334,
+            "x": 0.31842320174025346,
+            "y": -0.0004683999381962322,
+            "vx": 0.0
+          },
+          {
+            "seconds": 12.439,
+            "x": 0.31842320174025346,
+            "y": -0.0004683999381962322,
+            "vx": 0.0
+          },
+          {
+            "seconds": 12.542,
+            "x": 0.31842320174025346,
+            "y": -0.0004683999381962322,
+            "vx": 0.0
+          },
+          {
+            "seconds": 12.645,
+            "x": 0.31842320174025346,
+            "y": -0.0004683999381962322,
+            "vx": 0.0
+          },
+          {
+            "seconds": 12.747,
+            "x": 0.31842320174025346,
+            "y": -0.0004683999381962322,
+            "vx": 0.0
+          },
+          {
+            "seconds": 12.849,
+            "x": 0.31842320174025346,
+            "y": -0.0004683999381962322,
+            "vx": 0.0
+          },
+          {
+            "seconds": 13.048,
+            "x": 0.31842320174025346,
+            "y": -0.0004683999381962322,
+            "vx": 0.0
+          },
+          {
+            "seconds": 13.15,
+            "x": 0.31842320174025346,
+            "y": -0.0004683999381962322,
+            "vx": 0.0
+          }
+        ],
+        "state_samples": [
+          {
+            "seconds": 10.144,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 10.144,
+            "node": "planner_server",
+            "state": "active"
+          },
+          {
+            "seconds": 10.145,
+            "node": "bt_navigator",
+            "state": "active"
+          },
+          {
+            "seconds": 11.172,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 11.174,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 11.174,
+            "node": "planner_server",
+            "state": "active"
+          },
+          {
+            "seconds": 11.175,
+            "node": "bt_navigator",
+            "state": "active"
+          },
+          {
+            "seconds": 12.174,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 12.175,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 12.176,
+            "node": "planner_server",
+            "state": "active"
+          },
+          {
+            "seconds": 12.176,
+            "node": "bt_navigator",
+            "state": "active"
+          },
+          {
+            "seconds": 13.201,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 13.203,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 13.203,
+            "node": "planner_server",
+            "state": "active"
+          },
+          {
+            "seconds": 13.203,
+            "node": "bt_navigator",
+            "state": "active"
+          },
+          {
+            "seconds": 14.216,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 14.218,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 14.218,
+            "node": "planner_server",
+            "state": "active"
+          },
+          {
+            "seconds": 14.218,
+            "node": "bt_navigator",
+            "state": "active"
+          },
+          {
+            "seconds": 15.224,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 15.225,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 15.225,
+            "node": "bt_navigator",
+            "state": "inactive"
+          },
+          {
+            "seconds": 15.32,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 16.233,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 16.234,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 16.235,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 16.235,
+            "node": "bt_navigator",
+            "state": "inactive"
+          },
+          {
+            "seconds": 17.249,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 17.25,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 17.251,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 17.251,
+            "node": "bt_navigator",
+            "state": "inactive"
+          },
+          {
+            "seconds": 18.264,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 18.266,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 18.266,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 18.266,
+            "node": "bt_navigator",
+            "state": "inactive"
+          },
+          {
+            "seconds": 19.28,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 19.282,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 19.282,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 19.282,
+            "node": "bt_navigator",
+            "state": "inactive"
+          },
+          {
+            "seconds": 20.296,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 20.298,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 20.298,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 20.298,
+            "node": "bt_navigator",
+            "state": "inactive"
+          },
+          {
+            "seconds": 21.312,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 21.314,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 21.314,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 21.315,
+            "node": "bt_navigator",
+            "state": "inactive"
+          },
+          {
+            "seconds": 22.329,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 22.331,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 22.331,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 22.331,
+            "node": "bt_navigator",
+            "state": "inactive"
+          },
+          {
+            "seconds": 23.345,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 23.346,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 23.346,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 23.347,
+            "node": "bt_navigator",
+            "state": "inactive"
+          },
+          {
+            "seconds": 24.36,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 24.362,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 24.362,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 24.362,
+            "node": "bt_navigator",
+            "state": "inactive"
+          },
+          {
+            "seconds": 25.375,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 25.376,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 25.377,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 25.377,
+            "node": "bt_navigator",
+            "state": "inactive"
+          },
+          {
+            "seconds": 26.39,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 26.391,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 26.392,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 26.392,
+            "node": "bt_navigator",
+            "state": "inactive"
+          },
+          {
+            "seconds": 27.404,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 27.406,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 27.406,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 27.407,
+            "node": "bt_navigator",
+            "state": "inactive"
+          },
+          {
+            "seconds": 28.42,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 28.422,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 28.422,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 28.422,
+            "node": "bt_navigator",
+            "state": "inactive"
+          },
+          {
+            "seconds": 29.436,
+            "node": "controller_server",
+            "state": "no_response_within_1s"
+          },
+          {
+            "seconds": 29.438,
+            "node": "map_server",
+            "state": "active"
+          },
+          {
+            "seconds": 29.438,
+            "node": "planner_server",
+            "state": "inactive"
+          },
+          {
+            "seconds": 29.439,
+            "node": "bt_navigator",
+            "state": "inactive"
+          }
+        ],
+        "observation_window_seconds": 20,
+        "fault": "SIGKILL controller process",
+        "prediction": "Loss of controller bond should trigger coordinated lifecycle teardown. Action outcome and simulated motion must be measured.",
+        "action_status": 6,
+        "mission_exit_code": 0,
+        "residual_group_cleanup_needed": false,
+        "launch_exit_code": 0
+      },
+      "log_excerpts": [
+        "[bt_navigator-10] [WARN] [1790991139.981375107] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.",
+        "[lifecycle_manager-15] [INFO] [1790991143.970746112] [lifecycle_manager_navigation]: \u001b[34m\u001b[1mHave not received a heartbeat from controller_server.\u001b[0m\u001b[0m",
+        "[lifecycle_manager-15] [ERROR] [1790991143.970862261] [lifecycle_manager_navigation]: CRITICAL FAILURE: SERVER controller_server IS DOWN after not receiving a heartbeat for 4000 ms. Shutting down related nodes.",
+        "[ERROR] [lifecycle_manager-15]: process[lifecycle_manager-15] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'",
+        "[ERROR] [lifecycle_manager-15]: process[lifecycle_manager-15] failed to terminate '10.0' seconds after receiving 'SIGTERM', escalating to 'SIGKILL'"
+      ],
+      "forced_shutdown_observed": true
+    },
+    {
+      "phase": "recovery",
+      "run": "20261003T013253Z",
+      "result": {
+        "simulation": "Upstream Nav2 loopback; idealized motion, no physical robot",
+        "goals": [
+          {
+            "target": [
+              -1.0,
+              0.0
+            ],
+            "status": 4,
+            "seconds": 11.056510833000004,
+            "feedback": [
+              {
+                "distance_remaining": 0.0,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.0,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -2.0,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9991887205094099,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9991887205094099,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9991887205094099,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9991887205094099,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9991887205094099,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9991887205094099,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9991887205094099,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9991887205094099,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9991887205094099,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9991887205094099,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9991887205094099,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9991887205094099,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9991887205094099,
+                "y": 0.0
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9984559662877095,
+                "y": 4.195465841254111e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9984559662877095,
+                "y": 4.195465841254111e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9984559662877095,
+                "y": 4.195465841254111e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9984559662877095,
+                "y": 4.195465841254111e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9984559662877095,
+                "y": 4.195465841254111e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9984559662877095,
+                "y": 4.195465841254111e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9984559662877095,
+                "y": 4.195465841254111e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9984559662877095,
+                "y": 4.195465841254111e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9984559662877095,
+                "y": 4.195465841254111e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9984559662877095,
+                "y": 4.195465841254111e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9984559662877095,
+                "y": 4.195465841254111e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9984559662877095,
+                "y": 4.195465841254111e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9984559662877095,
+                "y": 4.195465841254111e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9978685519794956,
+                "y": -1.3811376026817809e-09
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9978685519794956,
+                "y": -1.3811376026817809e-09
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9978685519794956,
+                "y": -1.3811376026817809e-09
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9978685519794956,
+                "y": -1.3811376026817809e-09
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9978685519794956,
+                "y": -1.3811376026817809e-09
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9978685519794956,
+                "y": -1.3811376026817809e-09
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9978685519794956,
+                "y": -1.3811376026817809e-09
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9978685519794956,
+                "y": -1.3811376026817809e-09
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9978685519794956,
+                "y": -1.3811376026817809e-09
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9978685519794956,
+                "y": -1.3811376026817809e-09
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9978685519794956,
+                "y": -1.3811376026817809e-09
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9978685519794956,
+                "y": -1.3811376026817809e-09
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9978685519794956,
+                "y": -1.3811376026817809e-09
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9974288299409004,
+                "y": 2.5776984078299965e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9974288299409004,
+                "y": 2.5776984078299965e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9974288299409004,
+                "y": 2.5776984078299965e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9974288299409004,
+                "y": 2.5776984078299965e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9974288299409004,
+                "y": 2.5776984078299965e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9974288299409004,
+                "y": 2.5776984078299965e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9974288299409004,
+                "y": 2.5776984078299965e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9974288299409004,
+                "y": 2.5776984078299965e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9974288299409004,
+                "y": 2.5776984078299965e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9974288299409004,
+                "y": 2.5776984078299965e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9974288299409004,
+                "y": 2.5776984078299965e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.996518729400833,
+                "y": 9.972258545673684e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.996518729400833,
+                "y": 9.972258545673684e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.996518729400833,
+                "y": 9.972258545673684e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.996518729400833,
+                "y": 9.972258545673684e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.996518729400833,
+                "y": 9.972258545673684e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.996518729400833,
+                "y": 9.972258545673684e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.996518729400833,
+                "y": 9.972258545673684e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.996518729400833,
+                "y": 9.972258545673684e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.996518729400833,
+                "y": 9.972258545673684e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.996518729400833,
+                "y": 9.972258545673684e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.996518729400833,
+                "y": 9.972258545673684e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9959977270970173,
+                "y": 3.747640913621935e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9959977270970173,
+                "y": 3.747640913621935e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9959977270970173,
+                "y": 3.747640913621935e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9959977270970173,
+                "y": 3.747640913621935e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9959977270970173,
+                "y": 3.747640913621935e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9959977270970173,
+                "y": 3.747640913621935e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9959977270970173,
+                "y": 3.747640913621935e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9959977270970173,
+                "y": 3.747640913621935e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9959977270970173,
+                "y": 3.747640913621935e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9959977270970173,
+                "y": 3.747640913621935e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9959977270970173,
+                "y": 3.747640913621935e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9959977270970173,
+                "y": 3.747640913621935e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9959977270970173,
+                "y": 3.747640913621935e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9926938530802902,
+                "y": 1.1557211728984427e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9926938530802902,
+                "y": 1.1557211728984427e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9926938530802902,
+                "y": 1.1557211728984427e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9926938530802902,
+                "y": 1.1557211728984427e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9926938530802902,
+                "y": 1.1557211728984427e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9926938530802902,
+                "y": 1.1557211728984427e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9926938530802902,
+                "y": 1.1557211728984427e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9926938530802902,
+                "y": 1.1557211728984427e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9926938530802902,
+                "y": 1.1557211728984427e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9926938530802902,
+                "y": 1.1557211728984427e-08
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9884852057985998,
+                "y": -4.828790774330865e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9884852057985998,
+                "y": -4.828790774330865e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9884852057985998,
+                "y": -4.828790774330865e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9884852057985998,
+                "y": -4.828790774330865e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9884852057985998,
+                "y": -4.828790774330865e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9884852057985998,
+                "y": -4.828790774330865e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9884852057985998,
+                "y": -4.828790774330865e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9884852057985998,
+                "y": -4.828790774330865e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9884852057985998,
+                "y": -4.828790774330865e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9884852057985998,
+                "y": -4.828790774330865e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9884852057985998,
+                "y": -4.828790774330865e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9838603607169856,
+                "y": -7.167652209345938e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9838603607169856,
+                "y": -7.167652209345938e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9838603607169856,
+                "y": -7.167652209345938e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9838603607169856,
+                "y": -7.167652209345938e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9838603607169856,
+                "y": -7.167652209345938e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9838603607169856,
+                "y": -7.167652209345938e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9838603607169856,
+                "y": -7.167652209345938e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9838603607169856,
+                "y": -7.167652209345938e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9838603607169856,
+                "y": -7.167652209345938e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9838603607169856,
+                "y": -7.167652209345938e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9787925139471647,
+                "y": -4.864367486707307e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9787925139471647,
+                "y": -4.864367486707307e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9787925139471647,
+                "y": -4.864367486707307e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9787925139471647,
+                "y": -4.864367486707307e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9787925139471647,
+                "y": -4.864367486707307e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9787925139471647,
+                "y": -4.864367486707307e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9787925139471647,
+                "y": -4.864367486707307e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9787925139471647,
+                "y": -4.864367486707307e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9787925139471647,
+                "y": -4.864367486707307e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9787925139471647,
+                "y": -4.864367486707307e-07
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.9787925139471647,
+                "y": -4.864367486707307e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9734690186788784,
+                "y": -4.109506377729552e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9734690186788784,
+                "y": -4.109506377729552e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9734690186788784,
+                "y": -4.109506377729552e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9734690186788784,
+                "y": -4.109506377729552e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9734690186788784,
+                "y": -4.109506377729552e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9734690186788784,
+                "y": -4.109506377729552e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9734690186788784,
+                "y": -4.109506377729552e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9734690186788784,
+                "y": -4.109506377729552e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9734690186788784,
+                "y": -4.109506377729552e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9734690186788784,
+                "y": -4.109506377729552e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.96791548405232,
+                "y": -3.4408589983337243e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.96791548405232,
+                "y": -3.4408589983337243e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.96791548405232,
+                "y": -3.4408589983337243e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.96791548405232,
+                "y": -3.4408589983337243e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.96791548405232,
+                "y": -3.4408589983337243e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.96791548405232,
+                "y": -3.4408589983337243e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.96791548405232,
+                "y": -3.4408589983337243e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.96791548405232,
+                "y": -3.4408589983337243e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.96791548405232,
+                "y": -3.4408589983337243e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.96791548405232,
+                "y": -3.4408589983337243e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9620271161949245,
+                "y": -9.760838401738583e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9620271161949245,
+                "y": -9.760838401738583e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9620271161949245,
+                "y": -9.760838401738583e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9620271161949245,
+                "y": -9.760838401738583e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9620271161949245,
+                "y": -9.760838401738583e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9620271161949245,
+                "y": -9.760838401738583e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9620271161949245,
+                "y": -9.760838401738583e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9620271161949245,
+                "y": -9.760838401738583e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9620271161949245,
+                "y": -9.760838401738583e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9620271161949245,
+                "y": -9.760838401738583e-07
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9557613283799444,
+                "y": -2.7926506712094304e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9557613283799444,
+                "y": -2.7926506712094304e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9557613283799444,
+                "y": -2.7926506712094304e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9557613283799444,
+                "y": -2.7926506712094304e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9557613283799444,
+                "y": -2.7926506712094304e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9557613283799444,
+                "y": -2.7926506712094304e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9557613283799444,
+                "y": -2.7926506712094304e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9557613283799444,
+                "y": -2.7926506712094304e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9557613283799444,
+                "y": -2.7926506712094304e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9557613283799444,
+                "y": -2.7926506712094304e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9557613283799444,
+                "y": -2.7926506712094304e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9493374991547783,
+                "y": -5.495849523240354e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9493374991547783,
+                "y": -5.495849523240354e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9493374991547783,
+                "y": -5.495849523240354e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9493374991547783,
+                "y": -5.495849523240354e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9493374991547783,
+                "y": -5.495849523240354e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9493374991547783,
+                "y": -5.495849523240354e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9493374991547783,
+                "y": -5.495849523240354e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9493374991547783,
+                "y": -5.495849523240354e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9493374991547783,
+                "y": -5.495849523240354e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9493374991547783,
+                "y": -5.495849523240354e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9493374991547783,
+                "y": -5.495849523240354e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9427210606332623,
+                "y": -8.543222983855556e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9427210606332623,
+                "y": -8.543222983855556e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9427210606332623,
+                "y": -8.543222983855556e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9427210606332623,
+                "y": -8.543222983855556e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9427210606332623,
+                "y": -8.543222983855556e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9427210606332623,
+                "y": -8.543222983855556e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9427210606332623,
+                "y": -8.543222983855556e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9427210606332623,
+                "y": -8.543222983855556e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9427210606332623,
+                "y": -8.543222983855556e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9427210606332623,
+                "y": -8.543222983855556e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9427210606332623,
+                "y": -8.543222983855556e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9427210606332623,
+                "y": -8.543222983855556e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9427210606332623,
+                "y": -8.543222983855556e-06
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.935756653938916,
+                "y": -1.2022049296430917e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.935756653938916,
+                "y": -1.2022049296430917e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.935756653938916,
+                "y": -1.2022049296430917e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.935756653938916,
+                "y": -1.2022049296430917e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.935756653938916,
+                "y": -1.2022049296430917e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.935756653938916,
+                "y": -1.2022049296430917e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.935756653938916,
+                "y": -1.2022049296430917e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.935756653938916,
+                "y": -1.2022049296430917e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.935756653938916,
+                "y": -1.2022049296430917e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.935756653938916,
+                "y": -1.2022049296430917e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.935756653938916,
+                "y": -1.2022049296430917e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9285911370823579,
+                "y": -1.571270139584573e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9285911370823579,
+                "y": -1.571270139584573e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9285911370823579,
+                "y": -1.571270139584573e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9285911370823579,
+                "y": -1.571270139584573e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9285911370823579,
+                "y": -1.571270139584573e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9285911370823579,
+                "y": -1.571270139584573e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9285911370823579,
+                "y": -1.571270139584573e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9285911370823579,
+                "y": -1.571270139584573e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9285911370823579,
+                "y": -1.571270139584573e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9285911370823579,
+                "y": -1.571270139584573e-05
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -1.9285911370823579,
+                "y": -1.571270139584573e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9211207593010335,
+                "y": -1.975637367251498e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9211207593010335,
+                "y": -1.975637367251498e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9211207593010335,
+                "y": -1.975637367251498e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9211207593010335,
+                "y": -1.975637367251498e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9211207593010335,
+                "y": -1.975637367251498e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9211207593010335,
+                "y": -1.975637367251498e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9211207593010335,
+                "y": -1.975637367251498e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9211207593010335,
+                "y": -1.975637367251498e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9211207593010335,
+                "y": -1.975637367251498e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9211207593010335,
+                "y": -1.975637367251498e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9134342512599438,
+                "y": -2.447594189523785e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9134342512599438,
+                "y": -2.447594189523785e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9134342512599438,
+                "y": -2.447594189523785e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9134342512599438,
+                "y": -2.447594189523785e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9134342512599438,
+                "y": -2.447594189523785e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9134342512599438,
+                "y": -2.447594189523785e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9134342512599438,
+                "y": -2.447594189523785e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9134342512599438,
+                "y": -2.447594189523785e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9134342512599438,
+                "y": -2.447594189523785e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9134342512599438,
+                "y": -2.447594189523785e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9134342512599438,
+                "y": -2.447594189523785e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9134342512599438,
+                "y": -2.447594189523785e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9054117977453031,
+                "y": -3.100212115853791e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9054117977453031,
+                "y": -3.100212115853791e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9054117977453031,
+                "y": -3.100212115853791e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9054117977453031,
+                "y": -3.100212115853791e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9054117977453031,
+                "y": -3.100212115853791e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9054117977453031,
+                "y": -3.100212115853791e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9054117977453031,
+                "y": -3.100212115853791e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9054117977453031,
+                "y": -3.100212115853791e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9054117977453031,
+                "y": -3.100212115853791e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9054117977453031,
+                "y": -3.100212115853791e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.9054117977453031,
+                "y": -3.100212115853791e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8972990129692258,
+                "y": -3.7776340807666836e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8972990129692258,
+                "y": -3.7776340807666836e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8972990129692258,
+                "y": -3.7776340807666836e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8972990129692258,
+                "y": -3.7776340807666836e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8972990129692258,
+                "y": -3.7776340807666836e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8972990129692258,
+                "y": -3.7776340807666836e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8972990129692258,
+                "y": -3.7776340807666836e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8972990129692258,
+                "y": -3.7776340807666836e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8972990129692258,
+                "y": -3.7776340807666836e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8972990129692258,
+                "y": -3.7776340807666836e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8972990129692258,
+                "y": -3.7776340807666836e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8891090283602556,
+                "y": -4.470556883540048e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8891090283602556,
+                "y": -4.470556883540048e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8891090283602556,
+                "y": -4.470556883540048e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8891090283602556,
+                "y": -4.470556883540048e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8891090283602556,
+                "y": -4.470556883540048e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8891090283602556,
+                "y": -4.470556883540048e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8891090283602556,
+                "y": -4.470556883540048e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8891090283602556,
+                "y": -4.470556883540048e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8891090283602556,
+                "y": -4.470556883540048e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8891090283602556,
+                "y": -4.470556883540048e-05
+              },
+              {
+                "distance_remaining": 0.8999999761581421,
+                "x": -1.8891090283602556,
+                "y": -4.470556883540048e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.8808555431664216,
+                "y": -5.1444030765708466e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.8808555431664216,
+                "y": -5.1444030765708466e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.8808555431664216,
+                "y": -5.1444030765708466e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.8808555431664216,
+                "y": -5.1444030765708466e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.8808555431664216,
+                "y": -5.1444030765708466e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.8808555431664216,
+                "y": -5.1444030765708466e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.8808555431664216,
+                "y": -5.1444030765708466e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.8808555431664216,
+                "y": -5.1444030765708466e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.8808555431664216,
+                "y": -5.1444030765708466e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.8808555431664216,
+                "y": -5.1444030765708466e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.8808555431664216,
+                "y": -5.1444030765708466e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.8808555431664216,
+                "y": -5.1444030765708466e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.872418388341504,
+                "y": -5.787167735194758e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.872418388341504,
+                "y": -5.787167735194758e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.872418388341504,
+                "y": -5.787167735194758e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.872418388341504,
+                "y": -5.787167735194758e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.872418388341504,
+                "y": -5.787167735194758e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.872418388341504,
+                "y": -5.787167735194758e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.872418388341504,
+                "y": -5.787167735194758e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.872418388341504,
+                "y": -5.787167735194758e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.872418388341504,
+                "y": -5.787167735194758e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.872418388341504,
+                "y": -5.787167735194758e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.8637685810768805,
+                "y": -6.541360591937241e-05
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -1.8637685810768805,
+                "y": -6.541360591937241e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8637685810768805,
+                "y": -6.541360591937241e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8637685810768805,
+                "y": -6.541360591937241e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8637685810768805,
+                "y": -6.541360591937241e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8637685810768805,
+                "y": -6.541360591937241e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8637685810768805,
+                "y": -6.541360591937241e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8637685810768805,
+                "y": -6.541360591937241e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8637685810768805,
+                "y": -6.541360591937241e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8637685810768805,
+                "y": -6.541360591937241e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8637685810768805,
+                "y": -6.541360591937241e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8551135407605017,
+                "y": -7.322393563716319e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8551135407605017,
+                "y": -7.322393563716319e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8551135407605017,
+                "y": -7.322393563716319e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8551135407605017,
+                "y": -7.322393563716319e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8551135407605017,
+                "y": -7.322393563716319e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8551135407605017,
+                "y": -7.322393563716319e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8551135407605017,
+                "y": -7.322393563716319e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8551135407605017,
+                "y": -7.322393563716319e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8551135407605017,
+                "y": -7.322393563716319e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8551135407605017,
+                "y": -7.322393563716319e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8551135407605017,
+                "y": -7.322393563716319e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8463703403609761,
+                "y": -8.102349025361445e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8463703403609761,
+                "y": -8.102349025361445e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8463703403609761,
+                "y": -8.102349025361445e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8463703403609761,
+                "y": -8.102349025361445e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8463703403609761,
+                "y": -8.102349025361445e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8463703403609761,
+                "y": -8.102349025361445e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8463703403609761,
+                "y": -8.102349025361445e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8463703403609761,
+                "y": -8.102349025361445e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8463703403609761,
+                "y": -8.102349025361445e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8463703403609761,
+                "y": -8.102349025361445e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8463703403609761,
+                "y": -8.102349025361445e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8463703403609761,
+                "y": -8.102349025361445e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8463703403609761,
+                "y": -8.102349025361445e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.837454168155026,
+                "y": -8.920702084350956e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.837454168155026,
+                "y": -8.920702084350956e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.837454168155026,
+                "y": -8.920702084350956e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.837454168155026,
+                "y": -8.920702084350956e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.837454168155026,
+                "y": -8.920702084350956e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.837454168155026,
+                "y": -8.920702084350956e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.837454168155026,
+                "y": -8.920702084350956e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.837454168155026,
+                "y": -8.920702084350956e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.837454168155026,
+                "y": -8.920702084350956e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.837454168155026,
+                "y": -8.920702084350956e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8284158548204799,
+                "y": -9.61632422063937e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8284158548204799,
+                "y": -9.61632422063937e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8284158548204799,
+                "y": -9.61632422063937e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8284158548204799,
+                "y": -9.61632422063937e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8284158548204799,
+                "y": -9.61632422063937e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8284158548204799,
+                "y": -9.61632422063937e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8284158548204799,
+                "y": -9.61632422063937e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8284158548204799,
+                "y": -9.61632422063937e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8284158548204799,
+                "y": -9.61632422063937e-05
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -1.8284158548204799,
+                "y": -9.61632422063937e-05
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8192347707734715,
+                "y": -0.00010354813112444842
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8192347707734715,
+                "y": -0.00010354813112444842
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8192347707734715,
+                "y": -0.00010354813112444842
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8192347707734715,
+                "y": -0.00010354813112444842
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8192347707734715,
+                "y": -0.00010354813112444842
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8192347707734715,
+                "y": -0.00010354813112444842
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8192347707734715,
+                "y": -0.00010354813112444842
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8192347707734715,
+                "y": -0.00010354813112444842
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8192347707734715,
+                "y": -0.00010354813112444842
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8192347707734715,
+                "y": -0.00010354813112444842
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8192347707734715,
+                "y": -0.00010354813112444842
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8101185043735168,
+                "y": -0.00011158897636231752
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8101185043735168,
+                "y": -0.00011158897636231752
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8101185043735168,
+                "y": -0.00011158897636231752
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8101185043735168,
+                "y": -0.00011158897636231752
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8101185043735168,
+                "y": -0.00011158897636231752
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8101185043735168,
+                "y": -0.00011158897636231752
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8101185043735168,
+                "y": -0.00011158897636231752
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8101185043735168,
+                "y": -0.00011158897636231752
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8101185043735168,
+                "y": -0.00011158897636231752
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8101185043735168,
+                "y": -0.00011158897636231752
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8011319667498884,
+                "y": -0.00011869955704751152
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8011319667498884,
+                "y": -0.00011869955704751152
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8011319667498884,
+                "y": -0.00011869955704751152
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8011319667498884,
+                "y": -0.00011869955704751152
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8011319667498884,
+                "y": -0.00011869955704751152
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8011319667498884,
+                "y": -0.00011869955704751152
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8011319667498884,
+                "y": -0.00011869955704751152
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8011319667498884,
+                "y": -0.00011869955704751152
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8011319667498884,
+                "y": -0.00011869955704751152
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.8011319667498884,
+                "y": -0.00011869955704751152
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.7921031569175756,
+                "y": -0.00012582866196322173
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.7921031569175756,
+                "y": -0.00012582866196322173
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.7921031569175756,
+                "y": -0.00012582866196322173
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.7921031569175756,
+                "y": -0.00012582866196322173
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.7921031569175756,
+                "y": -0.00012582866196322173
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.7921031569175756,
+                "y": -0.00012582866196322173
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.7921031569175756,
+                "y": -0.00012582866196322173
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.7921031569175756,
+                "y": -0.00012582866196322173
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.7921031569175756,
+                "y": -0.00012582866196322173
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.7921031569175756,
+                "y": -0.00012582866196322173
+              },
+              {
+                "distance_remaining": 0.7749999761581421,
+                "x": -1.7829538479452376,
+                "y": -0.0001329975775525088
+              },
+              {
+                "distance_remaining": 0.7749999761581421,
+                "x": -1.7829538479452376,
+                "y": -0.0001329975775525088
+              },
+              {
+                "distance_remaining": 0.7749999761581421,
+                "x": -1.7829538479452376,
+                "y": -0.0001329975775525088
+              },
+              {
+                "distance_remaining": 0.7749999761581421,
+                "x": -1.7829538479452376,
+                "y": -0.0001329975775525088
+              },
+              {
+                "distance_remaining": 0.7749999761581421,
+                "x": -1.7829538479452376,
+                "y": -0.0001329975775525088
+              },
+              {
+                "distance_remaining": 0.7749999761581421,
+                "x": -1.7829538479452376,
+                "y": -0.0001329975775525088
+              },
+              {
+                "distance_remaining": 0.7749999761581421,
+                "x": -1.7829538479452376,
+                "y": -0.0001329975775525088
+              },
+              {
+                "distance_remaining": 0.7749999761581421,
+                "x": -1.7829538479452376,
+                "y": -0.0001329975775525088
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.7829538479452376,
+                "y": -0.0001329975775525088
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -1.7829538479452376,
+                "y": -0.0001329975775525088
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7737900574837935,
+                "y": -0.00013944472751903383
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7737900574837935,
+                "y": -0.00013944472751903383
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7737900574837935,
+                "y": -0.00013944472751903383
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7737900574837935,
+                "y": -0.00013944472751903383
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7737900574837935,
+                "y": -0.00013944472751903383
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7737900574837935,
+                "y": -0.00013944472751903383
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7737900574837935,
+                "y": -0.00013944472751903383
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7737900574837935,
+                "y": -0.00013944472751903383
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7737900574837935,
+                "y": -0.00013944472751903383
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7737900574837935,
+                "y": -0.00013944472751903383
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.764614732512771,
+                "y": -0.00014614880406676564
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.764614732512771,
+                "y": -0.00014614880406676564
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.764614732512771,
+                "y": -0.00014614880406676564
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.764614732512771,
+                "y": -0.00014614880406676564
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.764614732512771,
+                "y": -0.00014614880406676564
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.764614732512771,
+                "y": -0.00014614880406676564
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.764614732512771,
+                "y": -0.00014614880406676564
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.764614732512771,
+                "y": -0.00014614880406676564
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.764614732512771,
+                "y": -0.00014614880406676564
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.764614732512771,
+                "y": -0.00014614880406676564
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.764614732512771,
+                "y": -0.00014614880406676564
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7552981678074173,
+                "y": -0.00015294275392715236
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7552981678074173,
+                "y": -0.00015294275392715236
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7552981678074173,
+                "y": -0.00015294275392715236
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7552981678074173,
+                "y": -0.00015294275392715236
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7552981678074173,
+                "y": -0.00015294275392715236
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7552981678074173,
+                "y": -0.00015294275392715236
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7552981678074173,
+                "y": -0.00015294275392715236
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7552981678074173,
+                "y": -0.00015294275392715236
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7552981678074173,
+                "y": -0.00015294275392715236
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7552981678074173,
+                "y": -0.00015294275392715236
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7460560695158986,
+                "y": -0.00015963662354774645
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7460560695158986,
+                "y": -0.00015963662354774645
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7460560695158986,
+                "y": -0.00015963662354774645
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7460560695158986,
+                "y": -0.00015963662354774645
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7460560695158986,
+                "y": -0.00015963662354774645
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7460560695158986,
+                "y": -0.00015963662354774645
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7460560695158986,
+                "y": -0.00015963662354774645
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7460560695158986,
+                "y": -0.00015963662354774645
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7460560695158986,
+                "y": -0.00015963662354774645
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -1.7460560695158986,
+                "y": -0.00015963662354774645
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7368879949178195,
+                "y": -0.00016556558453203793
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7368879949178195,
+                "y": -0.00016556558453203793
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7368879949178195,
+                "y": -0.00016556558453203793
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7368879949178195,
+                "y": -0.00016556558453203793
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7368879949178195,
+                "y": -0.00016556558453203793
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7368879949178195,
+                "y": -0.00016556558453203793
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7368879949178195,
+                "y": -0.00016556558453203793
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7368879949178195,
+                "y": -0.00016556558453203793
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7368879949178195,
+                "y": -0.00016556558453203793
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7368879949178195,
+                "y": -0.00016556558453203793
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7368879949178195,
+                "y": -0.00016556558453203793
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7277283762127986,
+                "y": -0.0001711448735937731
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7277283762127986,
+                "y": -0.0001711448735937731
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7277283762127986,
+                "y": -0.0001711448735937731
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7277283762127986,
+                "y": -0.0001711448735937731
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7277283762127986,
+                "y": -0.0001711448735937731
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7277283762127986,
+                "y": -0.0001711448735937731
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7277283762127986,
+                "y": -0.0001711448735937731
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7277283762127986,
+                "y": -0.0001711448735937731
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7277283762127986,
+                "y": -0.0001711448735937731
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7277283762127986,
+                "y": -0.0001711448735937731
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7185276376299534,
+                "y": -0.00017599372618196118
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7185276376299534,
+                "y": -0.00017599372618196118
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7185276376299534,
+                "y": -0.00017599372618196118
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7185276376299534,
+                "y": -0.00017599372618196118
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7185276376299534,
+                "y": -0.00017599372618196118
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7185276376299534,
+                "y": -0.00017599372618196118
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7185276376299534,
+                "y": -0.00017599372618196118
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7185276376299534,
+                "y": -0.00017599372618196118
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7185276376299534,
+                "y": -0.00017599372618196118
+              },
+              {
+                "distance_remaining": 0.7249999642372131,
+                "x": -1.7185276376299534,
+                "y": -0.00017599372618196118
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.709368990434788,
+                "y": -0.00018039455263626122
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.709368990434788,
+                "y": -0.00018039455263626122
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.709368990434788,
+                "y": -0.00018039455263626122
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.709368990434788,
+                "y": -0.00018039455263626122
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.709368990434788,
+                "y": -0.00018039455263626122
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.709368990434788,
+                "y": -0.00018039455263626122
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.709368990434788,
+                "y": -0.00018039455263626122
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.709368990434788,
+                "y": -0.00018039455263626122
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.709368990434788,
+                "y": -0.00018039455263626122
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.709368990434788,
+                "y": -0.00018039455263626122
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.7002709868238077,
+                "y": -0.00018484349954367763
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.7002709868238077,
+                "y": -0.00018484349954367763
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.7002709868238077,
+                "y": -0.00018484349954367763
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.7002709868238077,
+                "y": -0.00018484349954367763
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.7002709868238077,
+                "y": -0.00018484349954367763
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.7002709868238077,
+                "y": -0.00018484349954367763
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.7002709868238077,
+                "y": -0.00018484349954367763
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.7002709868238077,
+                "y": -0.00018484349954367763
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.7002709868238077,
+                "y": -0.00018484349954367763
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.7002709868238077,
+                "y": -0.00018484349954367763
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6911637071214514,
+                "y": -0.0001883400584832091
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6911637071214514,
+                "y": -0.0001883400584832091
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6911637071214514,
+                "y": -0.0001883400584832091
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6911637071214514,
+                "y": -0.0001883400584832091
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6911637071214514,
+                "y": -0.0001883400584832091
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6911637071214514,
+                "y": -0.0001883400584832091
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6911637071214514,
+                "y": -0.0001883400584832091
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6911637071214514,
+                "y": -0.0001883400584832091
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6911637071214514,
+                "y": -0.0001883400584832091
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6911637071214514,
+                "y": -0.0001883400584832091
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6820966852824608,
+                "y": -0.00019091422512785392
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6820966852824608,
+                "y": -0.00019091422512785392
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6820966852824608,
+                "y": -0.00019091422512785392
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6820966852824608,
+                "y": -0.00019091422512785392
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6820966852824608,
+                "y": -0.00019091422512785392
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6820966852824608,
+                "y": -0.00019091422512785392
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6820966852824608,
+                "y": -0.00019091422512785392
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6820966852824608,
+                "y": -0.00019091422512785392
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6820966852824608,
+                "y": -0.00019091422512785392
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6820966852824608,
+                "y": -0.00019091422512785392
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -1.6820966852824608,
+                "y": -0.00019091422512785392
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.673014169062979,
+                "y": -0.00019287812898430593
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.673014169062979,
+                "y": -0.00019287812898430593
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.673014169062979,
+                "y": -0.00019287812898430593
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.673014169062979,
+                "y": -0.00019287812898430593
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.673014169062979,
+                "y": -0.00019287812898430593
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.673014169062979,
+                "y": -0.00019287812898430593
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.673014169062979,
+                "y": -0.00019287812898430593
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.673014169062979,
+                "y": -0.00019287812898430593
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.673014169062979,
+                "y": -0.00019287812898430593
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.673014169062979,
+                "y": -0.00019287812898430593
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6640333817778608,
+                "y": -0.00019429211335563924
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6640333817778608,
+                "y": -0.00019429211335563924
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6640333817778608,
+                "y": -0.00019429211335563924
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6640333817778608,
+                "y": -0.00019429211335563924
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6640333817778608,
+                "y": -0.00019429211335563924
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6640333817778608,
+                "y": -0.00019429211335563924
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6640333817778608,
+                "y": -0.00019429211335563924
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6640333817778608,
+                "y": -0.00019429211335563924
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6640333817778608,
+                "y": -0.00019429211335563924
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6640333817778608,
+                "y": -0.00019429211335563924
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.655105144891992,
+                "y": -0.00019545318757645234
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.655105144891992,
+                "y": -0.00019545318757645234
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.655105144891992,
+                "y": -0.00019545318757645234
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.655105144891992,
+                "y": -0.00019545318757645234
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.655105144891992,
+                "y": -0.00019545318757645234
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.655105144891992,
+                "y": -0.00019545318757645234
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.655105144891992,
+                "y": -0.00019545318757645234
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.655105144891992,
+                "y": -0.00019545318757645234
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.655105144891992,
+                "y": -0.00019545318757645234
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.655105144891992,
+                "y": -0.00019545318757645234
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6463152503153062,
+                "y": -0.00019518291415715762
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6463152503153062,
+                "y": -0.00019518291415715762
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6463152503153062,
+                "y": -0.00019518291415715762
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6463152503153062,
+                "y": -0.00019518291415715762
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6463152503153062,
+                "y": -0.00019518291415715762
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6463152503153062,
+                "y": -0.00019518291415715762
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6463152503153062,
+                "y": -0.00019518291415715762
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6463152503153062,
+                "y": -0.00019518291415715762
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6463152503153062,
+                "y": -0.00019518291415715762
+              },
+              {
+                "distance_remaining": 0.6499999761581421,
+                "x": -1.6463152503153062,
+                "y": -0.00019518291415715762
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6374217199505687,
+                "y": -0.000194913938164468
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6374217199505687,
+                "y": -0.000194913938164468
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6374217199505687,
+                "y": -0.000194913938164468
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6374217199505687,
+                "y": -0.000194913938164468
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6374217199505687,
+                "y": -0.000194913938164468
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6374217199505687,
+                "y": -0.000194913938164468
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6374217199505687,
+                "y": -0.000194913938164468
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6374217199505687,
+                "y": -0.000194913938164468
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6374217199505687,
+                "y": -0.000194913938164468
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6374217199505687,
+                "y": -0.000194913938164468
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6285860043491365,
+                "y": -0.00019397320241741267
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6285860043491365,
+                "y": -0.00019397320241741267
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6285860043491365,
+                "y": -0.00019397320241741267
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6285860043491365,
+                "y": -0.00019397320241741267
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6285860043491365,
+                "y": -0.00019397320241741267
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6285860043491365,
+                "y": -0.00019397320241741267
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6285860043491365,
+                "y": -0.00019397320241741267
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6285860043491365,
+                "y": -0.00019397320241741267
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6285860043491365,
+                "y": -0.00019397320241741267
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6285860043491365,
+                "y": -0.00019397320241741267
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6198766977320063,
+                "y": -0.0001926548009333165
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6198766977320063,
+                "y": -0.0001926548009333165
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6198766977320063,
+                "y": -0.0001926548009333165
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6198766977320063,
+                "y": -0.0001926548009333165
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6198766977320063,
+                "y": -0.0001926548009333165
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6198766977320063,
+                "y": -0.0001926548009333165
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6198766977320063,
+                "y": -0.0001926548009333165
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6198766977320063,
+                "y": -0.0001926548009333165
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6198766977320063,
+                "y": -0.0001926548009333165
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6198766977320063,
+                "y": -0.0001926548009333165
+              },
+              {
+                "distance_remaining": 0.6249999403953552,
+                "x": -1.6198766977320063,
+                "y": -0.0001926548009333165
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6112326058934232,
+                "y": -0.00019059928790745385
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6112326058934232,
+                "y": -0.00019059928790745385
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6112326058934232,
+                "y": -0.00019059928790745385
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6112326058934232,
+                "y": -0.00019059928790745385
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6112326058934232,
+                "y": -0.00019059928790745385
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6112326058934232,
+                "y": -0.00019059928790745385
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6112326058934232,
+                "y": -0.00019059928790745385
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6112326058934232,
+                "y": -0.00019059928790745385
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6112326058934232,
+                "y": -0.00019059928790745385
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6112326058934232,
+                "y": -0.00019059928790745385
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6026126576252837,
+                "y": -0.00018811695652448746
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6026126576252837,
+                "y": -0.00018811695652448746
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6026126576252837,
+                "y": -0.00018811695652448746
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6026126576252837,
+                "y": -0.00018811695652448746
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6026126576252837,
+                "y": -0.00018811695652448746
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6026126576252837,
+                "y": -0.00018811695652448746
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6026126576252837,
+                "y": -0.00018811695652448746
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6026126576252837,
+                "y": -0.00018811695652448746
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6026126576252837,
+                "y": -0.00018811695652448746
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.6026126576252837,
+                "y": -0.00018811695652448746
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5940529449967547,
+                "y": -0.00018456944970013066
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5940529449967547,
+                "y": -0.00018456944970013066
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5940529449967547,
+                "y": -0.00018456944970013066
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5940529449967547,
+                "y": -0.00018456944970013066
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5940529449967547,
+                "y": -0.00018456944970013066
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5940529449967547,
+                "y": -0.00018456944970013066
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5940529449967547,
+                "y": -0.00018456944970013066
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5940529449967547,
+                "y": -0.00018456944970013066
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5940529449967547,
+                "y": -0.00018456944970013066
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5940529449967547,
+                "y": -0.00018456944970013066
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.585475210722986,
+                "y": -0.00018148594279332437
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.585475210722986,
+                "y": -0.00018148594279332437
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.585475210722986,
+                "y": -0.00018148594279332437
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.585475210722986,
+                "y": -0.00018148594279332437
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.585475210722986,
+                "y": -0.00018148594279332437
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.585475210722986,
+                "y": -0.00018148594279332437
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.585475210722986,
+                "y": -0.00018148594279332437
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.585475210722986,
+                "y": -0.00018148594279332437
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.585475210722986,
+                "y": -0.00018148594279332437
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.585475210722986,
+                "y": -0.00018148594279332437
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.585475210722986,
+                "y": -0.00018148594279332437
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.585475210722986,
+                "y": -0.00018148594279332437
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5770227342722194,
+                "y": -0.0001788586367125738
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5770227342722194,
+                "y": -0.0001788586367125738
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5770227342722194,
+                "y": -0.0001788586367125738
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5770227342722194,
+                "y": -0.0001788586367125738
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5770227342722194,
+                "y": -0.0001788586367125738
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5770227342722194,
+                "y": -0.0001788586367125738
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5770227342722194,
+                "y": -0.0001788586367125738
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5770227342722194,
+                "y": -0.0001788586367125738
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5770227342722194,
+                "y": -0.0001788586367125738
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -1.5770227342722194,
+                "y": -0.0001788586367125738
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5686480366038134,
+                "y": -0.00017598309797225837
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5686480366038134,
+                "y": -0.00017598309797225837
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5686480366038134,
+                "y": -0.00017598309797225837
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5686480366038134,
+                "y": -0.00017598309797225837
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5686480366038134,
+                "y": -0.00017598309797225837
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5686480366038134,
+                "y": -0.00017598309797225837
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5686480366038134,
+                "y": -0.00017598309797225837
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5686480366038134,
+                "y": -0.00017598309797225837
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5686480366038134,
+                "y": -0.00017598309797225837
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5686480366038134,
+                "y": -0.00017598309797225837
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5686480366038134,
+                "y": -0.00017598309797225837
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5603123305496656,
+                "y": -0.00017298974043514093
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5603123305496656,
+                "y": -0.00017298974043514093
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5603123305496656,
+                "y": -0.00017298974043514093
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5603123305496656,
+                "y": -0.00017298974043514093
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5603123305496656,
+                "y": -0.00017298974043514093
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5603123305496656,
+                "y": -0.00017298974043514093
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5603123305496656,
+                "y": -0.00017298974043514093
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5603123305496656,
+                "y": -0.00017298974043514093
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5603123305496656,
+                "y": -0.00017298974043514093
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5603123305496656,
+                "y": -0.00017298974043514093
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5520500078696862,
+                "y": -0.0001702293384030952
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5520500078696862,
+                "y": -0.0001702293384030952
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5520500078696862,
+                "y": -0.0001702293384030952
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5520500078696862,
+                "y": -0.0001702293384030952
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5520500078696862,
+                "y": -0.0001702293384030952
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5520500078696862,
+                "y": -0.0001702293384030952
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5520500078696862,
+                "y": -0.0001702293384030952
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5520500078696862,
+                "y": -0.0001702293384030952
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5520500078696862,
+                "y": -0.0001702293384030952
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5520500078696862,
+                "y": -0.0001702293384030952
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.5520500078696862,
+                "y": -0.0001702293384030952
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.54389068659617,
+                "y": -0.000168118505033863
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.54389068659617,
+                "y": -0.000168118505033863
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.54389068659617,
+                "y": -0.000168118505033863
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.54389068659617,
+                "y": -0.000168118505033863
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.54389068659617,
+                "y": -0.000168118505033863
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.54389068659617,
+                "y": -0.000168118505033863
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.54389068659617,
+                "y": -0.000168118505033863
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.54389068659617,
+                "y": -0.000168118505033863
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.54389068659617,
+                "y": -0.000168118505033863
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -1.54389068659617,
+                "y": -0.000168118505033863
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5357425430574057,
+                "y": -0.0001657345123482953
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5357425430574057,
+                "y": -0.0001657345123482953
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5357425430574057,
+                "y": -0.0001657345123482953
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5357425430574057,
+                "y": -0.0001657345123482953
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5357425430574057,
+                "y": -0.0001657345123482953
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5357425430574057,
+                "y": -0.0001657345123482953
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5357425430574057,
+                "y": -0.0001657345123482953
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5357425430574057,
+                "y": -0.0001657345123482953
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5357425430574057,
+                "y": -0.0001657345123482953
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5357425430574057,
+                "y": -0.0001657345123482953
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5276402371178646,
+                "y": -0.0001639890665932043
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5276402371178646,
+                "y": -0.0001639890665932043
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5276402371178646,
+                "y": -0.0001639890665932043
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5276402371178646,
+                "y": -0.0001639890665932043
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5276402371178646,
+                "y": -0.0001639890665932043
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5276402371178646,
+                "y": -0.0001639890665932043
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5276402371178646,
+                "y": -0.0001639890665932043
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5276402371178646,
+                "y": -0.0001639890665932043
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5276402371178646,
+                "y": -0.0001639890665932043
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.5276402371178646,
+                "y": -0.0001639890665932043
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.519696024674323,
+                "y": -0.00016265304004277578
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.519696024674323,
+                "y": -0.00016265304004277578
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.519696024674323,
+                "y": -0.00016265304004277578
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.519696024674323,
+                "y": -0.00016265304004277578
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.519696024674323,
+                "y": -0.00016265304004277578
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.519696024674323,
+                "y": -0.00016265304004277578
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.519696024674323,
+                "y": -0.00016265304004277578
+              },
+              {
+                "distance_remaining": 0.5249999761581421,
+                "x": -1.519696024674323,
+                "y": -0.00016265304004277578
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.519696024674323,
+                "y": -0.00016265304004277578
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.519696024674323,
+                "y": -0.00016265304004277578
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.519696024674323,
+                "y": -0.00016265304004277578
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5117922819794485,
+                "y": -0.00016142535768863114
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5117922819794485,
+                "y": -0.00016142535768863114
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5117922819794485,
+                "y": -0.00016142535768863114
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5117922819794485,
+                "y": -0.00016142535768863114
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5117922819794485,
+                "y": -0.00016142535768863114
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5117922819794485,
+                "y": -0.00016142535768863114
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5117922819794485,
+                "y": -0.00016142535768863114
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5117922819794485,
+                "y": -0.00016142535768863114
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5117922819794485,
+                "y": -0.00016142535768863114
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5117922819794485,
+                "y": -0.00016142535768863114
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5039346017695754,
+                "y": -0.0001601053907569153
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5039346017695754,
+                "y": -0.0001601053907569153
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5039346017695754,
+                "y": -0.0001601053907569153
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5039346017695754,
+                "y": -0.0001601053907569153
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5039346017695754,
+                "y": -0.0001601053907569153
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5039346017695754,
+                "y": -0.0001601053907569153
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5039346017695754,
+                "y": -0.0001601053907569153
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5039346017695754,
+                "y": -0.0001601053907569153
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5039346017695754,
+                "y": -0.0001601053907569153
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.5039346017695754,
+                "y": -0.0001601053907569153
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4959753563616784,
+                "y": -0.00015935421565534951
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4959753563616784,
+                "y": -0.00015935421565534951
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4959753563616784,
+                "y": -0.00015935421565534951
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4959753563616784,
+                "y": -0.00015935421565534951
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4959753563616784,
+                "y": -0.00015935421565534951
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4959753563616784,
+                "y": -0.00015935421565534951
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4959753563616784,
+                "y": -0.00015935421565534951
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4959753563616784,
+                "y": -0.00015935421565534951
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4959753563616784,
+                "y": -0.00015935421565534951
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4959753563616784,
+                "y": -0.00015935421565534951
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4879790237321733,
+                "y": -0.0001588497745544808
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4879790237321733,
+                "y": -0.0001588497745544808
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4879790237321733,
+                "y": -0.0001588497745544808
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4879790237321733,
+                "y": -0.0001588497745544808
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4879790237321733,
+                "y": -0.0001588497745544808
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4879790237321733,
+                "y": -0.0001588497745544808
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4879790237321733,
+                "y": -0.0001588497745544808
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4879790237321733,
+                "y": -0.0001588497745544808
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4879790237321733,
+                "y": -0.0001588497745544808
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4879790237321733,
+                "y": -0.0001588497745544808
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4800377741501436,
+                "y": -0.0001581953660077622
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4800377741501436,
+                "y": -0.0001581953660077622
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4800377741501436,
+                "y": -0.0001581953660077622
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4800377741501436,
+                "y": -0.0001581953660077622
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4800377741501436,
+                "y": -0.0001581953660077622
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4800377741501436,
+                "y": -0.0001581953660077622
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4800377741501436,
+                "y": -0.0001581953660077622
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4800377741501436,
+                "y": -0.0001581953660077622
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4800377741501436,
+                "y": -0.0001581953660077622
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -1.4800377741501436,
+                "y": -0.0001581953660077622
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.47227538383048,
+                "y": -0.00015726734820366596
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.47227538383048,
+                "y": -0.00015726734820366596
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.47227538383048,
+                "y": -0.00015726734820366596
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.47227538383048,
+                "y": -0.00015726734820366596
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.47227538383048,
+                "y": -0.00015726734820366596
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.47227538383048,
+                "y": -0.00015726734820366596
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.47227538383048,
+                "y": -0.00015726734820366596
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.47227538383048,
+                "y": -0.00015726734820366596
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.47227538383048,
+                "y": -0.00015726734820366596
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.47227538383048,
+                "y": -0.00015726734820366596
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.46455076676329,
+                "y": -0.00015633377925754004
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.46455076676329,
+                "y": -0.00015633377925754004
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.46455076676329,
+                "y": -0.00015633377925754004
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.46455076676329,
+                "y": -0.00015633377925754004
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.46455076676329,
+                "y": -0.00015633377925754004
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.46455076676329,
+                "y": -0.00015633377925754004
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.46455076676329,
+                "y": -0.00015633377925754004
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.46455076676329,
+                "y": -0.00015633377925754004
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.46455076676329,
+                "y": -0.00015633377925754004
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.46455076676329,
+                "y": -0.00015633377925754004
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4568959198937002,
+                "y": -0.00015558041012573762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4568959198937002,
+                "y": -0.00015558041012573762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4568959198937002,
+                "y": -0.00015558041012573762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4568959198937002,
+                "y": -0.00015558041012573762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4568959198937002,
+                "y": -0.00015558041012573762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4568959198937002,
+                "y": -0.00015558041012573762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4568959198937002,
+                "y": -0.00015558041012573762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4568959198937002,
+                "y": -0.00015558041012573762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4568959198937002,
+                "y": -0.00015558041012573762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4568959198937002,
+                "y": -0.00015558041012573762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4568959198937002,
+                "y": -0.00015558041012573762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.449181995252409,
+                "y": -0.0001553002837698762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.449181995252409,
+                "y": -0.0001553002837698762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.449181995252409,
+                "y": -0.0001553002837698762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.449181995252409,
+                "y": -0.0001553002837698762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.449181995252409,
+                "y": -0.0001553002837698762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.449181995252409,
+                "y": -0.0001553002837698762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.449181995252409,
+                "y": -0.0001553002837698762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.449181995252409,
+                "y": -0.0001553002837698762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.449181995252409,
+                "y": -0.0001553002837698762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.449181995252409,
+                "y": -0.0001553002837698762
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4414141331977313,
+                "y": -0.00015465442444528236
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4414141331977313,
+                "y": -0.00015465442444528236
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4414141331977313,
+                "y": -0.00015465442444528236
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4414141331977313,
+                "y": -0.00015465442444528236
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4414141331977313,
+                "y": -0.00015465442444528236
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4414141331977313,
+                "y": -0.00015465442444528236
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4414141331977313,
+                "y": -0.00015465442444528236
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4414141331977313,
+                "y": -0.00015465442444528236
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4414141331977313,
+                "y": -0.00015465442444528236
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4414141331977313,
+                "y": -0.00015465442444528236
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.433636539579193,
+                "y": -0.0001533266225705603
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.433636539579193,
+                "y": -0.0001533266225705603
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.433636539579193,
+                "y": -0.0001533266225705603
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.433636539579193,
+                "y": -0.0001533266225705603
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.433636539579193,
+                "y": -0.0001533266225705603
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.433636539579193,
+                "y": -0.0001533266225705603
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.433636539579193,
+                "y": -0.0001533266225705603
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.433636539579193,
+                "y": -0.0001533266225705603
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.433636539579193,
+                "y": -0.0001533266225705603
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.433636539579193,
+                "y": -0.0001533266225705603
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.433636539579193,
+                "y": -0.0001533266225705603
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.433636539579193,
+                "y": -0.0001533266225705603
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4258829939968,
+                "y": -0.0001523660140740361
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4258829939968,
+                "y": -0.0001523660140740361
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4258829939968,
+                "y": -0.0001523660140740361
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4258829939968,
+                "y": -0.0001523660140740361
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4258829939968,
+                "y": -0.0001523660140740361
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4258829939968,
+                "y": -0.0001523660140740361
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4258829939968,
+                "y": -0.0001523660140740361
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4258829939968,
+                "y": -0.0001523660140740361
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4258829939968,
+                "y": -0.0001523660140740361
+              },
+              {
+                "distance_remaining": 0.44999995827674866,
+                "x": -1.4258829939968,
+                "y": -0.0001523660140740361
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4182057822492504,
+                "y": -0.000151903619444514
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4182057822492504,
+                "y": -0.000151903619444514
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4182057822492504,
+                "y": -0.000151903619444514
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4182057822492504,
+                "y": -0.000151903619444514
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4182057822492504,
+                "y": -0.000151903619444514
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4182057822492504,
+                "y": -0.000151903619444514
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4182057822492504,
+                "y": -0.000151903619444514
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4182057822492504,
+                "y": -0.000151903619444514
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4182057822492504,
+                "y": -0.000151903619444514
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4182057822492504,
+                "y": -0.000151903619444514
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4107222206200078,
+                "y": -0.00015160962259477186
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4107222206200078,
+                "y": -0.00015160962259477186
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4107222206200078,
+                "y": -0.00015160962259477186
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4107222206200078,
+                "y": -0.00015160962259477186
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4107222206200078,
+                "y": -0.00015160962259477186
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4107222206200078,
+                "y": -0.00015160962259477186
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4107222206200078,
+                "y": -0.00015160962259477186
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4107222206200078,
+                "y": -0.00015160962259477186
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4107222206200078,
+                "y": -0.00015160962259477186
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4107222206200078,
+                "y": -0.00015160962259477186
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4107222206200078,
+                "y": -0.00015160962259477186
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4031897802563096,
+                "y": -0.00015065677545676178
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4031897802563096,
+                "y": -0.00015065677545676178
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4031897802563096,
+                "y": -0.00015065677545676178
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4031897802563096,
+                "y": -0.00015065677545676178
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4031897802563096,
+                "y": -0.00015065677545676178
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4031897802563096,
+                "y": -0.00015065677545676178
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4031897802563096,
+                "y": -0.00015065677545676178
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4031897802563096,
+                "y": -0.00015065677545676178
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4031897802563096,
+                "y": -0.00015065677545676178
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.4031897802563096,
+                "y": -0.00015065677545676178
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.395654105969744,
+                "y": -0.00014858271035441905
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.395654105969744,
+                "y": -0.00014858271035441905
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.395654105969744,
+                "y": -0.00014858271035441905
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.395654105969744,
+                "y": -0.00014858271035441905
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.395654105969744,
+                "y": -0.00014858271035441905
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.395654105969744,
+                "y": -0.00014858271035441905
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.395654105969744,
+                "y": -0.00014858271035441905
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.395654105969744,
+                "y": -0.00014858271035441905
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.395654105969744,
+                "y": -0.00014858271035441905
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.395654105969744,
+                "y": -0.00014858271035441905
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.395654105969744,
+                "y": -0.00014858271035441905
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.3881178754746168,
+                "y": -0.00014514461232390243
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.3881178754746168,
+                "y": -0.00014514461232390243
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.3881178754746168,
+                "y": -0.00014514461232390243
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.3881178754746168,
+                "y": -0.00014514461232390243
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.3881178754746168,
+                "y": -0.00014514461232390243
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.3881178754746168,
+                "y": -0.00014514461232390243
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.3881178754746168,
+                "y": -0.00014514461232390243
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.3881178754746168,
+                "y": -0.00014514461232390243
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.3881178754746168,
+                "y": -0.00014514461232390243
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.3881178754746168,
+                "y": -0.00014514461232390243
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -1.3881178754746168,
+                "y": -0.00014514461232390243
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.38064522977977,
+                "y": -0.00014102125768301112
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.38064522977977,
+                "y": -0.00014102125768301112
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.38064522977977,
+                "y": -0.00014102125768301112
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.38064522977977,
+                "y": -0.00014102125768301112
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.38064522977977,
+                "y": -0.00014102125768301112
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.38064522977977,
+                "y": -0.00014102125768301112
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.38064522977977,
+                "y": -0.00014102125768301112
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.38064522977977,
+                "y": -0.00014102125768301112
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.38064522977977,
+                "y": -0.00014102125768301112
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.38064522977977,
+                "y": -0.00014102125768301112
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.373347047953493,
+                "y": -0.00013716491966859072
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.373347047953493,
+                "y": -0.00013716491966859072
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.373347047953493,
+                "y": -0.00013716491966859072
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.373347047953493,
+                "y": -0.00013716491966859072
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.373347047953493,
+                "y": -0.00013716491966859072
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.373347047953493,
+                "y": -0.00013716491966859072
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.373347047953493,
+                "y": -0.00013716491966859072
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.373347047953493,
+                "y": -0.00013716491966859072
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.373347047953493,
+                "y": -0.00013716491966859072
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.373347047953493,
+                "y": -0.00013716491966859072
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.3660482746221456,
+                "y": -0.000133765068948416
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.3660482746221456,
+                "y": -0.000133765068948416
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.3660482746221456,
+                "y": -0.000133765068948416
+              },
+              {
+                "distance_remaining": 0.3749999403953552,
+                "x": -1.3660482746221456,
+                "y": -0.000133765068948416
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3660482746221456,
+                "y": -0.000133765068948416
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3660482746221456,
+                "y": -0.000133765068948416
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3660482746221456,
+                "y": -0.000133765068948416
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3660482746221456,
+                "y": -0.000133765068948416
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3660482746221456,
+                "y": -0.000133765068948416
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3660482746221456,
+                "y": -0.000133765068948416
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3660482746221456,
+                "y": -0.000133765068948416
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.358921476812355,
+                "y": -0.00013034636710195334
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.358921476812355,
+                "y": -0.00013034636710195334
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.358921476812355,
+                "y": -0.00013034636710195334
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.358921476812355,
+                "y": -0.00013034636710195334
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.358921476812355,
+                "y": -0.00013034636710195334
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.358921476812355,
+                "y": -0.00013034636710195334
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.358921476812355,
+                "y": -0.00013034636710195334
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.358921476812355,
+                "y": -0.00013034636710195334
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.358921476812355,
+                "y": -0.00013034636710195334
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.358921476812355,
+                "y": -0.00013034636710195334
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.358921476812355,
+                "y": -0.00013034636710195334
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3517455187885288,
+                "y": -0.00012598584261203937
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3517455187885288,
+                "y": -0.00012598584261203937
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3517455187885288,
+                "y": -0.00012598584261203937
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3517455187885288,
+                "y": -0.00012598584261203937
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3517455187885288,
+                "y": -0.00012598584261203937
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3517455187885288,
+                "y": -0.00012598584261203937
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3517455187885288,
+                "y": -0.00012598584261203937
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3517455187885288,
+                "y": -0.00012598584261203937
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3517455187885288,
+                "y": -0.00012598584261203937
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3517455187885288,
+                "y": -0.00012598584261203937
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3445831198566305,
+                "y": -0.00012043850018654919
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3445831198566305,
+                "y": -0.00012043850018654919
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3445831198566305,
+                "y": -0.00012043850018654919
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3445831198566305,
+                "y": -0.00012043850018654919
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3445831198566305,
+                "y": -0.00012043850018654919
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3445831198566305,
+                "y": -0.00012043850018654919
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3445831198566305,
+                "y": -0.00012043850018654919
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3445831198566305,
+                "y": -0.00012043850018654919
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3445831198566305,
+                "y": -0.00012043850018654919
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.3445831198566305,
+                "y": -0.00012043850018654919
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.337504396179805,
+                "y": -0.0001143541478587695
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.337504396179805,
+                "y": -0.0001143541478587695
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.337504396179805,
+                "y": -0.0001143541478587695
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.337504396179805,
+                "y": -0.0001143541478587695
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.337504396179805,
+                "y": -0.0001143541478587695
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.337504396179805,
+                "y": -0.0001143541478587695
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.337504396179805,
+                "y": -0.0001143541478587695
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.337504396179805,
+                "y": -0.0001143541478587695
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.337504396179805,
+                "y": -0.0001143541478587695
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.337504396179805,
+                "y": -0.0001143541478587695
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.330520209786591,
+                "y": -0.00010814562292562839
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.330520209786591,
+                "y": -0.00010814562292562839
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.330520209786591,
+                "y": -0.00010814562292562839
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.330520209786591,
+                "y": -0.00010814562292562839
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.330520209786591,
+                "y": -0.00010814562292562839
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.330520209786591,
+                "y": -0.00010814562292562839
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.330520209786591,
+                "y": -0.00010814562292562839
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.330520209786591,
+                "y": -0.00010814562292562839
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.330520209786591,
+                "y": -0.00010814562292562839
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -1.330520209786591,
+                "y": -0.00010814562292562839
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3235378912756512,
+                "y": -0.00010281324120480071
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3235378912756512,
+                "y": -0.00010281324120480071
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3235378912756512,
+                "y": -0.00010281324120480071
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3235378912756512,
+                "y": -0.00010281324120480071
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3235378912756512,
+                "y": -0.00010281324120480071
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3235378912756512,
+                "y": -0.00010281324120480071
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3235378912756512,
+                "y": -0.00010281324120480071
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3235378912756512,
+                "y": -0.00010281324120480071
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3235378912756512,
+                "y": -0.00010281324120480071
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3235378912756512,
+                "y": -0.00010281324120480071
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3167519295168575,
+                "y": -9.842495764076514e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3167519295168575,
+                "y": -9.842495764076514e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3167519295168575,
+                "y": -9.842495764076514e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3167519295168575,
+                "y": -9.842495764076514e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3167519295168575,
+                "y": -9.842495764076514e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3167519295168575,
+                "y": -9.842495764076514e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3167519295168575,
+                "y": -9.842495764076514e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3167519295168575,
+                "y": -9.842495764076514e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3167519295168575,
+                "y": -9.842495764076514e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3167519295168575,
+                "y": -9.842495764076514e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.3167519295168575,
+                "y": -9.842495764076514e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.309959262743348,
+                "y": -9.417319407884876e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.309959262743348,
+                "y": -9.417319407884876e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.309959262743348,
+                "y": -9.417319407884876e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.309959262743348,
+                "y": -9.417319407884876e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.309959262743348,
+                "y": -9.417319407884876e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.309959262743348,
+                "y": -9.417319407884876e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.309959262743348,
+                "y": -9.417319407884876e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.309959262743348,
+                "y": -9.417319407884876e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.309959262743348,
+                "y": -9.417319407884876e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.309959262743348,
+                "y": -9.417319407884876e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.303210866565999,
+                "y": -8.928689220997766e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.303210866565999,
+                "y": -8.928689220997766e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.303210866565999,
+                "y": -8.928689220997766e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.303210866565999,
+                "y": -8.928689220997766e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.303210866565999,
+                "y": -8.928689220997766e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.303210866565999,
+                "y": -8.928689220997766e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.303210866565999,
+                "y": -8.928689220997766e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.303210866565999,
+                "y": -8.928689220997766e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.303210866565999,
+                "y": -8.928689220997766e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.303210866565999,
+                "y": -8.928689220997766e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2966003400270294,
+                "y": -8.378722054817715e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2966003400270294,
+                "y": -8.378722054817715e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2966003400270294,
+                "y": -8.378722054817715e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2966003400270294,
+                "y": -8.378722054817715e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2966003400270294,
+                "y": -8.378722054817715e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2966003400270294,
+                "y": -8.378722054817715e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2966003400270294,
+                "y": -8.378722054817715e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2966003400270294,
+                "y": -8.378722054817715e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2966003400270294,
+                "y": -8.378722054817715e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2966003400270294,
+                "y": -8.378722054817715e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2900046895478319,
+                "y": -7.769206420213656e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2900046895478319,
+                "y": -7.769206420213656e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2900046895478319,
+                "y": -7.769206420213656e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2900046895478319,
+                "y": -7.769206420213656e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2900046895478319,
+                "y": -7.769206420213656e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2900046895478319,
+                "y": -7.769206420213656e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2900046895478319,
+                "y": -7.769206420213656e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2900046895478319,
+                "y": -7.769206420213656e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2900046895478319,
+                "y": -7.769206420213656e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2900046895478319,
+                "y": -7.769206420213656e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2834777551300656,
+                "y": -7.136467182594586e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2834777551300656,
+                "y": -7.136467182594586e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2834777551300656,
+                "y": -7.136467182594586e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2834777551300656,
+                "y": -7.136467182594586e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2834777551300656,
+                "y": -7.136467182594586e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2834777551300656,
+                "y": -7.136467182594586e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2834777551300656,
+                "y": -7.136467182594586e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2834777551300656,
+                "y": -7.136467182594586e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2834777551300656,
+                "y": -7.136467182594586e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2834777551300656,
+                "y": -7.136467182594586e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2771076745598953,
+                "y": -6.569462265831605e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2771076745598953,
+                "y": -6.569462265831605e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2771076745598953,
+                "y": -6.569462265831605e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2771076745598953,
+                "y": -6.569462265831605e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2771076745598953,
+                "y": -6.569462265831605e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2771076745598953,
+                "y": -6.569462265831605e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2771076745598953,
+                "y": -6.569462265831605e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2771076745598953,
+                "y": -6.569462265831605e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2771076745598953,
+                "y": -6.569462265831605e-05
+              },
+              {
+                "distance_remaining": 0.2999999523162842,
+                "x": -1.2771076745598953,
+                "y": -6.569462265831605e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.270707760475006,
+                "y": -5.957939330196972e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.270707760475006,
+                "y": -5.957939330196972e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.270707760475006,
+                "y": -5.957939330196972e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.270707760475006,
+                "y": -5.957939330196972e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.270707760475006,
+                "y": -5.957939330196972e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.270707760475006,
+                "y": -5.957939330196972e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.270707760475006,
+                "y": -5.957939330196972e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.270707760475006,
+                "y": -5.957939330196972e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.270707760475006,
+                "y": -5.957939330196972e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.270707760475006,
+                "y": -5.957939330196972e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.270707760475006,
+                "y": -5.957939330196972e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.264457300065948,
+                "y": -5.25870634258145e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.264457300065948,
+                "y": -5.25870634258145e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.264457300065948,
+                "y": -5.25870634258145e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.264457300065948,
+                "y": -5.25870634258145e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.264457300065948,
+                "y": -5.25870634258145e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.264457300065948,
+                "y": -5.25870634258145e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.264457300065948,
+                "y": -5.25870634258145e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.264457300065948,
+                "y": -5.25870634258145e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.264457300065948,
+                "y": -5.25870634258145e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.264457300065948,
+                "y": -5.25870634258145e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.25825490618992,
+                "y": -4.5484650334629126e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.25825490618992,
+                "y": -4.5484650334629126e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.25825490618992,
+                "y": -4.5484650334629126e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.25825490618992,
+                "y": -4.5484650334629126e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.25825490618992,
+                "y": -4.5484650334629126e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.25825490618992,
+                "y": -4.5484650334629126e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.25825490618992,
+                "y": -4.5484650334629126e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.25825490618992,
+                "y": -4.5484650334629126e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.25825490618992,
+                "y": -4.5484650334629126e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.25825490618992,
+                "y": -4.5484650334629126e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.25825490618992,
+                "y": -4.5484650334629126e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.2521061965539408,
+                "y": -3.7811956306560315e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.2521061965539408,
+                "y": -3.7811956306560315e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.2521061965539408,
+                "y": -3.7811956306560315e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.2521061965539408,
+                "y": -3.7811956306560315e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.2521061965539408,
+                "y": -3.7811956306560315e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.2521061965539408,
+                "y": -3.7811956306560315e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.2521061965539408,
+                "y": -3.7811956306560315e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.2521061965539408,
+                "y": -3.7811956306560315e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.2521061965539408,
+                "y": -3.7811956306560315e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.246043211990759,
+                "y": -2.9379594768975855e-05
+              },
+              {
+                "distance_remaining": 0.24999994039535522,
+                "x": -1.2399873540518487,
+                "y": -2.1172888584052144e-05
+              }
+            ]
+          },
+          {
+            "target": [
+              0.0,
+              0.0
+            ],
+            "status": 4,
+            "seconds": 12.652476897000014,
+            "feedback": [
+              {
+                "distance_remaining": 0.0,
+                "x": -1.2399873540518487,
+                "y": -2.1172888584052144e-05
+              },
+              {
+                "distance_remaining": 0.0,
+                "x": -1.2399873540518487,
+                "y": -2.1172888584052144e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2399873540518487,
+                "y": -2.1172888584052144e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2399873540518487,
+                "y": -2.1172888584052144e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2399873540518487,
+                "y": -2.1172888584052144e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2399873540518487,
+                "y": -2.1172888584052144e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2399873540518487,
+                "y": -2.1172888584052144e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2399873540518487,
+                "y": -2.1172888584052144e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2339941218401145,
+                "y": -1.2777814854235846e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2339941218401145,
+                "y": -1.2777814854235846e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2339941218401145,
+                "y": -1.2777814854235846e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2339941218401145,
+                "y": -1.2777814854235846e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2339941218401145,
+                "y": -1.2777814854235846e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2339941218401145,
+                "y": -1.2777814854235846e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2339941218401145,
+                "y": -1.2777814854235846e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2339941218401145,
+                "y": -1.2777814854235846e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2339941218401145,
+                "y": -1.2777814854235846e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2339941218401145,
+                "y": -1.2777814854235846e-05
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2280696609347923,
+                "y": -4.8181496670536175e-06
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2280696609347923,
+                "y": -4.8181496670536175e-06
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2280696609347923,
+                "y": -4.8181496670536175e-06
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2280696609347923,
+                "y": -4.8181496670536175e-06
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2280696609347923,
+                "y": -4.8181496670536175e-06
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2280696609347923,
+                "y": -4.8181496670536175e-06
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2280696609347923,
+                "y": -4.8181496670536175e-06
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2280696609347923,
+                "y": -4.8181496670536175e-06
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2280696609347923,
+                "y": -4.8181496670536175e-06
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2280696609347923,
+                "y": -4.8181496670536175e-06
+              },
+              {
+                "distance_remaining": 1.25,
+                "x": -1.2280696609347923,
+                "y": -4.8181496670536175e-06
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2222232527271464,
+                "y": 2.9541499230890267e-06
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2222232527271464,
+                "y": 2.9541499230890267e-06
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2222232527271464,
+                "y": 2.9541499230890267e-06
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2222232527271464,
+                "y": 2.9541499230890267e-06
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2222232527271464,
+                "y": 2.9541499230890267e-06
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2222232527271464,
+                "y": 2.9541499230890267e-06
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2222232527271464,
+                "y": 2.9541499230890267e-06
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2222232527271464,
+                "y": 2.9541499230890267e-06
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2222232527271464,
+                "y": 2.9541499230890267e-06
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2222232527271464,
+                "y": 2.9541499230890267e-06
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.216490126173801,
+                "y": 1.0685469601862305e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.216490126173801,
+                "y": 1.0685469601862305e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.216490126173801,
+                "y": 1.0685469601862305e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.216490126173801,
+                "y": 1.0685469601862305e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.216490126173801,
+                "y": 1.0685469601862305e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.216490126173801,
+                "y": 1.0685469601862305e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.216490126173801,
+                "y": 1.0685469601862305e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.216490126173801,
+                "y": 1.0685469601862305e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.216490126173801,
+                "y": 1.0685469601862305e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.216490126173801,
+                "y": 1.0685469601862305e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2132847140583498,
+                "y": 1.499352614136573e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2132847140583498,
+                "y": 1.499352614136573e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2132847140583498,
+                "y": 1.499352614136573e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2132847140583498,
+                "y": 1.499352614136573e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2132847140583498,
+                "y": 1.499352614136573e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2132847140583498,
+                "y": 1.499352614136573e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2132847140583498,
+                "y": 1.499352614136573e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2132847140583498,
+                "y": 1.499352614136573e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2132847140583498,
+                "y": 1.499352614136573e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2132847140583498,
+                "y": 1.499352614136573e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2098845317230515,
+                "y": 1.9563352802491813e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2098845317230515,
+                "y": 1.9563352802491813e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2098845317230515,
+                "y": 1.9563352802491813e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2098845317230515,
+                "y": 1.9563352802491813e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2098845317230515,
+                "y": 1.9563352802491813e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2098845317230515,
+                "y": 1.9563352802491813e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2098845317230515,
+                "y": 1.9563352802491813e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2098845317230515,
+                "y": 1.9563352802491813e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2098845317230515,
+                "y": 1.9563352802491813e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2098845317230515,
+                "y": 1.9563352802491813e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2098845317230515,
+                "y": 1.9563352802491813e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2047487372233892,
+                "y": 2.6834182970905457e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2047487372233892,
+                "y": 2.6834182970905457e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2047487372233892,
+                "y": 2.6834182970905457e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2047487372233892,
+                "y": 2.6834182970905457e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2047487372233892,
+                "y": 2.6834182970905457e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2047487372233892,
+                "y": 2.6834182970905457e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2047487372233892,
+                "y": 2.6834182970905457e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2047487372233892,
+                "y": 2.6834182970905457e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2047487372233892,
+                "y": 2.6834182970905457e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.2047487372233892,
+                "y": 2.6834182970905457e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.198844354095169,
+                "y": 3.5589633183879746e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.198844354095169,
+                "y": 3.5589633183879746e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.198844354095169,
+                "y": 3.5589633183879746e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.198844354095169,
+                "y": 3.5589633183879746e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.198844354095169,
+                "y": 3.5589633183879746e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.198844354095169,
+                "y": 3.5589633183879746e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.198844354095169,
+                "y": 3.5589633183879746e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.198844354095169,
+                "y": 3.5589633183879746e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.198844354095169,
+                "y": 3.5589633183879746e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.198844354095169,
+                "y": 3.5589633183879746e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1926112701766205,
+                "y": 4.5217522799005324e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1926112701766205,
+                "y": 4.5217522799005324e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1926112701766205,
+                "y": 4.5217522799005324e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1926112701766205,
+                "y": 4.5217522799005324e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1926112701766205,
+                "y": 4.5217522799005324e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1926112701766205,
+                "y": 4.5217522799005324e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1926112701766205,
+                "y": 4.5217522799005324e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1926112701766205,
+                "y": 4.5217522799005324e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1926112701766205,
+                "y": 4.5217522799005324e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1926112701766205,
+                "y": 4.5217522799005324e-05
+              },
+              {
+                "distance_remaining": 1.1749999523162842,
+                "x": -1.186034253384323,
+                "y": 5.526038867167778e-05
+              },
+              {
+                "distance_remaining": 1.1749999523162842,
+                "x": -1.186034253384323,
+                "y": 5.526038867167778e-05
+              },
+              {
+                "distance_remaining": 1.1749999523162842,
+                "x": -1.186034253384323,
+                "y": 5.526038867167778e-05
+              },
+              {
+                "distance_remaining": 1.1749999523162842,
+                "x": -1.186034253384323,
+                "y": 5.526038867167778e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.186034253384323,
+                "y": 5.526038867167778e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.186034253384323,
+                "y": 5.526038867167778e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.186034253384323,
+                "y": 5.526038867167778e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.186034253384323,
+                "y": 5.526038867167778e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.186034253384323,
+                "y": 5.526038867167778e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.186034253384323,
+                "y": 5.526038867167778e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.186034253384323,
+                "y": 5.526038867167778e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1803665328497428,
+                "y": 6.381699067650577e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1803665328497428,
+                "y": 6.381699067650577e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1803665328497428,
+                "y": 6.381699067650577e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1803665328497428,
+                "y": 6.381699067650577e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1803665328497428,
+                "y": 6.381699067650577e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1803665328497428,
+                "y": 6.381699067650577e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1803665328497428,
+                "y": 6.381699067650577e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1803665328497428,
+                "y": 6.381699067650577e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1803665328497428,
+                "y": 6.381699067650577e-05
+              },
+              {
+                "distance_remaining": 1.1999999284744263,
+                "x": -1.1803665328497428,
+                "y": 6.381699067650577e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1742285648206607,
+                "y": 7.374014367055753e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1742285648206607,
+                "y": 7.374014367055753e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1742285648206607,
+                "y": 7.374014367055753e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1742285648206607,
+                "y": 7.374014367055753e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1742285648206607,
+                "y": 7.374014367055753e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1742285648206607,
+                "y": 7.374014367055753e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1742285648206607,
+                "y": 7.374014367055753e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1742285648206607,
+                "y": 7.374014367055753e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1742285648206607,
+                "y": 7.374014367055753e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1742285648206607,
+                "y": 7.374014367055753e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.167455469782877,
+                "y": 8.550969967047425e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.167455469782877,
+                "y": 8.550969967047425e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.167455469782877,
+                "y": 8.550969967047425e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.167455469782877,
+                "y": 8.550969967047425e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.167455469782877,
+                "y": 8.550969967047425e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.167455469782877,
+                "y": 8.550969967047425e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.167455469782877,
+                "y": 8.550969967047425e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.167455469782877,
+                "y": 8.550969967047425e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.167455469782877,
+                "y": 8.550969967047425e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.167455469782877,
+                "y": 8.550969967047425e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.167455469782877,
+                "y": 8.550969967047425e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1602461115392995,
+                "y": 9.92452684345554e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1602461115392995,
+                "y": 9.92452684345554e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1602461115392995,
+                "y": 9.92452684345554e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1602461115392995,
+                "y": 9.92452684345554e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1602461115392995,
+                "y": 9.92452684345554e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1602461115392995,
+                "y": 9.92452684345554e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1602461115392995,
+                "y": 9.92452684345554e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1602461115392995,
+                "y": 9.92452684345554e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1602461115392995,
+                "y": 9.92452684345554e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1602461115392995,
+                "y": 9.92452684345554e-05
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1527430995444388,
+                "y": 0.00011380822333079279
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1527430995444388,
+                "y": 0.00011380822333079279
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1527430995444388,
+                "y": 0.00011380822333079279
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1527430995444388,
+                "y": 0.00011380822333079279
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1527430995444388,
+                "y": 0.00011380822333079279
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1527430995444388,
+                "y": 0.00011380822333079279
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1527430995444388,
+                "y": 0.00011380822333079279
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1527430995444388,
+                "y": 0.00011380822333079279
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1527430995444388,
+                "y": 0.00011380822333079279
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1527430995444388,
+                "y": 0.00011380822333079279
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1527430995444388,
+                "y": 0.00011380822333079279
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1452078577999987,
+                "y": 0.0001275963114569775
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1452078577999987,
+                "y": 0.0001275963114569775
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1452078577999987,
+                "y": 0.0001275963114569775
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1452078577999987,
+                "y": 0.0001275963114569775
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1452078577999987,
+                "y": 0.0001275963114569775
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1452078577999987,
+                "y": 0.0001275963114569775
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1452078577999987,
+                "y": 0.0001275963114569775
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1452078577999987,
+                "y": 0.0001275963114569775
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1452078577999987,
+                "y": 0.0001275963114569775
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1452078577999987,
+                "y": 0.0001275963114569775
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1452078577999987,
+                "y": 0.0001275963114569775
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1452078577999987,
+                "y": 0.0001275963114569775
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1377192283233488,
+                "y": 0.00014114824552503253
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1377192283233488,
+                "y": 0.00014114824552503253
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1377192283233488,
+                "y": 0.00014114824552503253
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1377192283233488,
+                "y": 0.00014114824552503253
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1377192283233488,
+                "y": 0.00014114824552503253
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1377192283233488,
+                "y": 0.00014114824552503253
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1377192283233488,
+                "y": 0.00014114824552503253
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1377192283233488,
+                "y": 0.00014114824552503253
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1377192283233488,
+                "y": 0.00014114824552503253
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1377192283233488,
+                "y": 0.00014114824552503253
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1377192283233488,
+                "y": 0.00014114824552503253
+              },
+              {
+                "distance_remaining": 1.149999976158142,
+                "x": -1.1377192283233488,
+                "y": 0.00014114824552503253
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.129785136398954,
+                "y": 0.00015670938174311368
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.129785136398954,
+                "y": 0.00015670938174311368
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.129785136398954,
+                "y": 0.00015670938174311368
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.129785136398954,
+                "y": 0.00015670938174311368
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.129785136398954,
+                "y": 0.00015670938174311368
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.129785136398954,
+                "y": 0.00015670938174311368
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.129785136398954,
+                "y": 0.00015670938174311368
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.129785136398954,
+                "y": 0.00015670938174311368
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.129785136398954,
+                "y": 0.00015670938174311368
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.129785136398954,
+                "y": 0.00015670938174311368
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.129785136398954,
+                "y": 0.00015670938174311368
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.1215772242656543,
+                "y": 0.0001734152744771305
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.1215772242656543,
+                "y": 0.0001734152744771305
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.1215772242656543,
+                "y": 0.0001734152744771305
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.1215772242656543,
+                "y": 0.0001734152744771305
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.1215772242656543,
+                "y": 0.0001734152744771305
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.1215772242656543,
+                "y": 0.0001734152744771305
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.1215772242656543,
+                "y": 0.0001734152744771305
+              },
+              {
+                "distance_remaining": 1.125,
+                "x": -1.1215772242656543,
+                "y": 0.0001734152744771305
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1215772242656543,
+                "y": 0.0001734152744771305
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1215772242656543,
+                "y": 0.0001734152744771305
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1215772242656543,
+                "y": 0.0001734152744771305
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1131863863591565,
+                "y": 0.0001892294574389497
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1131863863591565,
+                "y": 0.0001892294574389497
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1131863863591565,
+                "y": 0.0001892294574389497
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1131863863591565,
+                "y": 0.0001892294574389497
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1131863863591565,
+                "y": 0.0001892294574389497
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1131863863591565,
+                "y": 0.0001892294574389497
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1131863863591565,
+                "y": 0.0001892294574389497
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1131863863591565,
+                "y": 0.0001892294574389497
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1131863863591565,
+                "y": 0.0001892294574389497
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1131863863591565,
+                "y": 0.0001892294574389497
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1131863863591565,
+                "y": 0.0001892294574389497
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1046509539472478,
+                "y": 0.00020507532230089388
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1046509539472478,
+                "y": 0.00020507532230089388
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1046509539472478,
+                "y": 0.00020507532230089388
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1046509539472478,
+                "y": 0.00020507532230089388
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1046509539472478,
+                "y": 0.00020507532230089388
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1046509539472478,
+                "y": 0.00020507532230089388
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1046509539472478,
+                "y": 0.00020507532230089388
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1046509539472478,
+                "y": 0.00020507532230089388
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1046509539472478,
+                "y": 0.00020507532230089388
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1046509539472478,
+                "y": 0.00020507532230089388
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.1046509539472478,
+                "y": 0.00020507532230089388
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0959705475709383,
+                "y": 0.0002204103219437748
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0959705475709383,
+                "y": 0.0002204103219437748
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0959705475709383,
+                "y": 0.0002204103219437748
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0959705475709383,
+                "y": 0.0002204103219437748
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0959705475709383,
+                "y": 0.0002204103219437748
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0959705475709383,
+                "y": 0.0002204103219437748
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0959705475709383,
+                "y": 0.0002204103219437748
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0959705475709383,
+                "y": 0.0002204103219437748
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0959705475709383,
+                "y": 0.0002204103219437748
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0959705475709383,
+                "y": 0.0002204103219437748
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0959705475709383,
+                "y": 0.0002204103219437748
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0959705475709383,
+                "y": 0.0002204103219437748
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0871124687054166,
+                "y": 0.00023624767140217382
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0871124687054166,
+                "y": 0.00023624767140217382
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0871124687054166,
+                "y": 0.00023624767140217382
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0871124687054166,
+                "y": 0.00023624767140217382
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0871124687054166,
+                "y": 0.00023624767140217382
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0871124687054166,
+                "y": 0.00023624767140217382
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0871124687054166,
+                "y": 0.00023624767140217382
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0871124687054166,
+                "y": 0.00023624767140217382
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0871124687054166,
+                "y": 0.00023624767140217382
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0871124687054166,
+                "y": 0.00023624767140217382
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0871124687054166,
+                "y": 0.00023624767140217382
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0871124687054166,
+                "y": 0.00023624767140217382
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0871124687054166,
+                "y": 0.00023624767140217382
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0782087081526495,
+                "y": 0.00025207444495594446
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0782087081526495,
+                "y": 0.00025207444495594446
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0782087081526495,
+                "y": 0.00025207444495594446
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0782087081526495,
+                "y": 0.00025207444495594446
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0782087081526495,
+                "y": 0.00025207444495594446
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0782087081526495,
+                "y": 0.00025207444495594446
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0782087081526495,
+                "y": 0.00025207444495594446
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0782087081526495,
+                "y": 0.00025207444495594446
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0782087081526495,
+                "y": 0.00025207444495594446
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0782087081526495,
+                "y": 0.00025207444495594446
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0782087081526495,
+                "y": 0.00025207444495594446
+              },
+              {
+                "distance_remaining": 1.0999999046325684,
+                "x": -1.0782087081526495,
+                "y": 0.00025207444495594446
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0690763757911226,
+                "y": 0.0002674582126536445
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0690763757911226,
+                "y": 0.0002674582126536445
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0690763757911226,
+                "y": 0.0002674582126536445
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0690763757911226,
+                "y": 0.0002674582126536445
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0690763757911226,
+                "y": 0.0002674582126536445
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0690763757911226,
+                "y": 0.0002674582126536445
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0690763757911226,
+                "y": 0.0002674582126536445
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0690763757911226,
+                "y": 0.0002674582126536445
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0690763757911226,
+                "y": 0.0002674582126536445
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0690763757911226,
+                "y": 0.0002674582126536445
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0690763757911226,
+                "y": 0.0002674582126536445
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0690763757911226,
+                "y": 0.0002674582126536445
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0598817670671614,
+                "y": 0.00028275223424646125
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0598817670671614,
+                "y": 0.00028275223424646125
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0598817670671614,
+                "y": 0.00028275223424646125
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0598817670671614,
+                "y": 0.00028275223424646125
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0598817670671614,
+                "y": 0.00028275223424646125
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0598817670671614,
+                "y": 0.00028275223424646125
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0598817670671614,
+                "y": 0.00028275223424646125
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0598817670671614,
+                "y": 0.00028275223424646125
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0598817670671614,
+                "y": 0.00028275223424646125
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0598817670671614,
+                "y": 0.00028275223424646125
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0598817670671614,
+                "y": 0.00028275223424646125
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0506367162756054,
+                "y": 0.0002962755807193769
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0506367162756054,
+                "y": 0.0002962755807193769
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0506367162756054,
+                "y": 0.0002962755807193769
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0506367162756054,
+                "y": 0.0002962755807193769
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0506367162756054,
+                "y": 0.0002962755807193769
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0506367162756054,
+                "y": 0.0002962755807193769
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0506367162756054,
+                "y": 0.0002962755807193769
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0506367162756054,
+                "y": 0.0002962755807193769
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0506367162756054,
+                "y": 0.0002962755807193769
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0506367162756054,
+                "y": 0.0002962755807193769
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0506367162756054,
+                "y": 0.0002962755807193769
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0506367162756054,
+                "y": 0.0002962755807193769
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0412883437596174,
+                "y": 0.0003102426480608457
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 1.0499999523162842,
+                "x": -1.0316789480396662,
+                "y": 0.0003242947970889236
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0220272777242414,
+                "y": 0.0003379623998349159
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0220272777242414,
+                "y": 0.0003379623998349159
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0220272777242414,
+                "y": 0.0003379623998349159
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0220272777242414,
+                "y": 0.0003379623998349159
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0220272777242414,
+                "y": 0.0003379623998349159
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0220272777242414,
+                "y": 0.0003379623998349159
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0220272777242414,
+                "y": 0.0003379623998349159
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0220272777242414,
+                "y": 0.0003379623998349159
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0220272777242414,
+                "y": 0.0003379623998349159
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0220272777242414,
+                "y": 0.0003379623998349159
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0220272777242414,
+                "y": 0.0003379623998349159
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0220272777242414,
+                "y": 0.0003379623998349159
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0123349718646784,
+                "y": 0.0003502678418851494
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0123349718646784,
+                "y": 0.0003502678418851494
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0123349718646784,
+                "y": 0.0003502678418851494
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0123349718646784,
+                "y": 0.0003502678418851494
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0123349718646784,
+                "y": 0.0003502678418851494
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0123349718646784,
+                "y": 0.0003502678418851494
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0123349718646784,
+                "y": 0.0003502678418851494
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0123349718646784,
+                "y": 0.0003502678418851494
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0123349718646784,
+                "y": 0.0003502678418851494
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0123349718646784,
+                "y": 0.0003502678418851494
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0025169863568333,
+                "y": 0.00036142976863847673
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0025169863568333,
+                "y": 0.00036142976863847673
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0025169863568333,
+                "y": 0.00036142976863847673
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0025169863568333,
+                "y": 0.00036142976863847673
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0025169863568333,
+                "y": 0.00036142976863847673
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0025169863568333,
+                "y": 0.00036142976863847673
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0025169863568333,
+                "y": 0.00036142976863847673
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0025169863568333,
+                "y": 0.00036142976863847673
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0025169863568333,
+                "y": 0.00036142976863847673
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -1.0025169863568333,
+                "y": 0.00036142976863847673
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -0.9926832506704368,
+                "y": 0.0003718318662115853
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -0.9926832506704368,
+                "y": 0.0003718318662115853
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -0.9926832506704368,
+                "y": 0.0003718318662115853
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -0.9926832506704368,
+                "y": 0.0003718318662115853
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -0.9926832506704368,
+                "y": 0.0003718318662115853
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -0.9926832506704368,
+                "y": 0.0003718318662115853
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -0.9926832506704368,
+                "y": 0.0003718318662115853
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -0.9926832506704368,
+                "y": 0.0003718318662115853
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -0.9926832506704368,
+                "y": 0.0003718318662115853
+              },
+              {
+                "distance_remaining": 0.9999999403953552,
+                "x": -0.9926832506704368,
+                "y": 0.0003718318662115853
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.972728872027999,
+                "y": 0.0003930466091129397
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.972728872027999,
+                "y": 0.0003930466091129397
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.972728872027999,
+                "y": 0.0003930466091129397
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.972728872027999,
+                "y": 0.0003930466091129397
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.972728872027999,
+                "y": 0.0003930466091129397
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.972728872027999,
+                "y": 0.0003930466091129397
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.972728872027999,
+                "y": 0.0003930466091129397
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.972728872027999,
+                "y": 0.0003930466091129397
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.972728872027999,
+                "y": 0.0003930466091129397
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.972728872027999,
+                "y": 0.0003930466091129397
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.972728872027999,
+                "y": 0.0003930466091129397
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.9627403228453628,
+                "y": 0.00040356054223836247
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.9627403228453628,
+                "y": 0.00040356054223836247
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.9627403228453628,
+                "y": 0.00040356054223836247
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.9627403228453628,
+                "y": 0.00040356054223836247
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.9627403228453628,
+                "y": 0.00040356054223836247
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.9627403228453628,
+                "y": 0.00040356054223836247
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.9627403228453628,
+                "y": 0.00040356054223836247
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.9627403228453628,
+                "y": 0.00040356054223836247
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.9627403228453628,
+                "y": 0.00040356054223836247
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.9627403228453628,
+                "y": 0.00040356054223836247
+              },
+              {
+                "distance_remaining": 0.9749999642372131,
+                "x": -0.9627403228453628,
+                "y": 0.00040356054223836247
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9527959160405206,
+                "y": 0.00041324057978131394
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9527959160405206,
+                "y": 0.00041324057978131394
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9527959160405206,
+                "y": 0.00041324057978131394
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9527959160405206,
+                "y": 0.00041324057978131394
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9527959160405206,
+                "y": 0.00041324057978131394
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9527959160405206,
+                "y": 0.00041324057978131394
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9527959160405206,
+                "y": 0.00041324057978131394
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9527959160405206,
+                "y": 0.00041324057978131394
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9527959160405206,
+                "y": 0.00041324057978131394
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9527959160405206,
+                "y": 0.00041324057978131394
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9428009600445777,
+                "y": 0.0004232654023871182
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9428009600445777,
+                "y": 0.0004232654023871182
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9428009600445777,
+                "y": 0.0004232654023871182
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9428009600445777,
+                "y": 0.0004232654023871182
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9428009600445777,
+                "y": 0.0004232654023871182
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9428009600445777,
+                "y": 0.0004232654023871182
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9428009600445777,
+                "y": 0.0004232654023871182
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9428009600445777,
+                "y": 0.0004232654023871182
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9428009600445777,
+                "y": 0.0004232654023871182
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9428009600445777,
+                "y": 0.0004232654023871182
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9328009646885667,
+                "y": 0.0004329028163887392
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9328009646885667,
+                "y": 0.0004329028163887392
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9328009646885667,
+                "y": 0.0004329028163887392
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9328009646885667,
+                "y": 0.0004329028163887392
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9328009646885667,
+                "y": 0.0004329028163887392
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9328009646885667,
+                "y": 0.0004329028163887392
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9328009646885667,
+                "y": 0.0004329028163887392
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9328009646885667,
+                "y": 0.0004329028163887392
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9328009646885667,
+                "y": 0.0004329028163887392
+              },
+              {
+                "distance_remaining": 0.9499999284744263,
+                "x": -0.9328009646885667,
+                "y": 0.0004329028163887392
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9228009685041374,
+                "y": 0.00044163845636102157
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9228009685041374,
+                "y": 0.00044163845636102157
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9228009685041374,
+                "y": 0.00044163845636102157
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9228009685041374,
+                "y": 0.00044163845636102157
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9228009685041374,
+                "y": 0.00044163845636102157
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9228009685041374,
+                "y": 0.00044163845636102157
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9228009685041374,
+                "y": 0.00044163845636102157
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9228009685041374,
+                "y": 0.00044163845636102157
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9228009685041374,
+                "y": 0.00044163845636102157
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9228009685041374,
+                "y": 0.00044163845636102157
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9228009685041374,
+                "y": 0.00044163845636102157
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9128009720120744,
+                "y": 0.00045001453684699025
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9128009720120744,
+                "y": 0.00045001453684699025
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9128009720120744,
+                "y": 0.00045001453684699025
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9128009720120744,
+                "y": 0.00045001453684699025
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9128009720120744,
+                "y": 0.00045001453684699025
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9128009720120744,
+                "y": 0.00045001453684699025
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9128009720120744,
+                "y": 0.00045001453684699025
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9128009720120744,
+                "y": 0.00045001453684699025
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9128009720120744,
+                "y": 0.00045001453684699025
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9128009720120744,
+                "y": 0.00045001453684699025
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9028267966268442,
+                "y": 0.00045734067123075976
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9028267966268442,
+                "y": 0.00045734067123075976
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9028267966268442,
+                "y": 0.00045734067123075976
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9028267966268442,
+                "y": 0.00045734067123075976
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9028267966268442,
+                "y": 0.00045734067123075976
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9028267966268442,
+                "y": 0.00045734067123075976
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9028267966268442,
+                "y": 0.00045734067123075976
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9028267966268442,
+                "y": 0.00045734067123075976
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9028267966268442,
+                "y": 0.00045734067123075976
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9028267966268442,
+                "y": 0.00045734067123075976
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.9028267966268442,
+                "y": 0.00045734067123075976
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.8928267986233809,
+                "y": 0.00046365974764877156
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.8928267986233809,
+                "y": 0.00046365974764877156
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.8928267986233809,
+                "y": 0.00046365974764877156
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.8928267986233809,
+                "y": 0.00046365974764877156
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.8928267986233809,
+                "y": 0.00046365974764877156
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.8928267986233809,
+                "y": 0.00046365974764877156
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.8928267986233809,
+                "y": 0.00046365974764877156
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.8928267986233809,
+                "y": 0.00046365974764877156
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.8928267986233809,
+                "y": 0.00046365974764877156
+              },
+              {
+                "distance_remaining": 0.8999999165534973,
+                "x": -0.8928267986233809,
+                "y": 0.00046365974764877156
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8828268013007874,
+                "y": 0.00047097740615267223
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8828268013007874,
+                "y": 0.00047097740615267223
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8828268013007874,
+                "y": 0.00047097740615267223
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8828268013007874,
+                "y": 0.00047097740615267223
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8828268013007874,
+                "y": 0.00047097740615267223
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8828268013007874,
+                "y": 0.00047097740615267223
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8828268013007874,
+                "y": 0.00047097740615267223
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8828268013007874,
+                "y": 0.00047097740615267223
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8828268013007874,
+                "y": 0.00047097740615267223
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8828268013007874,
+                "y": 0.00047097740615267223
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8728268032321662,
+                "y": 0.0004771925146748811
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8728268032321662,
+                "y": 0.0004771925146748811
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8728268032321662,
+                "y": 0.0004771925146748811
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8728268032321662,
+                "y": 0.0004771925146748811
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8728268032321662,
+                "y": 0.0004771925146748811
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8728268032321662,
+                "y": 0.0004771925146748811
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8728268032321662,
+                "y": 0.0004771925146748811
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8728268032321662,
+                "y": 0.0004771925146748811
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8728268032321662,
+                "y": 0.0004771925146748811
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8728268032321662,
+                "y": 0.0004771925146748811
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8728268032321662,
+                "y": 0.0004771925146748811
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8628268049400585,
+                "y": 0.0004830369854248302
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8628268049400585,
+                "y": 0.0004830369854248302
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8628268049400585,
+                "y": 0.0004830369854248302
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8628268049400585,
+                "y": 0.0004830369854248302
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8628268049400585,
+                "y": 0.0004830369854248302
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8628268049400585,
+                "y": 0.0004830369854248302
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8628268049400585,
+                "y": 0.0004830369854248302
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8628268049400585,
+                "y": 0.0004830369854248302
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8628268049400585,
+                "y": 0.0004830369854248302
+              },
+              {
+                "distance_remaining": 0.8749999403953552,
+                "x": -0.8628268049400585,
+                "y": 0.0004830369854248302
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.85283482327845,
+                "y": 0.0004885369045453576
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.85283482327845,
+                "y": 0.0004885369045453576
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.85283482327845,
+                "y": 0.0004885369045453576
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.85283482327845,
+                "y": 0.0004885369045453576
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.85283482327845,
+                "y": 0.0004885369045453576
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.85283482327845,
+                "y": 0.0004885369045453576
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.85283482327845,
+                "y": 0.0004885369045453576
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.85283482327845,
+                "y": 0.0004885369045453576
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.85283482327845,
+                "y": 0.0004885369045453576
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.85283482327845,
+                "y": 0.0004885369045453576
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.85283482327845,
+                "y": 0.0004885369045453576
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8428365366928539,
+                "y": 0.0004941382207077125
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8428365366928539,
+                "y": 0.0004941382207077125
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8428365366928539,
+                "y": 0.0004941382207077125
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8428365366928539,
+                "y": 0.0004941382207077125
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8428365366928539,
+                "y": 0.0004941382207077125
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8428365366928539,
+                "y": 0.0004941382207077125
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8428365366928539,
+                "y": 0.0004941382207077125
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8428365366928539,
+                "y": 0.0004941382207077125
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8428365366928539,
+                "y": 0.0004941382207077125
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8428365366928539,
+                "y": 0.0004941382207077125
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8328627375730413,
+                "y": 0.0005008445103978706
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8328627375730413,
+                "y": 0.0005008445103978706
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8328627375730413,
+                "y": 0.0005008445103978706
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8328627375730413,
+                "y": 0.0005008445103978706
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8328627375730413,
+                "y": 0.0005008445103978706
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8328627375730413,
+                "y": 0.0005008445103978706
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8328627375730413,
+                "y": 0.0005008445103978706
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8328627375730413,
+                "y": 0.0005008445103978706
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8328627375730413,
+                "y": 0.0005008445103978706
+              },
+              {
+                "distance_remaining": 0.8499999642372131,
+                "x": -0.8328627375730413,
+                "y": 0.0005008445103978706
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8228868374243272,
+                "y": 0.0005084320558816302
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8228868374243272,
+                "y": 0.0005084320558816302
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8228868374243272,
+                "y": 0.0005084320558816302
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8228868374243272,
+                "y": 0.0005084320558816302
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8228868374243272,
+                "y": 0.0005084320558816302
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8228868374243272,
+                "y": 0.0005084320558816302
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8228868374243272,
+                "y": 0.0005084320558816302
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8228868374243272,
+                "y": 0.0005084320558816302
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8228868374243272,
+                "y": 0.0005084320558816302
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8228868374243272,
+                "y": 0.0005084320558816302
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8228868374243272,
+                "y": 0.0005084320558816302
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8128875505707676,
+                "y": 0.0005157243608068938
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8128875505707676,
+                "y": 0.0005157243608068938
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8128875505707676,
+                "y": 0.0005157243608068938
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8128875505707676,
+                "y": 0.0005157243608068938
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8128875505707676,
+                "y": 0.0005157243608068938
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8128875505707676,
+                "y": 0.0005157243608068938
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8128875505707676,
+                "y": 0.0005157243608068938
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8128875505707676,
+                "y": 0.0005157243608068938
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8128875505707676,
+                "y": 0.0005157243608068938
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.8128875505707676,
+                "y": 0.0005157243608068938
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.802927868897616,
+                "y": 0.0005216202686142097
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.802927868897616,
+                "y": 0.0005216202686142097
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.802927868897616,
+                "y": 0.0005216202686142097
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.802927868897616,
+                "y": 0.0005216202686142097
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.802927868897616,
+                "y": 0.0005216202686142097
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.802927868897616,
+                "y": 0.0005216202686142097
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.802927868897616,
+                "y": 0.0005216202686142097
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.802927868897616,
+                "y": 0.0005216202686142097
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.802927868897616,
+                "y": 0.0005216202686142097
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.802927868897616,
+                "y": 0.0005216202686142097
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.7929658748452859,
+                "y": 0.0005279739452596291
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.7929658748452859,
+                "y": 0.0005279739452596291
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.7929658748452859,
+                "y": 0.0005279739452596291
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.7929658748452859,
+                "y": 0.0005279739452596291
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.7929658748452859,
+                "y": 0.0005279739452596291
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.7929658748452859,
+                "y": 0.0005279739452596291
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.7929658748452859,
+                "y": 0.0005279739452596291
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.7929658748452859,
+                "y": 0.0005279739452596291
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.7929658748452859,
+                "y": 0.0005279739452596291
+              },
+              {
+                "distance_remaining": 0.7999999523162842,
+                "x": -0.7929658748452859,
+                "y": 0.0005279739452596291
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7830267001807578,
+                "y": 0.0005348402854404641
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7830267001807578,
+                "y": 0.0005348402854404641
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7830267001807578,
+                "y": 0.0005348402854404641
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7830267001807578,
+                "y": 0.0005348402854404641
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7830267001807578,
+                "y": 0.0005348402854404641
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7830267001807578,
+                "y": 0.0005348402854404641
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7830267001807578,
+                "y": 0.0005348402854404641
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7830267001807578,
+                "y": 0.0005348402854404641
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7830267001807578,
+                "y": 0.0005348402854404641
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7830267001807578,
+                "y": 0.0005348402854404641
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7830267001807578,
+                "y": 0.0005348402854404641
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7730868748710586,
+                "y": 0.0005420425162264011
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7730868748710586,
+                "y": 0.0005420425162264011
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7730868748710586,
+                "y": 0.0005420425162264011
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7730868748710586,
+                "y": 0.0005420425162264011
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7730868748710586,
+                "y": 0.0005420425162264011
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7730868748710586,
+                "y": 0.0005420425162264011
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7730868748710586,
+                "y": 0.0005420425162264011
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7730868748710586,
+                "y": 0.0005420425162264011
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7730868748710586,
+                "y": 0.0005420425162264011
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7730868748710586,
+                "y": 0.0005420425162264011
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.7730868748710586,
+                "y": 0.0005420425162264011
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.763279711385012,
+                "y": 0.0005496764348629015
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.763279711385012,
+                "y": 0.0005496764348629015
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.763279711385012,
+                "y": 0.0005496764348629015
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.763279711385012,
+                "y": 0.0005496764348629015
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.763279711385012,
+                "y": 0.0005496764348629015
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.763279711385012,
+                "y": 0.0005496764348629015
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.763279711385012,
+                "y": 0.0005496764348629015
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.763279711385012,
+                "y": 0.0005496764348629015
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.763279711385012,
+                "y": 0.0005496764348629015
+              },
+              {
+                "distance_remaining": 0.7749999165534973,
+                "x": -0.763279711385012,
+                "y": 0.0005496764348629015
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7535341915904061,
+                "y": 0.0005555180953547745
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7535341915904061,
+                "y": 0.0005555180953547745
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7535341915904061,
+                "y": 0.0005555180953547745
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7535341915904061,
+                "y": 0.0005555180953547745
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7535341915904061,
+                "y": 0.0005555180953547745
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7535341915904061,
+                "y": 0.0005555180953547745
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7535341915904061,
+                "y": 0.0005555180953547745
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7535341915904061,
+                "y": 0.0005555180953547745
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7535341915904061,
+                "y": 0.0005555180953547745
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7535341915904061,
+                "y": 0.0005555180953547745
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7437367204081957,
+                "y": 0.0005614099644144198
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7437367204081957,
+                "y": 0.0005614099644144198
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7437367204081957,
+                "y": 0.0005614099644144198
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7437367204081957,
+                "y": 0.0005614099644144198
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7437367204081957,
+                "y": 0.0005614099644144198
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7437367204081957,
+                "y": 0.0005614099644144198
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7437367204081957,
+                "y": 0.0005614099644144198
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7437367204081957,
+                "y": 0.0005614099644144198
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7437367204081957,
+                "y": 0.0005614099644144198
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7437367204081957,
+                "y": 0.0005614099644144198
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7437367204081957,
+                "y": 0.0005614099644144198
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7339501313082393,
+                "y": 0.0005674011370728926
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7339501313082393,
+                "y": 0.0005674011370728926
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7339501313082393,
+                "y": 0.0005674011370728926
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7339501313082393,
+                "y": 0.0005674011370728926
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7339501313082393,
+                "y": 0.0005674011370728926
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7339501313082393,
+                "y": 0.0005674011370728926
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7339501313082393,
+                "y": 0.0005674011370728926
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7339501313082393,
+                "y": 0.0005674011370728926
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7339501313082393,
+                "y": 0.0005674011370728926
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7339501313082393,
+                "y": 0.0005674011370728926
+              },
+              {
+                "distance_remaining": 0.7499999403953552,
+                "x": -0.7339501313082393,
+                "y": 0.0005674011370728926
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7241208893971807,
+                "y": 0.0005738363088926489
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7241208893971807,
+                "y": 0.0005738363088926489
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7241208893971807,
+                "y": 0.0005738363088926489
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7241208893971807,
+                "y": 0.0005738363088926489
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7241208893971807,
+                "y": 0.0005738363088926489
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7241208893971807,
+                "y": 0.0005738363088926489
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7241208893971807,
+                "y": 0.0005738363088926489
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7241208893971807,
+                "y": 0.0005738363088926489
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7241208893971807,
+                "y": 0.0005738363088926489
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7241208893971807,
+                "y": 0.0005738363088926489
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7241208893971807,
+                "y": 0.0005738363088926489
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7143647626706278,
+                "y": 0.0005801784988442332
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7143647626706278,
+                "y": 0.0005801784988442332
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7143647626706278,
+                "y": 0.0005801784988442332
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7143647626706278,
+                "y": 0.0005801784988442332
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7143647626706278,
+                "y": 0.0005801784988442332
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7143647626706278,
+                "y": 0.0005801784988442332
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7143647626706278,
+                "y": 0.0005801784988442332
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7143647626706278,
+                "y": 0.0005801784988442332
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7143647626706278,
+                "y": 0.0005801784988442332
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7143647626706278,
+                "y": 0.0005801784988442332
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7046625211544713,
+                "y": 0.0005847915840008611
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7046625211544713,
+                "y": 0.0005847915840008611
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7046625211544713,
+                "y": 0.0005847915840008611
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7046625211544713,
+                "y": 0.0005847915840008611
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7046625211544713,
+                "y": 0.0005847915840008611
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7046625211544713,
+                "y": 0.0005847915840008611
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7046625211544713,
+                "y": 0.0005847915840008611
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7046625211544713,
+                "y": 0.0005847915840008611
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7046625211544713,
+                "y": 0.0005847915840008611
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.7046625211544713,
+                "y": 0.0005847915840008611
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.6950773081278001,
+                "y": 0.0005882792868340568
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.6950773081278001,
+                "y": 0.0005882792868340568
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.6950773081278001,
+                "y": 0.0005882792868340568
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.6950773081278001,
+                "y": 0.0005882792868340568
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.6950773081278001,
+                "y": 0.0005882792868340568
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.6950773081278001,
+                "y": 0.0005882792868340568
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.6950773081278001,
+                "y": 0.0005882792868340568
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.6950773081278001,
+                "y": 0.0005882792868340568
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.6950773081278001,
+                "y": 0.0005882792868340568
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.6950773081278001,
+                "y": 0.0005882792868340568
+              },
+              {
+                "distance_remaining": 0.6999999284744263,
+                "x": -0.6950773081278001,
+                "y": 0.0005882792868340568
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6855327403710814,
+                "y": 0.0005924268517916279
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6855327403710814,
+                "y": 0.0005924268517916279
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6855327403710814,
+                "y": 0.0005924268517916279
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6855327403710814,
+                "y": 0.0005924268517916279
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6855327403710814,
+                "y": 0.0005924268517916279
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6855327403710814,
+                "y": 0.0005924268517916279
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6855327403710814,
+                "y": 0.0005924268517916279
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6855327403710814,
+                "y": 0.0005924268517916279
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6855327403710814,
+                "y": 0.0005924268517916279
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6855327403710814,
+                "y": 0.0005924268517916279
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6760525814946337,
+                "y": 0.00059678616447024
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6760525814946337,
+                "y": 0.00059678616447024
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6760525814946337,
+                "y": 0.00059678616447024
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6760525814946337,
+                "y": 0.00059678616447024
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6760525814946337,
+                "y": 0.00059678616447024
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6760525814946337,
+                "y": 0.00059678616447024
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6760525814946337,
+                "y": 0.00059678616447024
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6760525814946337,
+                "y": 0.00059678616447024
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6760525814946337,
+                "y": 0.00059678616447024
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6760525814946337,
+                "y": 0.00059678616447024
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6665716887510305,
+                "y": 0.0006008438253512217
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6665716887510305,
+                "y": 0.0006008438253512217
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6665716887510305,
+                "y": 0.0006008438253512217
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6665716887510305,
+                "y": 0.0006008438253512217
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6665716887510305,
+                "y": 0.0006008438253512217
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6665716887510305,
+                "y": 0.0006008438253512217
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6665716887510305,
+                "y": 0.0006008438253512217
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6665716887510305,
+                "y": 0.0006008438253512217
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6665716887510305,
+                "y": 0.0006008438253512217
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6665716887510305,
+                "y": 0.0006008438253512217
+              },
+              {
+                "distance_remaining": 0.6749999523162842,
+                "x": -0.6665716887510305,
+                "y": 0.0006008438253512217
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6572770812862321,
+                "y": 0.0006058840787327045
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6572770812862321,
+                "y": 0.0006058840787327045
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6572770812862321,
+                "y": 0.0006058840787327045
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6572770812862321,
+                "y": 0.0006058840787327045
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6572770812862321,
+                "y": 0.0006058840787327045
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6572770812862321,
+                "y": 0.0006058840787327045
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6572770812862321,
+                "y": 0.0006058840787327045
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6572770812862321,
+                "y": 0.0006058840787327045
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6572770812862321,
+                "y": 0.0006058840787327045
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6572770812862321,
+                "y": 0.0006058840787327045
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6479986728353462,
+                "y": 0.0006102563254102425
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6479986728353462,
+                "y": 0.0006102563254102425
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6479986728353462,
+                "y": 0.0006102563254102425
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6479986728353462,
+                "y": 0.0006102563254102425
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6479986728353462,
+                "y": 0.0006102563254102425
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6479986728353462,
+                "y": 0.0006102563254102425
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6479986728353462,
+                "y": 0.0006102563254102425
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6479986728353462,
+                "y": 0.0006102563254102425
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6479986728353462,
+                "y": 0.0006102563254102425
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6479986728353462,
+                "y": 0.0006102563254102425
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6479986728353462,
+                "y": 0.0006102563254102425
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6388947934686195,
+                "y": 0.0006134548012697239
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6388947934686195,
+                "y": 0.0006134548012697239
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6388947934686195,
+                "y": 0.0006134548012697239
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6388947934686195,
+                "y": 0.0006134548012697239
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6388947934686195,
+                "y": 0.0006134548012697239
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6388947934686195,
+                "y": 0.0006134548012697239
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6388947934686195,
+                "y": 0.0006134548012697239
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6388947934686195,
+                "y": 0.0006134548012697239
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6388947934686195,
+                "y": 0.0006134548012697239
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6388947934686195,
+                "y": 0.0006134548012697239
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6298343120530545,
+                "y": 0.0006160482221519949
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6298343120530545,
+                "y": 0.0006160482221519949
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6298343120530545,
+                "y": 0.0006160482221519949
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6298343120530545,
+                "y": 0.0006160482221519949
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6298343120530545,
+                "y": 0.0006160482221519949
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6298343120530545,
+                "y": 0.0006160482221519949
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6298343120530545,
+                "y": 0.0006160482221519949
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6298343120530545,
+                "y": 0.0006160482221519949
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6298343120530545,
+                "y": 0.0006160482221519949
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6298343120530545,
+                "y": 0.0006160482221519949
+              },
+              {
+                "distance_remaining": 0.6499999165534973,
+                "x": -0.6298343120530545,
+                "y": 0.0006160482221519949
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6207564896840316,
+                "y": 0.0006179394739054178
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6207564896840316,
+                "y": 0.0006179394739054178
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6207564896840316,
+                "y": 0.0006179394739054178
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6207564896840316,
+                "y": 0.0006179394739054178
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6207564896840316,
+                "y": 0.0006179394739054178
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6207564896840316,
+                "y": 0.0006179394739054178
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6207564896840316,
+                "y": 0.0006179394739054178
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6207564896840316,
+                "y": 0.0006179394739054178
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6207564896840316,
+                "y": 0.0006179394739054178
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6207564896840316,
+                "y": 0.0006179394739054178
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6116455421447453,
+                "y": 0.0006203088206969203
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6116455421447453,
+                "y": 0.0006203088206969203
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6116455421447453,
+                "y": 0.0006203088206969203
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6116455421447453,
+                "y": 0.0006203088206969203
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6116455421447453,
+                "y": 0.0006203088206969203
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6116455421447453,
+                "y": 0.0006203088206969203
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6116455421447453,
+                "y": 0.0006203088206969203
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6116455421447453,
+                "y": 0.0006203088206969203
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6116455421447453,
+                "y": 0.0006203088206969203
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6116455421447453,
+                "y": 0.0006203088206969203
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6026671278339388,
+                "y": 0.0006223175981260455
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6026671278339388,
+                "y": 0.0006223175981260455
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6026671278339388,
+                "y": 0.0006223175981260455
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6026671278339388,
+                "y": 0.0006223175981260455
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6026671278339388,
+                "y": 0.0006223175981260455
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6026671278339388,
+                "y": 0.0006223175981260455
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6026671278339388,
+                "y": 0.0006223175981260455
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6026671278339388,
+                "y": 0.0006223175981260455
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6026671278339388,
+                "y": 0.0006223175981260455
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.6026671278339388,
+                "y": 0.0006223175981260455
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.5938664457084433,
+                "y": 0.0006246155252482988
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.5938664457084433,
+                "y": 0.0006246155252482988
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.5938664457084433,
+                "y": 0.0006246155252482988
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.5938664457084433,
+                "y": 0.0006246155252482988
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.5938664457084433,
+                "y": 0.0006246155252482988
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.5938664457084433,
+                "y": 0.0006246155252482988
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.5938664457084433,
+                "y": 0.0006246155252482988
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.5938664457084433,
+                "y": 0.0006246155252482988
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.5938664457084433,
+                "y": 0.0006246155252482988
+              },
+              {
+                "distance_remaining": 0.5999999642372131,
+                "x": -0.5938664457084433,
+                "y": 0.0006246155252482988
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5850696217147053,
+                "y": 0.0006265967427954206
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5850696217147053,
+                "y": 0.0006265967427954206
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5850696217147053,
+                "y": 0.0006265967427954206
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5850696217147053,
+                "y": 0.0006265967427954206
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5850696217147053,
+                "y": 0.0006265967427954206
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5850696217147053,
+                "y": 0.0006265967427954206
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5850696217147053,
+                "y": 0.0006265967427954206
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5850696217147053,
+                "y": 0.0006265967427954206
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5850696217147053,
+                "y": 0.0006265967427954206
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5850696217147053,
+                "y": 0.0006265967427954206
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5850696217147053,
+                "y": 0.0006265967427954206
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5762442838823327,
+                "y": 0.0006275769789105823
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5762442838823327,
+                "y": 0.0006275769789105823
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5762442838823327,
+                "y": 0.0006275769789105823
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5762442838823327,
+                "y": 0.0006275769789105823
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5762442838823327,
+                "y": 0.0006275769789105823
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5762442838823327,
+                "y": 0.0006275769789105823
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5762442838823327,
+                "y": 0.0006275769789105823
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5762442838823327,
+                "y": 0.0006275769789105823
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5762442838823327,
+                "y": 0.0006275769789105823
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5762442838823327,
+                "y": 0.0006275769789105823
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5675294649279012,
+                "y": 0.0006275517886893011
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5675294649279012,
+                "y": 0.0006275517886893011
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5675294649279012,
+                "y": 0.0006275517886893011
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5675294649279012,
+                "y": 0.0006275517886893011
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5675294649279012,
+                "y": 0.0006275517886893011
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5675294649279012,
+                "y": 0.0006275517886893011
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5675294649279012,
+                "y": 0.0006275517886893011
+              },
+              {
+                "distance_remaining": 0.5749999284744263,
+                "x": -0.5675294649279012,
+                "y": 0.0006275517886893011
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5675294649279012,
+                "y": 0.0006275517886893011
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5675294649279012,
+                "y": 0.0006275517886893011
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5589578503259087,
+                "y": 0.0006269506809448484
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5589578503259087,
+                "y": 0.0006269506809448484
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5589578503259087,
+                "y": 0.0006269506809448484
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5589578503259087,
+                "y": 0.0006269506809448484
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5589578503259087,
+                "y": 0.0006269506809448484
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5589578503259087,
+                "y": 0.0006269506809448484
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5589578503259087,
+                "y": 0.0006269506809448484
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5589578503259087,
+                "y": 0.0006269506809448484
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5589578503259087,
+                "y": 0.0006269506809448484
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5589578503259087,
+                "y": 0.0006269506809448484
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5589578503259087,
+                "y": 0.0006269506809448484
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5503958153904223,
+                "y": 0.0006262450701553983
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5503958153904223,
+                "y": 0.0006262450701553983
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5503958153904223,
+                "y": 0.0006262450701553983
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5503958153904223,
+                "y": 0.0006262450701553983
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5503958153904223,
+                "y": 0.0006262450701553983
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5503958153904223,
+                "y": 0.0006262450701553983
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5503958153904223,
+                "y": 0.0006262450701553983
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5503958153904223,
+                "y": 0.0006262450701553983
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5503958153904223,
+                "y": 0.0006262450701553983
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5503958153904223,
+                "y": 0.0006262450701553983
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5419863224999102,
+                "y": 0.0006250923743906109
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5419863224999102,
+                "y": 0.0006250923743906109
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5419863224999102,
+                "y": 0.0006250923743906109
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5419863224999102,
+                "y": 0.0006250923743906109
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5419863224999102,
+                "y": 0.0006250923743906109
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5419863224999102,
+                "y": 0.0006250923743906109
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5419863224999102,
+                "y": 0.0006250923743906109
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5419863224999102,
+                "y": 0.0006250923743906109
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5419863224999102,
+                "y": 0.0006250923743906109
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5419863224999102,
+                "y": 0.0006250923743906109
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5336331011129765,
+                "y": 0.0006243898771218342
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5336331011129765,
+                "y": 0.0006243898771218342
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5336331011129765,
+                "y": 0.0006243898771218342
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5336331011129765,
+                "y": 0.0006243898771218342
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5336331011129765,
+                "y": 0.0006243898771218342
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5336331011129765,
+                "y": 0.0006243898771218342
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5336331011129765,
+                "y": 0.0006243898771218342
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5336331011129765,
+                "y": 0.0006243898771218342
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5336331011129765,
+                "y": 0.0006243898771218342
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5336331011129765,
+                "y": 0.0006243898771218342
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5252945044733459,
+                "y": 0.0006226515106946101
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5252945044733459,
+                "y": 0.0006226515106946101
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5252945044733459,
+                "y": 0.0006226515106946101
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5252945044733459,
+                "y": 0.0006226515106946101
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5252945044733459,
+                "y": 0.0006226515106946101
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5252945044733459,
+                "y": 0.0006226515106946101
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5252945044733459,
+                "y": 0.0006226515106946101
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5252945044733459,
+                "y": 0.0006226515106946101
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5252945044733459,
+                "y": 0.0006226515106946101
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5252945044733459,
+                "y": 0.0006226515106946101
+              },
+              {
+                "distance_remaining": 0.5499999523162842,
+                "x": -0.5252945044733459,
+                "y": 0.0006226515106946101
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5168633464517838,
+                "y": 0.0006193656904011168
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5168633464517838,
+                "y": 0.0006193656904011168
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5168633464517838,
+                "y": 0.0006193656904011168
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5168633464517838,
+                "y": 0.0006193656904011168
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5168633464517838,
+                "y": 0.0006193656904011168
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5168633464517838,
+                "y": 0.0006193656904011168
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5168633464517838,
+                "y": 0.0006193656904011168
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5168633464517838,
+                "y": 0.0006193656904011168
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5168633464517838,
+                "y": 0.0006193656904011168
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5168633464517838,
+                "y": 0.0006193656904011168
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.508505248533804,
+                "y": 0.0006153878597981277
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.508505248533804,
+                "y": 0.0006153878597981277
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.508505248533804,
+                "y": 0.0006153878597981277
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.508505248533804,
+                "y": 0.0006153878597981277
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.508505248533804,
+                "y": 0.0006153878597981277
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.508505248533804,
+                "y": 0.0006153878597981277
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.508505248533804,
+                "y": 0.0006153878597981277
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.508505248533804,
+                "y": 0.0006153878597981277
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.508505248533804,
+                "y": 0.0006153878597981277
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.508505248533804,
+                "y": 0.0006153878597981277
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5001576875046745,
+                "y": 0.0006114552945120253
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5001576875046745,
+                "y": 0.0006114552945120253
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5001576875046745,
+                "y": 0.0006114552945120253
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5001576875046745,
+                "y": 0.0006114552945120253
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5001576875046745,
+                "y": 0.0006114552945120253
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5001576875046745,
+                "y": 0.0006114552945120253
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5001576875046745,
+                "y": 0.0006114552945120253
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5001576875046745,
+                "y": 0.0006114552945120253
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5001576875046745,
+                "y": 0.0006114552945120253
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.5001576875046745,
+                "y": 0.0006114552945120253
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4918691785191873,
+                "y": 0.0006065419460166935
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4918691785191873,
+                "y": 0.0006065419460166935
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4918691785191873,
+                "y": 0.0006065419460166935
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4918691785191873,
+                "y": 0.0006065419460166935
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4918691785191873,
+                "y": 0.0006065419460166935
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4918691785191873,
+                "y": 0.0006065419460166935
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4918691785191873,
+                "y": 0.0006065419460166935
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4918691785191873,
+                "y": 0.0006065419460166935
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4918691785191873,
+                "y": 0.0006065419460166935
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4918691785191873,
+                "y": 0.0006065419460166935
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4918691785191873,
+                "y": 0.0006065419460166935
+              },
+              {
+                "distance_remaining": 0.47499993443489075,
+                "x": -0.4837248259725182,
+                "y": 0.0006004564122097659
+              },
+              {
+                "distance_remaining": 0.47499993443489075,
+                "x": -0.4837248259725182,
+                "y": 0.0006004564122097659
+              },
+              {
+                "distance_remaining": 0.47499993443489075,
+                "x": -0.4837248259725182,
+                "y": 0.0006004564122097659
+              },
+              {
+                "distance_remaining": 0.47499993443489075,
+                "x": -0.4837248259725182,
+                "y": 0.0006004564122097659
+              },
+              {
+                "distance_remaining": 0.47499993443489075,
+                "x": -0.4837248259725182,
+                "y": 0.0006004564122097659
+              },
+              {
+                "distance_remaining": 0.47499993443489075,
+                "x": -0.4837248259725182,
+                "y": 0.0006004564122097659
+              },
+              {
+                "distance_remaining": 0.47499993443489075,
+                "x": -0.4837248259725182,
+                "y": 0.0006004564122097659
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4837248259725182,
+                "y": 0.0006004564122097659
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4837248259725182,
+                "y": 0.0006004564122097659
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4837248259725182,
+                "y": 0.0006004564122097659
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4755568400134107,
+                "y": 0.0005924838188058346
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4755568400134107,
+                "y": 0.0005924838188058346
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4755568400134107,
+                "y": 0.0005924838188058346
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4755568400134107,
+                "y": 0.0005924838188058346
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4755568400134107,
+                "y": 0.0005924838188058346
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4755568400134107,
+                "y": 0.0005924838188058346
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4755568400134107,
+                "y": 0.0005924838188058346
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4755568400134107,
+                "y": 0.0005924838188058346
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4755568400134107,
+                "y": 0.0005924838188058346
+              },
+              {
+                "distance_remaining": 0.4999999403953552,
+                "x": -0.4755568400134107,
+                "y": 0.0005924838188058346
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.46745792444935264,
+                "y": 0.0005824530124813399
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.46745792444935264,
+                "y": 0.0005824530124813399
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.46745792444935264,
+                "y": 0.0005824530124813399
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.46745792444935264,
+                "y": 0.0005824530124813399
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.46745792444935264,
+                "y": 0.0005824530124813399
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.46745792444935264,
+                "y": 0.0005824530124813399
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.46745792444935264,
+                "y": 0.0005824530124813399
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.46745792444935264,
+                "y": 0.0005824530124813399
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.46745792444935264,
+                "y": 0.0005824530124813399
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.46745792444935264,
+                "y": 0.0005824530124813399
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.46745792444935264,
+                "y": 0.0005824530124813399
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4595383673829525,
+                "y": 0.0005722404900449196
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4595383673829525,
+                "y": 0.0005722404900449196
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4595383673829525,
+                "y": 0.0005722404900449196
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4595383673829525,
+                "y": 0.0005722404900449196
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4595383673829525,
+                "y": 0.0005722404900449196
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4595383673829525,
+                "y": 0.0005722404900449196
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4595383673829525,
+                "y": 0.0005722404900449196
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4595383673829525,
+                "y": 0.0005722404900449196
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4595383673829525,
+                "y": 0.0005722404900449196
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4595383673829525,
+                "y": 0.0005722404900449196
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.45163725843526814,
+                "y": 0.0005621292503067664
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.45163725843526814,
+                "y": 0.0005621292503067664
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.45163725843526814,
+                "y": 0.0005621292503067664
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.45163725843526814,
+                "y": 0.0005621292503067664
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.45163725843526814,
+                "y": 0.0005621292503067664
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.45163725843526814,
+                "y": 0.0005621292503067664
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.45163725843526814,
+                "y": 0.0005621292503067664
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.45163725843526814,
+                "y": 0.0005621292503067664
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.45163725843526814,
+                "y": 0.0005621292503067664
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.45163725843526814,
+                "y": 0.0005621292503067664
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4438249930125917,
+                "y": 0.0005513159151996678
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4438249930125917,
+                "y": 0.0005513159151996678
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4438249930125917,
+                "y": 0.0005513159151996678
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4438249930125917,
+                "y": 0.0005513159151996678
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4438249930125917,
+                "y": 0.0005513159151996678
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4438249930125917,
+                "y": 0.0005513159151996678
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4438249930125917,
+                "y": 0.0005513159151996678
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4438249930125917,
+                "y": 0.0005513159151996678
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4438249930125917,
+                "y": 0.0005513159151996678
+              },
+              {
+                "distance_remaining": 0.44999992847442627,
+                "x": -0.4438249930125917,
+                "y": 0.0005513159151996678
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.43606859489334937,
+                "y": 0.0005386547387423741
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.43606859489334937,
+                "y": 0.0005386547387423741
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.43606859489334937,
+                "y": 0.0005386547387423741
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.43606859489334937,
+                "y": 0.0005386547387423741
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.43606859489334937,
+                "y": 0.0005386547387423741
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.43606859489334937,
+                "y": 0.0005386547387423741
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.43606859489334937,
+                "y": 0.0005386547387423741
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.43606859489334937,
+                "y": 0.0005386547387423741
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.43606859489334937,
+                "y": 0.0005386547387423741
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.43606859489334937,
+                "y": 0.0005386547387423741
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42824086042173093,
+                "y": 0.0005237528052387803
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42824086042173093,
+                "y": 0.0005237528052387803
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42824086042173093,
+                "y": 0.0005237528052387803
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42824086042173093,
+                "y": 0.0005237528052387803
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42824086042173093,
+                "y": 0.0005237528052387803
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42824086042173093,
+                "y": 0.0005237528052387803
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42824086042173093,
+                "y": 0.0005237528052387803
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42824086042173093,
+                "y": 0.0005237528052387803
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42824086042173093,
+                "y": 0.0005237528052387803
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42824086042173093,
+                "y": 0.0005237528052387803
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42824086042173093,
+                "y": 0.0005237528052387803
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42039761641574325,
+                "y": 0.0005075388754819137
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42039761641574325,
+                "y": 0.0005075388754819137
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42039761641574325,
+                "y": 0.0005075388754819137
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42039761641574325,
+                "y": 0.0005075388754819137
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42039761641574325,
+                "y": 0.0005075388754819137
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42039761641574325,
+                "y": 0.0005075388754819137
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42039761641574325,
+                "y": 0.0005075388754819137
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42039761641574325,
+                "y": 0.0005075388754819137
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42039761641574325,
+                "y": 0.0005075388754819137
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.42039761641574325,
+                "y": 0.0005075388754819137
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.41263378337309864,
+                "y": 0.0004912677116562747
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.41263378337309864,
+                "y": 0.0004912677116562747
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.41263378337309864,
+                "y": 0.0004912677116562747
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.41263378337309864,
+                "y": 0.0004912677116562747
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.41263378337309864,
+                "y": 0.0004912677116562747
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.41263378337309864,
+                "y": 0.0004912677116562747
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.41263378337309864,
+                "y": 0.0004912677116562747
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.41263378337309864,
+                "y": 0.0004912677116562747
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.41263378337309864,
+                "y": 0.0004912677116562747
+              },
+              {
+                "distance_remaining": 0.4249999225139618,
+                "x": -0.41263378337309864,
+                "y": 0.0004912677116562747
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.40491365165293236,
+                "y": 0.0004740376055224703
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.40491365165293236,
+                "y": 0.0004740376055224703
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.40491365165293236,
+                "y": 0.0004740376055224703
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.40491365165293236,
+                "y": 0.0004740376055224703
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.40491365165293236,
+                "y": 0.0004740376055224703
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.40491365165293236,
+                "y": 0.0004740376055224703
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.40491365165293236,
+                "y": 0.0004740376055224703
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.40491365165293236,
+                "y": 0.0004740376055224703
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.40491365165293236,
+                "y": 0.0004740376055224703
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.40491365165293236,
+                "y": 0.0004740376055224703
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.39722655898683534,
+                "y": 0.00045702264133976094
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.39722655898683534,
+                "y": 0.00045702264133976094
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.39722655898683534,
+                "y": 0.00045702264133976094
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.39722655898683534,
+                "y": 0.00045702264133976094
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.39722655898683534,
+                "y": 0.00045702264133976094
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.39722655898683534,
+                "y": 0.00045702264133976094
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.39722655898683534,
+                "y": 0.00045702264133976094
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.39722655898683534,
+                "y": 0.00045702264133976094
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.39722655898683534,
+                "y": 0.00045702264133976094
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.39722655898683534,
+                "y": 0.00045702264133976094
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38958078685368047,
+                "y": 0.00044078055917733594
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38958078685368047,
+                "y": 0.00044078055917733594
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38958078685368047,
+                "y": 0.00044078055917733594
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38958078685368047,
+                "y": 0.00044078055917733594
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38958078685368047,
+                "y": 0.00044078055917733594
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38958078685368047,
+                "y": 0.00044078055917733594
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38958078685368047,
+                "y": 0.00044078055917733594
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38958078685368047,
+                "y": 0.00044078055917733594
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38958078685368047,
+                "y": 0.00044078055917733594
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38958078685368047,
+                "y": 0.00044078055917733594
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38958078685368047,
+                "y": 0.00044078055917733594
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38195374470944343,
+                "y": 0.0004238167375215109
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38195374470944343,
+                "y": 0.0004238167375215109
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38195374470944343,
+                "y": 0.0004238167375215109
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38195374470944343,
+                "y": 0.0004238167375215109
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38195374470944343,
+                "y": 0.0004238167375215109
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38195374470944343,
+                "y": 0.0004238167375215109
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38195374470944343,
+                "y": 0.0004238167375215109
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38195374470944343,
+                "y": 0.0004238167375215109
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38195374470944343,
+                "y": 0.0004238167375215109
+              },
+              {
+                "distance_remaining": 0.3999999463558197,
+                "x": -0.38195374470944343,
+                "y": 0.0004238167375215109
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.37442101967200925,
+                "y": 0.0004067339552199648
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.37442101967200925,
+                "y": 0.0004067339552199648
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.37442101967200925,
+                "y": 0.0004067339552199648
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.37442101967200925,
+                "y": 0.0004067339552199648
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.37442101967200925,
+                "y": 0.0004067339552199648
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.37442101967200925,
+                "y": 0.0004067339552199648
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.37442101967200925,
+                "y": 0.0004067339552199648
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.37442101967200925,
+                "y": 0.0004067339552199648
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.37442101967200925,
+                "y": 0.0004067339552199648
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.37442101967200925,
+                "y": 0.0004067339552199648
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3670045576607195,
+                "y": 0.0003897860610354076
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3670045576607195,
+                "y": 0.0003897860610354076
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3670045576607195,
+                "y": 0.0003897860610354076
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3670045576607195,
+                "y": 0.0003897860610354076
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3670045576607195,
+                "y": 0.0003897860610354076
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3670045576607195,
+                "y": 0.0003897860610354076
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3670045576607195,
+                "y": 0.0003897860610354076
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3670045576607195,
+                "y": 0.0003897860610354076
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3670045576607195,
+                "y": 0.0003897860610354076
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3670045576607195,
+                "y": 0.0003897860610354076
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3670045576607195,
+                "y": 0.0003897860610354076
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35963778183790396,
+                "y": 0.00037274192949620884
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35963778183790396,
+                "y": 0.00037274192949620884
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35963778183790396,
+                "y": 0.00037274192949620884
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35963778183790396,
+                "y": 0.00037274192949620884
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35963778183790396,
+                "y": 0.00037274192949620884
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35963778183790396,
+                "y": 0.00037274192949620884
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35963778183790396,
+                "y": 0.00037274192949620884
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35963778183790396,
+                "y": 0.00037274192949620884
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35963778183790396,
+                "y": 0.00037274192949620884
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35963778183790396,
+                "y": 0.00037274192949620884
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35963778183790396,
+                "y": 0.00037274192949620884
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35224316374022924,
+                "y": 0.00035530445347064837
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35224316374022924,
+                "y": 0.00035530445347064837
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35224316374022924,
+                "y": 0.00035530445347064837
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35224316374022924,
+                "y": 0.00035530445347064837
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35224316374022924,
+                "y": 0.00035530445347064837
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35224316374022924,
+                "y": 0.00035530445347064837
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35224316374022924,
+                "y": 0.00035530445347064837
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35224316374022924,
+                "y": 0.00035530445347064837
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35224316374022924,
+                "y": 0.00035530445347064837
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35224316374022924,
+                "y": 0.00035530445347064837
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35224316374022924,
+                "y": 0.00035530445347064837
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.35224316374022924,
+                "y": 0.00035530445347064837
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.34490715106714975,
+                "y": 0.00033778912491405215
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.34490715106714975,
+                "y": 0.00033778912491405215
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.34490715106714975,
+                "y": 0.00033778912491405215
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.34490715106714975,
+                "y": 0.00033778912491405215
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.34490715106714975,
+                "y": 0.00033778912491405215
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.34490715106714975,
+                "y": 0.00033778912491405215
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.34490715106714975,
+                "y": 0.00033778912491405215
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.34490715106714975,
+                "y": 0.00033778912491405215
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.34490715106714975,
+                "y": 0.00033778912491405215
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.34490715106714975,
+                "y": 0.00033778912491405215
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.34490715106714975,
+                "y": 0.00033778912491405215
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3376529445758074,
+                "y": 0.00032139526930115135
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3376529445758074,
+                "y": 0.00032139526930115135
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3376529445758074,
+                "y": 0.00032139526930115135
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3376529445758074,
+                "y": 0.00032139526930115135
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3376529445758074,
+                "y": 0.00032139526930115135
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3376529445758074,
+                "y": 0.00032139526930115135
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3376529445758074,
+                "y": 0.00032139526930115135
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3376529445758074,
+                "y": 0.00032139526930115135
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3376529445758074,
+                "y": 0.00032139526930115135
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3376529445758074,
+                "y": 0.00032139526930115135
+              },
+              {
+                "distance_remaining": 0.32499992847442627,
+                "x": -0.3304622185264665,
+                "y": 0.00030468181728523635
+              },
+              {
+                "distance_remaining": 0.32499992847442627,
+                "x": -0.3304622185264665,
+                "y": 0.00030468181728523635
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3304622185264665,
+                "y": 0.00030468181728523635
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3304622185264665,
+                "y": 0.00030468181728523635
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3304622185264665,
+                "y": 0.00030468181728523635
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3304622185264665,
+                "y": 0.00030468181728523635
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3304622185264665,
+                "y": 0.00030468181728523635
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3304622185264665,
+                "y": 0.00030468181728523635
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3304622185264665,
+                "y": 0.00030468181728523635
+              },
+              {
+                "distance_remaining": 0.34999993443489075,
+                "x": -0.3304622185264665,
+                "y": 0.00030468181728523635
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.32340902467273547,
+                "y": 0.00028819634259739306
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.32340902467273547,
+                "y": 0.00028819634259739306
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.32340902467273547,
+                "y": 0.00028819634259739306
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.32340902467273547,
+                "y": 0.00028819634259739306
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.32340902467273547,
+                "y": 0.00028819634259739306
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.32340902467273547,
+                "y": 0.00028819634259739306
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.32340902467273547,
+                "y": 0.00028819634259739306
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.32340902467273547,
+                "y": 0.00028819634259739306
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.32340902467273547,
+                "y": 0.00028819634259739306
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.32340902467273547,
+                "y": 0.00028819634259739306
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.32340902467273547,
+                "y": 0.00028819634259739306
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.31650115873646345,
+                "y": 0.0002719356357049565
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.31650115873646345,
+                "y": 0.0002719356357049565
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.31650115873646345,
+                "y": 0.0002719356357049565
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.31650115873646345,
+                "y": 0.0002719356357049565
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.31650115873646345,
+                "y": 0.0002719356357049565
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.31650115873646345,
+                "y": 0.0002719356357049565
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.31650115873646345,
+                "y": 0.0002719356357049565
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.31650115873646345,
+                "y": 0.0002719356357049565
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.31650115873646345,
+                "y": 0.0002719356357049565
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.31650115873646345,
+                "y": 0.0002719356357049565
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.3095406268121399,
+                "y": 0.0002560943837907047
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.3095406268121399,
+                "y": 0.0002560943837907047
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.3095406268121399,
+                "y": 0.0002560943837907047
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.3095406268121399,
+                "y": 0.0002560943837907047
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.3095406268121399,
+                "y": 0.0002560943837907047
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.3095406268121399,
+                "y": 0.0002560943837907047
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.3095406268121399,
+                "y": 0.0002560943837907047
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.3095406268121399,
+                "y": 0.0002560943837907047
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.3095406268121399,
+                "y": 0.0002560943837907047
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.3095406268121399,
+                "y": 0.0002560943837907047
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.3095406268121399,
+                "y": 0.0002560943837907047
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.30267874405652617,
+                "y": 0.0002412098486866172
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.30267874405652617,
+                "y": 0.0002412098486866172
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.30267874405652617,
+                "y": 0.0002412098486866172
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.30267874405652617,
+                "y": 0.0002412098486866172
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.30267874405652617,
+                "y": 0.0002412098486866172
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.30267874405652617,
+                "y": 0.0002412098486866172
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.30267874405652617,
+                "y": 0.0002412098486866172
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.30267874405652617,
+                "y": 0.0002412098486866172
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.30267874405652617,
+                "y": 0.0002412098486866172
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.30267874405652617,
+                "y": 0.0002412098486866172
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.2959086530194388,
+                "y": 0.0002267149362023915
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.2959086530194388,
+                "y": 0.0002267149362023915
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.2959086530194388,
+                "y": 0.0002267149362023915
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.2959086530194388,
+                "y": 0.0002267149362023915
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.2959086530194388,
+                "y": 0.0002267149362023915
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.2959086530194388,
+                "y": 0.0002267149362023915
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.2959086530194388,
+                "y": 0.0002267149362023915
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.2959086530194388,
+                "y": 0.0002267149362023915
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.2959086530194388,
+                "y": 0.0002267149362023915
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.2959086530194388,
+                "y": 0.0002267149362023915
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.2959086530194388,
+                "y": 0.0002267149362023915
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.28918094771447356,
+                "y": 0.00021213883251440023
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.28918094771447356,
+                "y": 0.00021213883251440023
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.28918094771447356,
+                "y": 0.00021213883251440023
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.28918094771447356,
+                "y": 0.00021213883251440023
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.28918094771447356,
+                "y": 0.00021213883251440023
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.28918094771447356,
+                "y": 0.00021213883251440023
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.28918094771447356,
+                "y": 0.00021213883251440023
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.28918094771447356,
+                "y": 0.00021213883251440023
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.28918094771447356,
+                "y": 0.00021213883251440023
+              },
+              {
+                "distance_remaining": 0.2999999225139618,
+                "x": -0.28918094771447356,
+                "y": 0.00021213883251440023
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.28248819678065185,
+                "y": 0.00019740887692157227
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.28248819678065185,
+                "y": 0.00019740887692157227
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.28248819678065185,
+                "y": 0.00019740887692157227
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.28248819678065185,
+                "y": 0.00019740887692157227
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.28248819678065185,
+                "y": 0.00019740887692157227
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.28248819678065185,
+                "y": 0.00019740887692157227
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.28248819678065185,
+                "y": 0.00019740887692157227
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.28248819678065185,
+                "y": 0.00019740887692157227
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.28248819678065185,
+                "y": 0.00019740887692157227
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.28248819678065185,
+                "y": 0.00019740887692157227
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.27590670294285236,
+                "y": 0.00018350830723413804
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.27590670294285236,
+                "y": 0.00018350830723413804
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.27590670294285236,
+                "y": 0.00018350830723413804
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.27590670294285236,
+                "y": 0.00018350830723413804
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.27590670294285236,
+                "y": 0.00018350830723413804
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.27590670294285236,
+                "y": 0.00018350830723413804
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.27590670294285236,
+                "y": 0.00018350830723413804
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.27590670294285236,
+                "y": 0.00018350830723413804
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.27590670294285236,
+                "y": 0.00018350830723413804
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.27590670294285236,
+                "y": 0.00018350830723413804
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.26936711582796113,
+                "y": 0.00016970442696423056
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.26936711582796113,
+                "y": 0.00016970442696423056
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.26936711582796113,
+                "y": 0.00016970442696423056
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.26936711582796113,
+                "y": 0.00016970442696423056
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.26936711582796113,
+                "y": 0.00016970442696423056
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.26936711582796113,
+                "y": 0.00016970442696423056
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.26936711582796113,
+                "y": 0.00016970442696423056
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.26936711582796113,
+                "y": 0.00016970442696423056
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.26936711582796113,
+                "y": 0.00016970442696423056
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.26936711582796113,
+                "y": 0.00016970442696423056
+              },
+              {
+                "distance_remaining": 0.2749999165534973,
+                "x": -0.26936711582796113,
+                "y": 0.00016970442696423056
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.26290154553921385,
+                "y": 0.00015580368264614958
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.26290154553921385,
+                "y": 0.00015580368264614958
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.26290154553921385,
+                "y": 0.00015580368264614958
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.26290154553921385,
+                "y": 0.00015580368264614958
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.26290154553921385,
+                "y": 0.00015580368264614958
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.26290154553921385,
+                "y": 0.00015580368264614958
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.26290154553921385,
+                "y": 0.00015580368264614958
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.26290154553921385,
+                "y": 0.00015580368264614958
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.26290154553921385,
+                "y": 0.00015580368264614958
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.26290154553921385,
+                "y": 0.00015580368264614958
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.25649569381650106,
+                "y": 0.00014193196311823068
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.25649569381650106,
+                "y": 0.00014193196311823068
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.25649569381650106,
+                "y": 0.00014193196311823068
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.25649569381650106,
+                "y": 0.00014193196311823068
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.25649569381650106,
+                "y": 0.00014193196311823068
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.25649569381650106,
+                "y": 0.00014193196311823068
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.25649569381650106,
+                "y": 0.00014193196311823068
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.25649569381650106,
+                "y": 0.00014193196311823068
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.25649569381650106,
+                "y": 0.00014193196311823068
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.25649569381650106,
+                "y": 0.00014193196311823068
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2501921441178383,
+                "y": 0.0001286393603292587
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2501921441178383,
+                "y": 0.0001286393603292587
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2501921441178383,
+                "y": 0.0001286393603292587
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2501921441178383,
+                "y": 0.0001286393603292587
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2501921441178383,
+                "y": 0.0001286393603292587
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2501921441178383,
+                "y": 0.0001286393603292587
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2501921441178383,
+                "y": 0.0001286393603292587
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2501921441178383,
+                "y": 0.0001286393603292587
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2501921441178383,
+                "y": 0.0001286393603292587
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2501921441178383,
+                "y": 0.0001286393603292587
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2501921441178383,
+                "y": 0.0001286393603292587
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2438852822973434,
+                "y": 0.00011529200395522595
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2438852822973434,
+                "y": 0.00011529200395522595
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2438852822973434,
+                "y": 0.00011529200395522595
+              },
+              {
+                "distance_remaining": 0.24999992549419403,
+                "x": -0.2438852822973434,
+                "y": 0.00011529200395522595
+              }
+            ]
+          }
+        ],
+        "lifecycle": [
+          {
+            "operation": "pause",
+            "success": true,
+            "controller_state": "inactive"
+          },
+          {
+            "operation": "resume",
+            "success": true,
+            "controller_state": "active"
+          }
+        ],
+        "initial_states": {
+          "map_server": "active",
+          "planner_server": "active",
+          "controller_server": "active",
+          "bt_navigator": "active"
+        },
+        "success": true,
+        "mission_exit_code": 0,
+        "residual_group_cleanup_needed": false,
+        "launch_exit_code": 0
+      },
+      "log_excerpts": [],
+      "forced_shutdown_observed": false
+    }
+  ],
+  "success": true,
+  "checks": {
+    "navigation_aborted": true,
+    "planner_observed_inactive": true,
+    "navigator_observed_inactive": true,
+    "restart_navigation_succeeded": true
+  },
+  "success_meaning": "Fault observation and restart checks passed; does not imply graceful shutdown."
+};
