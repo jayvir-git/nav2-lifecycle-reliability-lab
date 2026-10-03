@@ -21,4 +21,22 @@ s=s.replace('invoke<Change>(change_, request, std::chrono::seconds(5),\n      st
 s=s.replace('uint8_t get_state() {', 'uint8_t get_state(std::chrono::milliseconds timeout = std::chrono::seconds(2)) {')
 s=s.replace('std::chrono::seconds(2), std::chrono::seconds(2))->current_state.id;', 'timeout, timeout)->current_state.id;')
 s=s.replace('throw std::runtime_error("Lifecycle service wait interrupted by shutdown");','throw ShutdownCancelled();')
+s=s.replace(': stopping_(stopping) {', '''
+  : stopping_(stopping), context_(node->get_node_base_interface()->get_context()),
+    executor_(executor_options(context_)) {''')
+s=s.replace('!rclcpp::ok()', '!rclcpp::ok(context_)')
+s=s.replace('private:\n  void check_stop()', '''private:
+  static rclcpp::ExecutorOptions executor_options(rclcpp::Context::SharedPtr context) {
+    rclcpp::ExecutorOptions options;
+    options.context = context;
+    return options;
+  }
+  void check_stop()''')
+s=s.replace('  rclcpp::CallbackGroup::SharedPtr group_;', '  rclcpp::Context::SharedPtr context_;\n  rclcpp::CallbackGroup::SharedPtr group_;')
 header.write_text(s)
+source=Path(sys.argv[1])/'nav2_lifecycle_manager/src/lifecycle_manager.cpp'
+s=source.read_text()
+s=s.replace('auto executor = std::make_shared<rclcpp::executors::SingleThreadedExecutor>();', '''rclcpp::ExecutorOptions worker_options;
+      worker_options.context = get_node_base_interface()->get_context();
+      auto executor = std::make_shared<rclcpp::executors::SingleThreadedExecutor>(worker_options);''')
+source.write_text(s)

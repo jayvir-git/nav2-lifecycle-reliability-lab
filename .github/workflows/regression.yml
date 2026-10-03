@@ -1,0 +1,57 @@
+name: Independent Linux regression
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '*.py'
+      - '*.hpp'
+      - '*.sh'
+      - 'tests/**'
+      - '.github/workflows/regression.yml'
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        ros: [jazzy, rolling]
+    container: ros:${{ matrix.ros }}-ros-base
+    env:
+      NAV2_LAB_BUILD_ROOT: /tmp/nav2-build
+      NAV2_LAB_UPSTREAM_ROOT: /tmp/nav2-upstream
+      ROS_AUTOMATIC_DISCOVERY_RANGE: LOCALHOST
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build and probe dependencies
+        shell: bash
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends build-essential cmake curl \
+            ros-${ROS_DISTRO}-navigation2 ros-${ROS_DISTRO}-nav2-bringup
+      - name: Build pinned upstream and candidate
+        shell: bash
+        run: |
+          mkdir -p results
+          bash build_upstream.sh upstream-main 2>&1 | tee results/upstream-build.log
+          bash build_main_candidate.sh 2>&1 | tee results/candidate-build.log
+      - name: Real-process control and candidate matrix
+        shell: bash
+        run: |
+          source /opt/ros/${ROS_DISTRO}/setup.bash
+          python3 validate_main.py
+      - name: Context composition regression
+        shell: bash
+        run: |
+          bash build_context_probe.sh discovery 2>&1 | tee results/context-discovery.log
+          source /opt/ros/${ROS_DISTRO}/setup.bash
+          python3 validate_context.py
+      - name: Preserve all available evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-regression-evidence-${{ matrix.ros }}
+          path: results/
+          retention-days: 14

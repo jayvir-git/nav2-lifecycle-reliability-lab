@@ -13,14 +13,15 @@ resource.setrlimit(resource.RLIMIT_CORE,(0,0))
 variant=sys.argv[1]
 if variant not in ('baseline','shutdown-cancellation','shutdown-coordinated','upstream-jazzy','upstream-main','main-coordinated'):
     raise SystemExit('Unknown variant')
-prefix=Path('/home/learner/nav2-shutdown-build')/variant/'install'
+build_root=Path(os.environ.get('NAV2_LAB_BUILD_ROOT','/home/learner/nav2-shutdown-build'))
+prefix=build_root/variant/'install'
 out=root/'results'/('discovery-'+str(time.time_ns()))
 out.mkdir(parents=True)
 env=os.environ.copy()
 env['ROS_DOMAIN_ID']='74'
 env['ROS_AUTOMATIC_DISCOVERY_RANGE']='LOCALHOST'
 dependency='upstream-main' if variant=='main-coordinated' else 'baseline'
-env['LD_LIBRARY_PATH']=str(prefix/'lib')+f':/home/learner/nav2-shutdown-build/{dependency}/install/lib:'+env.get('LD_LIBRARY_PATH','')
+env['LD_LIBRARY_PATH']=str(prefix/'lib')+':'+str(build_root/dependency/'install/lib')+':'+env.get('LD_LIBRARY_PATH','')
 delay=float(sys.argv[2]) if len(sys.argv)>2 else 0.5
 if not 0 <= delay <= 10: raise SystemExit('Delay must be between 0 and 10 seconds')
 result={'variant':variant,'mode':'discovery','delay_after_initialization_log':delay,'graceful_manager_shutdown':False}

@@ -1,0 +1,22 @@
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found nav2_lifecycle_manager: 1.5.0 (/home/learner/nav2-shutdown-build/main-coordinated/install/share/nav2_lifecycle_manager/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found eigen3_cmake_module: 0.3.1 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Configuring done (4.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/learner/nav2-shutdown-build/context-probe
+[ 50%] Building CXX object CMakeFiles/context_probe.dir/context_probe.cpp.o
+[100%] Linking CXX executable context_probe
+[100%] Built target context_probe
+[INFO] [1790998107.832501927] [lifecycle_manager]: Creating
+[INFO] [1790998107.834317902] [lifecycle_manager]: [34m[1mCreating and initializing lifecycle publishers[0m[0m
+[INFO] [1790998107.836284602] [lifecycle_manager]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+terminate called without an active exception
+build_context_probe.sh: line 11:    62 Aborted                 timeout 12 "$base/context-probe/context_probe" "${1:-discovery}"

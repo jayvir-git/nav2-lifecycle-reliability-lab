@@ -3,11 +3,15 @@ import json
 from pathlib import Path
 import subprocess
 import time
+import os
+import platform
 
 root=Path(__file__).resolve().parent
 target=root/'results'/('main-matrix-'+str(time.time_ns())+'.json')
+target.parent.mkdir(exist_ok=True)
 report={'source_sha':'d7bf2ac06fe778c21c6141eb49b4d3e2c0c82d3a',
-        'runtime':'ROS 2 Jazzy on WSL; not native Rolling','trials':[]}
+        'runtime':{'ros_distro':os.environ.get('ROS_DISTRO'), 'kernel':platform.release(),
+                   'ci':os.environ.get('GITHUB_ACTIONS','false')},'trials':[]}
 
 def run(command,pattern,expected=0):
     before=set((root/'results').glob(pattern))

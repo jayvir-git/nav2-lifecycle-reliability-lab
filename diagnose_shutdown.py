@@ -26,14 +26,16 @@ manager_executable=os.environ.get('NAV2_PROBE_MANAGER','/opt/ros/jazzy/lib/nav2_
 manager_env=os.environ.copy()
 if 'NAV2_PROBE_PREFIX' in os.environ:
     dependency='upstream-main' if os.environ.get('NAV2_PROBE_VARIANT')=='main-coordinated' else 'baseline'
-    manager_env['LD_LIBRARY_PATH']=os.environ['NAV2_PROBE_PREFIX']+f'/lib:/home/learner/nav2-shutdown-build/{dependency}/install/lib:'+os.environ.get('LD_LIBRARY_PATH','')
+    build_root=os.environ.get('NAV2_LAB_BUILD_ROOT','/home/learner/nav2-shutdown-build')
+    manager_env['LD_LIBRARY_PATH']=os.environ['NAV2_PROBE_PREFIX']+f'/lib:{build_root}/{dependency}/install/lib:'+os.environ.get('LD_LIBRARY_PATH','')
 shutdown_delay=float(os.environ.get('NAV2_PROBE_SHUTDOWN_DELAY','2'))
 result={'mode':mode,'graceful_manager_shutdown':False,'manager_executable':manager_executable,
         'shutdown_delay_after_detection':shutdown_delay,
         'variant':os.environ.get('NAV2_PROBE_VARIANT','installed')}
 rclpy.init(); observer=Node('shutdown_probe')
 try:
-    server=subprocess.Popen(['/opt/ros/jazzy/lib/nav2_map_server/map_server','--ros-args','-p',
+    ros_prefix='/opt/ros/'+os.environ.get('ROS_DISTRO','jazzy')
+    server=subprocess.Popen([ros_prefix+'/lib/nav2_map_server/map_server','--ros-args','-p',
         'yaml_filename:='+str(out/'room.yaml')],stdout=log,stderr=log,start_new_session=True)
     children.append(server)
     manager=subprocess.Popen([manager_executable,
